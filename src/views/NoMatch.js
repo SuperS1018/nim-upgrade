@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import './NoMatch.css'
+import '../stylesheets/views/NoMatch.css'
 
 const NoMatch = ({ siteUrl }) => (
-  <div className='NoMatch'>
+  <div className='NoMatch page vh-100'>
     <section className='section thick'>
       <div className='container taCenter'>
         <h1>404 - Page Not Found</h1>

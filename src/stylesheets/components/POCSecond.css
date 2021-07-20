@@ -1,0 +1,37 @@
+.POCSecond {
+  width: 100%;
+  background: #005968;
+  padding: 10rem 0;
+  color: white;
+}
+
+.POCSecond--Left {
+}
+
+.POCSecond--Left h2 {
+  font-size: 2.3em;
+  font-weight: 600;
+}
+
+.POCSecond--Right {
+  font-size: 1.1em;
+}
+
+.POCSecond--Right h3 {
+  font-size: 1.6em;
+  font-weight: 500;
+  margin: 5rem 0 3rem;
+}
+
+.POCSecond--Right .note {
+  font-size: 0.7em;
+  /*font-weight: 500;*/
+}
+
+.POCSecond--Right ul li {
+  position: relative;
+  padding-right: 3rem;
+  padding-left: 10px;
+  margin-bottom: 4rem;
+}
+

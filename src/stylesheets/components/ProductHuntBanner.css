@@ -1,0 +1,44 @@
+.ProductHuntBanner {
+  position: relative;
+  top: 0;
+  width: 100%;
+  background-color: #DC5525;
+  height: 50px;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.ProductHuntBanner--Content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ProductHuntBanner--Content img {
+  margin-right: 1rem;
+}
+
+.ProductHuntBanner--Content .text-wrap {
+  transition: opacity .3s ease-in-out;
+  position: relative;
+}
+
+.ProductHuntBanner--Content .text-wrap .mask {
+  background-color: #DC5525;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.ProductHuntBanner--Content:hover .text-wrap {
+  opacity: 0.7;
+}
+
+@media (max-width: 812px) {
+  .ProductHuntBanner--Content .text-wrap {
+    font-size: 0.8em;
+  }
+}

@@ -9,7 +9,7 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 
 collections: # A list of collections the CMS should be able to edit
   - name: "pages"
-    label: "Page"
+    label: "Pages"
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: true
@@ -18,20 +18,49 @@ collections: # A list of collections the CMS should be able to edit
         label: "Contact Page"
         name: "contact-page"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Featured Image, name: featuredImage, widget: image}
-          - {label: Subtitle, name: subtitle, widget: markdown}
+          - {label: Message, name: message, widget: string}
+          - {label: Background Image, name: backgroundImage, widget: image}
           - {label: Body, name: body, widget: markdown}
-          - {label: Address, name: address, widget: text}
-          - {label: Phone, name: phone, widget: string}
-          - {label: Email Address, name: email, widget: string}
           - label: "Meta"
             required: false
             name: "meta"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+              - {label: Title, name: title, widget: string, required: false, pattern: ["^.{0,60}$", "Must not exceed 60 characters"]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/request.md"
+        label: "Request Page"
+        name: "request-page"
+        fields:
+          - {label: Background Image, name: backgroundImage, widget: image}
+          - {label: Body, name: body, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/sales.md"
+        label: "Sales Page"
+        name: "sales-page"
+        fields:
+          - {label: Message, name: message, widget: string}
+          - {label: Background Image, name: backgroundImage, widget: image}
+          - {label: Body, name: body, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
               - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
               - {label: Noindex, name: noindex, widget: boolean, required: false}
 
@@ -41,14 +70,113 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Featured Image, name: featuredImage, widget: image}
-          - {label: Subtitle, name: subtitle, widget: markdown}
+          - {label: Subtitle, name: subtitle, widget: markdown, required: false}
           - label: "Meta"
             required: false
             name: "meta"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/careers.md"
+        label: "Careers Page"
+        name: "careers-page"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Background Image, name: backgroundImage, widget: image}
+          - {label: Subtitle, name: subtitle, widget: markdown, required: false}
+          - {label: Content, name: content, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/newsevents.md"
+        label: "News and Events Page"
+        name: "newsevents-page"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Featured Image, name: featuredImage, widget: image}
+          - {label: Subtitle, name: subtitle, widget: markdown, required: false}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/webinars.md"
+        label: "Webinars Page"
+        name: "webinars-page"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: markdown, required: false}
+          - {label: Featured Image, name: featuredImage, widget: image}
+          - {label: Blog Title, name: titleBlog, widget: string}
+          - {label: Blog Subtitle, name: subtitleBlog, widget: markdown, required: false}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/source.md"
+        label: "Open Source Page"
+        name: "source-page"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: markdown, required: false}
+          - {label: Background Image, name: backgroundImage, widget: image}
+          - label: Nimbella Contributions
+            name: contributions
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: desc, widget: markdown}
+              - label: Contribution List
+                name: list
+                widget: list
+                fields:
+                  - {label: Name, name: name, widget: string}
+                  - {label: Icon, name: icon, widget: image}
+                  - {label: Description, name: desc, widget: markdown}
+                  - {label: Url, name: url, widget: string}
+          - label: Open Source uses Nimbella
+            name: openSourceUse
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: desc, widget: markdown}
+              - label: Open Source List
+                name: list
+                widget: list
+                fields:
+                  - {label: Name, name: name, widget: string}
+                  - {label: Icon, name: icon, widget: image}
+                  - {label: Description, name: desc, widget: markdown}
+                  - {label: Url, name: url, widget: string}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
               - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
               - {label: Noindex, name: noindex, widget: boolean, required: false}
 
@@ -58,16 +186,655 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Featured Image, name: featuredImage, widget: image}
-          - {label: Subtitle, name: subtitle, widget: markdown}
+          - {label: Subtitle, name: subtitle, widget: markdown, required: false}
           - {label: Section 1, name: section1, widget: markdown}
-          - {label: Section 2, name: section2, widget: markdown}
+          - {label: Section 2, name: section2, widget: markdown, required: false}
           - label: "Meta"
             required: false
             name: "meta"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/poc.md"
+        label: "POC Page"
+        name: "poc-page"
+        fields:
+          - label: "Hero Banner"
+            name: "heroBanner"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Description, name: desc, widget: markdown }
+              - { label: Sub Title, name: subtitle, widget: string}
+              - label: List
+                name: list
+                widget: list
+                fields:
+                  - { label: Item, name: item, widget: markdown }
+          - label: "Second Section"
+            name: "secondSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Description, name: desc, widget: markdown }
+              - { label: Sub Title, name: subtitle, widget: string }
+              - label: List
+                name: list
+                widget: list
+                fields:
+                  - { label: Item, name: item, widget: markdown }
+          - label: "Third Section"
+            name: "thirdSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Image, name: img, widget: image, required: true }
+              - label: List
+                name: list
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: desc, widget: markdown }
+          - label: "Forth Section"
+            name: "forthSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Sub Title, name: subtitle, widget: text }
+              - label: Question Lists
+                name: list
+                widget: list
+                fields:
+                  - { label: Question, name: question, widget: string }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/enterpriseSolution.md"
+        label: "Enterprise Solution Page"
+        name: "enterpriseSolution-page"
+        fields:
+          - label: "Hero Banner"
+            name: "heroBanner"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Sub Title, name: subtitle, widget: string }
+              - { label: Description, name: desc, widget: markdown }
+              - { label: Note, name: note, widget: string }
+              - { label: Button Text, name: btnTxt, widget: string }
+              - { label: Button Link, name: btnLink, widget: string }
+          - label: "Second Section"
+            name: "secondSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Description, name: desc, widget: markdown }
+              - label: List
+                name: list
+                widget: list
+                fields:
+                  - { label: Item, name: item, widget: markdown }
+          - label: "Third Section"
+            name: "thirdSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Cite Title, name: citeTitle, widget: string }
+              - { label: Cite Content, name: citeContent, widget: markdown }
+              - { label: Download Text, name: downloadTxt, widget: string }
+              - { label: Download Link, name: downloadLink, widget: string }
+          - label: "Forth Section"
+            name: "forthSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Sub Title, name: subtitle, widget: text }
+          - label: "Fifth Section"
+            name: "fifthSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Content, name: content, widget: markdown }
+              - { label: Image, name: img, widget: image, required: true }
+          - label: "Sixth Section"
+            name: "sixthSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Sub Title, name: subtitle, widget: text }
+              - label: Question Lists
+                name: list
+                widget: list
+                fields:
+                  - { label: Question, name: question, widget: string }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ] }
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/caseStudy.md"
+        label: "Case Study Page"
+        name: "caseStudy-page"
+        fields:
+          - label: "Hero Banner"
+            name: "heroBanner"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Description, name: desc, widget: markdown }
+              - { label: Image, name: img, widget: image }
+              - { label: Button Text, name: btnTxt, widget: string }
+              - { label: Button Link, name: btnLink, widget: string }
+          - label: "Second Section"
+            name: "secondSection"
+            widget: "object"
+            fields:
+              - { label: Name, name: name, widget: string, required: true }
+              - { label: Position, name: position, widget: string }
+              - { label: Content, name: content, widget: markdown }
+              - { label: Video Id (from Wistia.com), name: videoId, widget: string }
+          - label: "Third Section"
+            name: "thirdSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Twitter Hash, name: twitterHash, widget: string }
+              - { label: Content Top, name: contentTop, widget: markdown }
+              - { label: Solution Title, name: solutionTitle, widget: string }
+              - { label: Solution Name, name: solutionName, widget: string }
+              - { label: Solution Position, name: solutionPosition, widget: string }
+              - { label: Solution Image, name: solutionImg, widget: image }
+              - { label: Solution Testimonial, name: solutionTestimonial, widget: markdown }
+              - { label: Content Bottom, name: contentBottom, widget: markdown }
+          - label: "Fourth Section"
+            name: "fourthSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Content, name: content, widget: markdown }
+              - { label: Button Text, name: btnTxt, widget: string }
+              - { label: Button Link, name: btnLink, widget: string }
+          - label: "Fifth Section"
+            name: "fifthSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Content, name: content, widget: markdown }
+          - label: "Sixth Section"
+            name: "sixthSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Content, name: content, widget: markdown }
+              - { label: Button Text, name: btnTxt, widget: string }
+              - { label: Button Link, name: btnLink, widget: string }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/forresterReport.md"
+        label: "Forrester Report Page"
+        name: "forrester-page"
+        fields:
+          - label: "Hero Banner"
+            name: "heroBanner"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Description, name: desc, widget: markdown }
+              - { label: Redirect Link, name: redirect, widget: string, required: true }
+          - label: "Second Section"
+            name: "secondSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Content, name: content, widget: markdown }
+              - { label: Screenshot, name: img, widget: image }
+          - label: "Third Section"
+            name: "thirdSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Content, name: content, widget: markdown }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+      - file: "content/pages/nimbellaCli.md"
+        label: "Nimbella Cli"
+        name: "nimbellaCli-page"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - label: "Download List"
+            name: "download"
+            widget: "list"
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Icon (brand name from fontawesome), name: icon, widget: string}
+              - {label: Platform, name: platform, widget: string}
+              - {label: Download Link, name: download, widget: string}
+          - { label: Content, name: content, widget: markdown, required: false}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/nimbellaWorkbench.md"
+        label: "Nimbella Workbench"
+        name: "nimbellaWorkbench-page"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - { label: Image, name: img, widget: image, required: false}
+          - { label: Content, name: content, widget: markdown, required: false }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/nimbellaStarterProjects.md"
+        label: "Nimbella Starter Projects"
+        name: "nimbellaStarterProjects-page"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - label: "Starter Projects List"
+            name: "starter"
+            widget: "list"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Runtime, name: runtime, widget: string }
+              - { label: Command, name: command, widget: string }
+              - { label: Demo Link, name: demolink, widget: string }
+          - label: "Other Starter Projects List"
+            name: "other"
+            widget: "list"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Command, name: command, widget: string }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/support.md"
+        label: "Support Page"
+        name: "support-page"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: markdown, required: false}
+          - {label: Background Image, name: backgroundImage, widget: image}
+          - {label: Body, name: body, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/whitepaper.md"
+        label: "Whitepaper Page"
+        name: "whitepaper-page"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Whitepaper Image, name: whitepaperImage, widget: image }
+          - { label: Body Content, name: content, widget: markdown }
+          - { label: Whitepaper PDF, name: pdf, widget: file }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/portableWhitepaper.md"
+        label: "New Whitepaper Page"
+        name: "portableWhitepaper-page"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Whitepaper Image, name: whitepaperImage, widget: image }
+          - { label: Body Content, name: content, widget: markdown }
+          - { label: Whitepaper PDF, name: pdf, widget: file }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/templates.md"
+        label: "Templates Page"
+        name: "templates-page"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: desc, widget: text}
+          - {label: Content, name: content, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/pricing.md"
+        label: "Pricing Platform Page"
+        name: "pricing-page"
+        fields:
+          - {label: Banner Title, name: bannerTitle, widget: string}
+          - {label: Banner Subtitle, name: bannerSubtitle, widget: text}
+          - {label: Banner Image, name: bannerImage, widget: image}
+          - label: "Pricing Table"
+            name: "pricingTable"
+            widget: "list"
+            fields:
+              - {label: Price Level, name: level, widget: string}
+              - {label: Price Value, name: value, widget: string}
+              - {label: Price Unit, name: unit, widget: string, required: false}
+              - {label: Price Note, name: note, widget: string, required: false}
+              - {label: Price Description, name: description, widget: text}
+              - {label: Price Button Text, name: button, widget: string}
+              - label: "Detail List"
+                name: "detailList"
+                widget: "list"
+                fields:
+                  - {label: Detail Item, name: detailItem, widget: markdown}
+          - label: "Comparison Table"
+            name: "comparisonTable"
+            widget: "list"
+            fields:
+              - {label: Features, name: features, widget: string}
+              - {label: Starter, name: starter, widget: markdown}
+              - {label: Pro, name: pro, widget: markdown}
+              - {label: Enterprise, name: enterprise, widget: markdown}
+          - label: "Usage Table"
+            name: "usageTable"
+            widget: "list"
+            fields:
+              - {label: Features, name: features, widget: string}
+              - {label: Starter, name: starter, widget: markdown}
+              - {label: Pro, name: pro, widget: markdown}
+              - {label: Enterprise, name: enterprise, widget: markdown}
+          - {label: Note Top, name: noteTop, widget: markdown}
+          - {label: Note Down, name: note, widget: markdown}
+          - label: "FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: Question, name: question, widget: string}
+                  - {label: Answer, name: answer, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/pricingCommander.md"
+        label: "Pricing Commander"
+        name: "pricingCommander-page"
+        fields:
+          - label: "Slack Pricing Table"
+            name: "slackPricing"
+            widget: "list"
+            fields:
+              - {label: Price Level, name: level, widget: string}
+              - {label: Price Value, name: value, widget: string}
+              - {label: Price Unit, name: unit, widget: text, required: false}
+              - {label: Price Note, name: note, widget: markdown, required: false}
+              - {label: Price Description, name: description, widget: markdown, required: false}
+              - {label: Price Button Text, name: button, widget: string}
+              - label: "Detail List"
+                name: "detailList"
+                widget: "list"
+                fields:
+                  - {label: Detail Item, name: detailItem, widget: markdown}
+          - label: "Slack Comparison Table"
+            name: "slackComparison"
+            widget: "list"
+            fields:
+              - {label: Features, name: features, widget: string}
+              - {label: Standard, name: playground, widget: markdown}
+              - {label: Pro, name: starter, widget: markdown}
+              - {label: Enterprise, name: enterprise, widget: markdown}
+          - label: "Teams Pricing Table"
+            name: "teamsPricing"
+            widget: "list"
+            fields:
+              - {label: Price Level, name: level, widget: string}
+              - {label: Price Value, name: value, widget: string}
+              - {label: Price Unit, name: unit, widget: text, required: false}
+              - {label: Price Note, name: note, widget: markdown, required: false}
+              - {label: Price Description, name: description, widget: markdown, required: false}
+              - {label: Price Button Text, name: button, widget: string}
+              - label: "Detail List"
+                name: "detailList"
+                widget: "list"
+                fields:
+                  - {label: Detail Item, name: detailItem, widget: markdown}
+          - label: "Teams Comparison Table"
+            name: "teamsComparison"
+            widget: "list"
+            fields:
+              - {label: Features, name: features, widget: string}
+              - {label: Standard, name: playground, widget: markdown}
+              - {label: Pro, name: starter, widget: markdown}
+              - {label: Enterprise, name: enterprise, widget: markdown}
+          - label: "Mattermost Pricing Table"
+            name: "mattermostPricing"
+            widget: "list"
+            fields:
+              - {label: Price Level, name: level, widget: string}
+              - {label: Price Value, name: value, widget: string}
+              - {label: Price Unit, name: unit, widget: text, required: false}
+              - {label: Price Note, name: note, widget: markdown, required: false}
+              - {label: Price Description, name: description, widget: markdown, required: false}
+              - {label: Price Button Text, name: button, widget: string}
+              - label: "Detail List"
+                name: "detailList"
+                widget: "list"
+                fields:
+                  - {label: Detail Item, name: detailItem, widget: markdown}
+          - label: "Mattermost Comparison Table"
+            name: "mattermostComparison"
+            widget: "list"
+            fields:
+              - {label: Features, name: features, widget: string}
+              - {label: Standard, name: playground, widget: markdown}
+              - {label: Pro, name: starter, widget: markdown}
+              - {label: Enterprise, name: enterprise, widget: markdown}
+          - label: "New FAQ"
+            name: "faq1"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: Question, name: question, widget: string}
+                  - {label: Answer, name: answer, widget: markdown}
+          - label: "FAQ (deprecated soon)"
+            name: "faq"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: Question, name: question, widget: string}
+                  - {label: Answer, name: answer, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/pricingCommanderMattermost.md"
+        label: "Pricing Commander for Mattermost Page (deprecated soon)"
+        name: "pricingCommanderMattermost-page"
+        fields:
+          - label: "Pricing Table"
+            name: "pricingTable"
+            widget: "list"
+            fields:
+              - {label: Price Level, name: level, widget: string}
+              - {label: Price Value, name: value, widget: string}
+              - {label: Price Unit, name: unit, widget: text, required: false}
+              - {label: Price Note, name: note, widget: markdown, required: false}
+              - {label: Price Description, name: description, widget: markdown, required: false}
+              - {label: Price Button Text, name: button, widget: string}
+              - label: "Detail List"
+                name: "detailList"
+                widget: "list"
+                fields:
+                  - {label: Detail Item, name: detailItem, widget: markdown}
+          - label: "Comparison Table"
+            name: "comparisonTable"
+            widget: "list"
+            fields:
+              - {label: Features, name: features, widget: string}
+              - {label: Standard, name: playground, widget: markdown}
+              - {label: Pro, name: starter, widget: markdown, required: false}
+              - {label: Enterprise, name: enterprise, widget: markdown, required: false}
+          - label: "FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: Question, name: question, widget: string}
+                  - {label: Answer, name: answer, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/pricingCommanderTeams.md"
+        label: "Pricing Commander for Teams Page (deprecated soon)"
+        name: "pricingCommanderTeams-page"
+        fields:
+          - label: "Pricing Table"
+            name: "pricingTable"
+            widget: "list"
+            fields:
+              - {label: Price Level, name: level, widget: string}
+              - {label: Price Value, name: value, widget: string}
+              - {label: Price Unit, name: unit, widget: text, required: false}
+              - {label: Price Note, name: note, widget: markdown, required: false}
+              - {label: Price Description, name: description, widget: markdown, required: false}
+              - {label: Price Button Text, name: button, widget: string}
+              - label: "Detail List"
+                name: "detailList"
+                widget: "list"
+                fields:
+                  - {label: Detail Item, name: detailItem, widget: markdown}
+          - label: "Comparison Table"
+            name: "comparisonTable"
+            widget: "list"
+            fields:
+              - {label: Features, name: features, widget: string}
+              - {label: Standard, name: playground, widget: markdown}
+              - {label: Pro, name: starter, widget: markdown, required: false}
+              - {label: Enterprise, name: enterprise, widget: markdown, required: false}
+          - label: "FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: Question, name: question, widget: string}
+                  - {label: Answer, name: answer, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
               - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
               - {label: Noindex, name: noindex, widget: boolean, required: false}
 
@@ -75,43 +842,1550 @@ collections: # A list of collections the CMS should be able to edit
         label: "Home Page"
         name: "home-page"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Featured Image, name: featuredImage, widget: image}
-          - {label: Subtitle, name: subtitle, widget: markdown}
-          - {label: Body, name: body, widget: markdown}
+          - label: "Hero Banner A"
+            name: "heroBannerA"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: true}
+              - {label: Subtitle, name: subtitle, widget: markdown}
+              - {label: More, name: note, widget: string}
+          - label: "Features"
+            name: "features"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: true}
+              - label: "List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - {label: Image, name: img, widget: image, required: true}
+                  - {label: Description, name: desc, widget: markdown, required: true}
+                  - {label: Button Text, name: btn, widget: string}
+                  - {label: Button Link, name: btnLink, widget: string}
+              - label: "CTA Box"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - {label: Title, name: title, widget: string, required: true}
+                  - {label: Content, name: content, widget: markdown, required: true}
+                  - {label: Button Text, name: btn, widget: string}
+                  - {label: Button Link, name: btnLink, widget: string}
+          - label: "Kubernetes"
+            name: "kubernetes"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: markdown, required: true}
+              - {label: Content, name: content, widget: markdown, required: true}
+              - label: "Image list"
+                name: "list"
+                widget: "list"
+                fields:
+                  - {label: Image Alt, name: alt, widget: string}
+                  - {label: Image, name: img, widget: image}
+          - label: "Experience"
+            name: "experience"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: true}
+              - {label: Sub Title, name: subtitle, widget: text}
+              - label: "List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - { label: Icon, name: icon, widget: image, required: true }
+                  - { label: Description, name: desc, widget: markdown, required: true }
+                  - { label: Button Text, name: btn, widget: string }
+                  - { label: Button Link, name: btnLink, widget: string }
+          - label: "Integrations"
+            name: "integrations"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: true}
+              - {label: Sub Title, name: subtitle, widget: text}
+              - {label: More, name: note, widget: markdown}
+              - label: "List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - {label: Name, name: name, widget: string, required: true}
+                  - {label: Description, name: desc, widget: markdown}
+                  - {label: Logo, name: logo, widget: image}
+                  - {label: Link, name: link, widget: string}
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: "List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - {label: Solution, name: solution, widget: markdown, required: true}
+                  - {label: Tab, name: tab, widget: string, required: true}
+                  - label: "Profile"
+                    name: "profile"
+                    widget: "object"
+                    fields:
+                      - {label: Name, name: name, widget: string, required: true}
+                      - {label: Position, name: position, widget: string}
+                      - {label: Message, name: message, widget: markdown, required: true}
+                      - {label: Image, name: image, widget: image, required: true}
+          - label: "Do not remove (for signup page)"
+            name: "signupData"
+            widget: "list"
+            fields:
+              - { label: Title, name: title, widget: string, required: true }
+              - { label: Description, name: desc, widget: markdown, required: true }
+              - { label: Icon, name: icon, widget: image, required: true }
           - label: "Meta"
             required: false
             name: "meta"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
               - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
               - {label: Noindex, name: noindex, widget: boolean, required: false}
 
+      - file: "content/pages/productFirst.md"
+        label: "Product - Nimbella Platform"
+        name: "productFirst-page"
+        fields:
+          - label: "Serverless Platform"
+            name: "serverlessPlatform"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: pageBanner
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: true, default: "Nimbella Platform"}
+                  - {label: Subtitle, name: subtitle, widget: markdown}
+                  - {label: Background Image, name: backgroundImage, widget: image}
+              - label: "Highlight"
+                name: "highlight"
+                widget: "object"
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Subtitle, name: subtitle, widget: markdown}
+                  - label: "List"
+                    name: "list"
+                    widget: "list"
+                    fields:
+                      - {label: Title, name: title, widget: string, required: true}
+                      - {label: Description, name: desc, widget: markdown, required: true}
+                      - {label: Icon, name: icon, widget: image, required: true}
+              - label: Nimbella Architecture
+                name: architecture
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content1, name: content1, widget: markdown, required: false}
+                  - {label: subtitle, name: subtitle, widget: string, required: false}
+                  - {label: Content2, name: content2, widget: markdown, required: false}
+                  - {label: Featured Image, name: featuredImage, widget: image}
+              - label: Three Pillars
+                name: threePillars
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: true, default: "Nimbella Platform"}
+                  - {label: Subtitle, name: subtitle, widget: markdown}
+                  - label: "Pillar List"
+                    name: "pillarList"
+                    widget: "list"
+                    fields:
+                      - {label: Title, name: title, widget: string, required: true, default: "Workbench"}
+                      - {label: Subtitle, name: subtitle, widget: markdown}
+                      - {label: Featured Image, name: featuredImage, widget: image}
+              - label: Playground Banner
+                name: playgroundBanner
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: markdown}
+                  - {label: Button Name, name: btn, widget: string}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/productSecond.md"
+        label: "Product - Commander"
+        name: "productSecond-page"
+        fields:
+          - label: "Commander Page"
+            name: "nimbellaCommander"
+            widget: "object"
+            fields:
+              - label: Page Banner (current)
+                name: pageBanner
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: true, default: "Nimbella Commander"}
+                  - {label: Subtitle, name: subtitle, widget: markdown}
+                  - {label: Background Image, name: backgroundImage, widget: image}
+              - label: Page Banner (new)
+                name: pageBanner1
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: true, default: "Nimbella Commander"}
+                  - {label: Subtitle, name: subtitle, widget: markdown}
+                  - {label: Button Text, name: btnTxt, widget: string, required: true}
+                  - {label: Featured Image, name: featuredImage, widget: image, required: true}
+                  - {label: Featured Background Image, name: featuredBgImage, widget: image, required: true}
+                  - {label: Background Image, name: backgroundImage, widget: image, required: true}
+              - label: Three Steps
+                name: threeSteps
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: markdown}
+                  - {label: Sub Title, name: subtitle, widget: markdown}
+                  - {label: Description, name: desc, widget: markdown}
+                  - {label: Bottom Text, name: btmTxt, widget: string}
+                  - label: Steps
+                    name: steps
+                    widget: list
+                    fields:
+                      - {label: Description, name: desc, widget: markdown}
+                      - {label: Image, name: img, widget: image}
+              - label: Signup Banner
+                name: signupBanner
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: markdown}
+                  - {label: Button Name, name: btn, widget: string}
+              - label: Challenge
+                name: challenge
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: markdown, required: false}
+                  - label: List
+                    name: list
+                    widget: list
+                    fields:
+                      - {label: Title, name: title, widget: string}
+                      - {label: Description, name: desc, widget: markdown, required: false}
+                      - {label: Image, name: img, widget: image}
+              - label: Why
+                name: why
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: markdown}
+                  - label: List
+                    name: list
+                    widget: list
+                    fields:
+                      - {label: Title, name: title, widget: string}
+                      - {label: Description, name: desc, widget: markdown}
+                      - {label: Icon, name: icon, widget: image}
+              - label: Command Sets
+                name: commandSets
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: text, required: false}
+                  - {label: Bottom Text, name: btmTxt, widget: markdown}
+                  - label: Catagory List
+                    name: cataList
+                    widget: list
+                    fields:
+                      - {label: Catagory, name: cata, widget: string}
+                      - label: Command List
+                        name: commandList
+                        widget: list
+                        fields:
+                          - {label: Name, name: name, widget: string}
+                          - {label: Icon, name: icon, widget: image}
+                          - {label: Command, name: command, widget: string}
+                          - {label: Readme Link, name: readme, widget: string}
+              - label: Table Comparison
+                name: tableComparison
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Sub Title, name: subtitle, widget: text}
+                  - label: Slack
+                    name: slack
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: Commander
+                    name: commander
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: List
+                    name: list
+                    widget: list
+                    fields:
+                      - {label: Feature, name: feature, widget: string}
+                      - {label: Slack, name: slack, widget: markdown}
+                      - {label: Commander, name: commander, widget: markdown}
+              - label: Schedule Demo
+                name: scheduleDemo
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Button Name, name: btn, widget: string}
+                  - {label: Form Title, name: formTitle, widget: string}
+                  - {label: Form Description, name: formDesc, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/productSlack.md"
+        label: "Product - Commander Slack"
+        name: "productSlack-page"
+        fields:
+          - label: "Slack Page"
+            name: "commanderSlack"
+            widget: "object"
+            fields:
+              - label: Page Banner (current)
+                name: pageBanner
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: true, default: "Nimbella Commander"}
+                  - {label: Subtitle, name: subtitle, widget: markdown}
+                  - {label: Background Image, name: backgroundImage, widget: image}
+              - label: Table Comparison
+                name: tableComparison
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Sub Title, name: subtitle, widget: text}
+                  - label: Slack
+                    name: slack
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: Commander
+                    name: commander
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: List
+                    name: list
+                    widget: list
+                    fields:
+                      - {label: Feature, name: feature, widget: string}
+                      - {label: Slack, name: slack, widget: markdown}
+                      - {label: Commander, name: commander, widget: markdown}
+              - label: Content
+                name: content
+                widget: object
+                fields:
+                  - {label: Title (not required), name: title, widget: string, required: false}
+                  - {label: Subtitle (not required), name: subtitle, widget: false}
+                  - {label: Content Body, name: body, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/productMattermost.md"
+        label: "Product - Commander Mattermost"
+        name: "productMattermost-page"
+        fields:
+          - label: "Commander Mattermost"
+            name: "commanderMattermost"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: pageBanner
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: true, default: "Nimbella Commander"}
+                  - {label: Subtitle, name: subtitle, widget: markdown}
+                  - {label: Background Image, name: backgroundImage, widget: image}
+              - label: Table Comparison
+                name: tableComparison
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Sub Title, name: subtitle, widget: text}
+                  - label: Slack
+                    name: slack
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: Commander
+                    name: commander
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: List
+                    name: list
+                    widget: list
+                    fields:
+                      - {label: Feature, name: feature, widget: string}
+                      - {label: Slack, name: slack, widget: markdown}
+                      - {label: Commander, name: commander, widget: markdown}
+              - label: Content
+                name: content
+                widget: object
+                fields:
+                  - {label: Title (not required), name: title, widget: string, required: false}
+                  - {label: Subtitle (not required), name: subtitle, widget: false}
+                  - {label: Content Body, name: body, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/productTeams.md"
+        label: "Product - Commander Teams"
+        name: "productTeams-page"
+        fields:
+          - label: "Commander Teams"
+            name: "commanderTeams"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: pageBanner
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: true, default: "Nimbella Commander"}
+                  - {label: Subtitle, name: subtitle, widget: markdown}
+                  - {label: Background Image, name: backgroundImage, widget: image}
+              - label: Table Comparison
+                name: tableComparison
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Sub Title, name: subtitle, widget: text}
+                  - label: Slack
+                    name: slack
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: Commander
+                    name: commander
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: List
+                    name: list
+                    widget: list
+                    fields:
+                      - {label: Feature, name: feature, widget: string}
+                      - {label: Slack, name: slack, widget: markdown}
+                      - {label: Commander, name: commander, widget: markdown}
+              - label: Content
+                name: content
+                widget: object
+                fields:
+                  - {label: Title (not required), name: title, widget: string, required: false}
+                  - {label: Subtitle (not required), name: subtitle, widget: false}
+                  - {label: Content Body, name: body, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/productCli.md"
+        label: "Product - Commander CLI"
+        name: "productCli-page"
+        fields:
+          - label: "Commander CLI"
+            name: "commanderCli"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: pageBanner
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: true}
+                  - {label: Subtitle, name: subtitle, widget: markdown}
+                  - {label: Background Image, name: backgroundImage, widget: image}
+              - label: Table Comparison
+                name: tableComparison
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Sub Title, name: subtitle, widget: text}
+                  - label: Slack
+                    name: slack
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: Commander
+                    name: commander
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: List
+                    name: list
+                    widget: list
+                    fields:
+                      - {label: Feature, name: feature, widget: string}
+                      - {label: Slack, name: slack, widget: markdown}
+                      - {label: Commander, name: commander, widget: markdown}
+              - label: Content
+                name: content
+                widget: object
+                fields:
+                  - {label: Title (not required), name: title, widget: string, required: false}
+                  - {label: Subtitle (not required), name: subtitle, widget: false}
+                  - {label: Content Body, name: body, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/productPostman.md"
+        label: "Product - Postman"
+        name: "productPostman-page"
+        fields:
+          - label: "Product Postman"
+            name: "productPostman"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: pageBanner
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string, required: true}
+                  - {label: Subtitle, name: subtitle, widget: markdown}
+                  - {label: Background Image, name: backgroundImage, widget: image}
+              - label: Table Comparison
+                name: tableComparison
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Sub Title, name: subtitle, widget: text}
+                  - label: Slack
+                    name: slack
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: Commander
+                    name: commander
+                    widget: object
+                    fields:
+                      - {label: Logo, name: logo, widget: image}
+                      - {label: Table Head, name: thead, widget: string}
+                  - label: List
+                    name: list
+                    widget: list
+                    fields:
+                      - {label: Feature, name: feature, widget: string}
+                      - {label: Slack, name: slack, widget: markdown}
+                      - {label: Commander, name: commander, widget: markdown}
+              - label: Content
+                name: content
+                widget: object
+                fields:
+                  - {label: Title (not required), name: title, widget: string, required: false}
+                  - {label: Subtitle (not required), name: subtitle, widget: false}
+                  - {label: Content Body, name: body, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/productNetlify.md"
+        label: "Product - Netlify"
+        name: "productNetlify-page"
+        fields:
+          - label: "Product Netlify"
+            name: "productNetlify"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: pageBanner
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: string, required: true }
+                  - { label: Subtitle, name: subtitle, widget: markdown }
+                  - { label: Background Image, name: backgroundImage, widget: image }
+              - label: First Section
+                name: firstSection
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: string, required: true }
+                  - { label: Top Content, name: top, widget: markdown }
+                  - label: Feature List
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string, required: true }
+                      - { label: Icon, name: icon, widget: image, required: true }
+                  - { label: Bottom Content, name: bottom, widget: markdown }
+              - label: Second Section
+                name: secondSection
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: string, required: true }
+                  - { label: Content, name: content, widget: markdown, required: true }
+              - label: Third Section
+                name: thirdSection
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: string, required: true }
+                  - label: Reason List
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string, required: true }
+                      - { label: Description, name: desc, widget: text }
+                      - { label: Icon, name: icon, widget: image, required: true }
+              - label: Forth Section
+                name: forthSection
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: string, required: true }
+                  - { label: Content, name: content, widget: markdown, required: true }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/frameworkReact.md"
+        label: "Framework React"
+        name: "frameworkReact-page"
+        fields:
+          - label: "Framework React Page"
+            name: "frameworkReact"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: banner
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: string }
+                  - { label: Featured Image, name: featuredImage, widget: image }
+                  - { label: Background Image, name: backgroundImage, widget: image }
+              - label: Deploy Apps
+                name: deploy
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string, required: true }
+                      - { label: Icon, name: img, widget: image }
+                      - { label: Button Link, name: link, widget: string }
+                      - { label: Button Text, name: btn, widget: string }
+              - label: Development Change
+                name: change
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: List Items
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: markdown, required: true }
+                      - { label: Image, name: img, widget: image }
+                  - { label: Buttom Text, name: bottomTxt, widget: text }
+                  - { label: More Content, name: content, widget: markdown }
+              - label: Data about Nimbella
+                name: data
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Deploy with Nimbella
+                name: deployNow
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Other Frameworks
+                name: other
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: text }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Framework Name, name: name, widget: string, required: true }
+                      - { label: Framework Icon, name: img, widget: image, required: true }
+                      - { label: Framework Link, name: link, widget: string }
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: FAQ List
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: Question, name: question, widget: string, required: true }
+                      - { label: Answer, name: answer, widget: markdown, required: true }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/frameworkPython.md"
+        label: "Framework Python"
+        name: "frameworkPython-page"
+        fields:
+          - label: "Framework Python Page"
+            name: "frameworkReact"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: banner
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: string }
+                  - { label: Featured Image, name: featuredImage, widget: image }
+                  - { label: Background Image, name: backgroundImage, widget: image }
+              - label: Deploy Apps
+                name: deploy
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string, required: true }
+                      - { label: Icon, name: img, widget: image }
+                      - { label: Button Link, name: link, widget: string }
+                      - { label: Button Text, name: btn, widget: string }
+              - label: Development Change
+                name: change
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: List Items
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: markdown, required: true }
+                      - { label: Image, name: img, widget: image }
+                  - { label: Buttom Text, name: bottomTxt, widget: text }
+                  - { label: More Content, name: content, widget: markdown }
+              - label: Data about Nimbella
+                name: data
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Deploy with Nimbella
+                name: deployNow
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Other Frameworks
+                name: other
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: text }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Framework Name, name: name, widget: string, required: true }
+                      - { label: Framework Icon, name: img, widget: image, required: true }
+                      - { label: Framework Link, name: link, widget: string }
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: FAQ List
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: Question, name: question, widget: string, required: true }
+                      - { label: Answer, name: answer, widget: markdown, required: true }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/frameworkNode.md"
+        label: "Framework Node"
+        name: "frameworkNode-page"
+        fields:
+          - label: "Framework Node Page"
+            name: "frameworkReact"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: banner
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: string }
+                  - { label: Featured Image, name: featuredImage, widget: image }
+                  - { label: Background Image, name: backgroundImage, widget: image }
+              - label: Deploy Apps
+                name: deploy
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string, required: true }
+                      - { label: Icon, name: img, widget: image }
+                      - { label: Button Link, name: link, widget: string }
+                      - { label: Button Text, name: btn, widget: string }
+              - label: Development Change
+                name: change
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: List Items
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: markdown, required: true }
+                      - { label: Image, name: img, widget: image }
+                  - { label: Buttom Text, name: bottomTxt, widget: text }
+                  - { label: More Content, name: content, widget: markdown }
+              - label: Data about Nimbella
+                name: data
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Deploy with Nimbella
+                name: deployNow
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Other Frameworks
+                name: other
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: text }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Framework Name, name: name, widget: string, required: true }
+                      - { label: Framework Icon, name: img, widget: image, required: true }
+                      - { label: Framework Link, name: link, widget: string }
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: FAQ List
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: Question, name: question, widget: string, required: true }
+                      - { label: Answer, name: answer, widget: markdown, required: true }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/frameworkGo.md"
+        label: "Framework Go"
+        name: "frameworkGo-page"
+        fields:
+          - label: "Framework Go Page"
+            name: "frameworkReact"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: banner
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: string }
+                  - { label: Featured Image, name: featuredImage, widget: image }
+                  - { label: Background Image, name: backgroundImage, widget: image }
+              - label: Deploy Apps
+                name: deploy
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string, required: true }
+                      - { label: Icon, name: img, widget: image }
+                      - { label: Button Link, name: link, widget: string }
+                      - { label: Button Text, name: btn, widget: string }
+              - label: Development Change
+                name: change
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: List Items
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: markdown, required: true }
+                      - { label: Image, name: img, widget: image }
+                  - { label: Buttom Text, name: bottomTxt, widget: text }
+                  - { label: More Content, name: content, widget: markdown }
+              - label: Data about Nimbella
+                name: data
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Deploy with Nimbella
+                name: deployNow
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Other Frameworks
+                name: other
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: text }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Framework Name, name: name, widget: string, required: true }
+                      - { label: Framework Icon, name: img, widget: image, required: true }
+                      - { label: Framework Link, name: link, widget: string }
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: FAQ List
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: Question, name: question, widget: string, required: true }
+                      - { label: Answer, name: answer, widget: markdown, required: true }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/frameworkScala.md"
+        label: "Framework Scala"
+        name: "frameworkScala-page"
+        fields:
+          - label: "Framework Scala Page"
+            name: "frameworkReact"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: banner
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: string }
+                  - { label: Featured Image, name: featuredImage, widget: image }
+                  - { label: Background Image, name: backgroundImage, widget: image }
+              - label: Deploy Apps
+                name: deploy
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string, required: true }
+                      - { label: Icon, name: img, widget: image }
+                      - { label: Button Link, name: link, widget: string }
+                      - { label: Button Text, name: btn, widget: string }
+              - label: Development Change
+                name: change
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: List Items
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: markdown, required: true }
+                      - { label: Image, name: img, widget: image }
+                  - { label: Buttom Text, name: bottomTxt, widget: text }
+                  - { label: More Content, name: content, widget: markdown }
+              - label: Data about Nimbella
+                name: data
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Deploy with Nimbella
+                name: deployNow
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Other Frameworks
+                name: other
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: text }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Framework Name, name: name, widget: string, required: true }
+                      - { label: Framework Icon, name: img, widget: image, required: true }
+                      - { label: Framework Link, name: link, widget: string }
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: FAQ List
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: Question, name: question, widget: string, required: true }
+                      - { label: Answer, name: answer, widget: markdown, required: true }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/frameworkJava.md"
+        label: "Framework Java"
+        name: "frameworkJava-page"
+        fields:
+          - label: "Framework Java Page"
+            name: "frameworkReact"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: banner
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: string }
+                  - { label: Featured Image, name: featuredImage, widget: image }
+                  - { label: Background Image, name: backgroundImage, widget: image }
+              - label: Deploy Apps
+                name: deploy
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string, required: true }
+                      - { label: Icon, name: img, widget: image }
+                      - { label: Button Link, name: link, widget: string }
+                      - { label: Button Text, name: btn, widget: string }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Development Change
+                name: change
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: List Items
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: markdown, required: true }
+                      - { label: Image, name: img, widget: image }
+                  - { label: Buttom Text, name: bottomTxt, widget: text }
+                  - { label: More Content, name: content, widget: markdown }
+              - label: Data about Nimbella
+                name: data
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: CTA Banner
+                name: cta
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: markdown }
+                  - {label: Sub title, name: desc, widget: text }
+                  - {label: Content, name: content, widget: markdown }
+                  - {label: Button Text, name: btnTxt, widget: string }
+                  - {label: Button Link, name: btnLink, widget: string }
+              - label: Deploy with Nimbella
+                name: deployNow
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Other Frameworks
+                name: other
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: text }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Framework Name, name: name, widget: string, required: true }
+                      - { label: Framework Icon, name: img, widget: image, required: true }
+                      - { label: Framework Link, name: link, widget: string }
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: FAQ List
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: Question, name: question, widget: string, required: true }
+                      - { label: Answer, name: answer, widget: markdown, required: true }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/frameworkRuby.md"
+        label: "Framework Ruby"
+        name: "frameworkRuby-page"
+        fields:
+          - label: "Framework Ruby Page"
+            name: "frameworkReact"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: banner
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: string }
+                  - { label: Featured Image, name: featuredImage, widget: image }
+                  - { label: Background Image, name: backgroundImage, widget: image }
+              - label: Deploy Apps
+                name: deploy
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string, required: true }
+                      - { label: Icon, name: img, widget: image }
+                      - { label: Button Link, name: link, widget: string }
+                      - { label: Button Text, name: btn, widget: string }
+              - label: Development Change
+                name: change
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: List Items
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: markdown, required: true }
+                      - { label: Image, name: img, widget: image }
+                  - { label: Buttom Text, name: bottomTxt, widget: text }
+                  - { label: More Content, name: content, widget: markdown }
+              - label: Data about Nimbella
+                name: data
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Deploy with Nimbella
+                name: deployNow
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Other Frameworks
+                name: other
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - { label: Sub Title, name: subtitle, widget: text }
+                  - label: Tiles
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: Framework Name, name: name, widget: string, required: true }
+                      - { label: Framework Icon, name: img, widget: image, required: true }
+                      - { label: Framework Link, name: link, widget: string }
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown, required: true }
+                  - label: FAQ List
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: Question, name: question, widget: string, required: true }
+                      - { label: Answer, name: answer, widget: markdown, required: true }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [ "^.{0,155}$", "Must not exceed 155 characters" ] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/election2020.md"
+        label: "Election 2020"
+        name: "election2020-page"
+        fields:
+          - label: "Election 2020 Page (abendon)"
+            name: "election2020"
+            widget: "object"
+            fields:
+              - label: Page Banner
+                name: pageBanner
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: string, required: true }
+                  - { label: Subtitle, name: subtitle, widget: markdown }
+                  - { label: Featured Image, name: featuredImage, widget: image }
+                  - { label: Background Image, name: backgroundImage, widget: image }
+              - label: Content
+                name: content
+                widget: object
+                fields:
+                  - { label: Title (not required), name: title, widget: string, required: false }
+                  - { label: Subtitle (not required), name: subtitle, widget: false }
+                  - { label: Content Body, name: body, widget: markdown }
+              - label: Signup Banner
+                name: signupBanner
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown }
+                  - { label: Button Name, name: btn, widget: string }
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - { label: Description, name: description, widget: text, required: false, pattern: [".{0,155}", "Must not exceed 155 characters"] }
+              - { label: Canonical Link, name: canonicalLink, widget: string, required: false }
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+      - file: "content/pages/investors.md"
+        label: "Investors Page"
+        name: "investors-page"
+        fields:
+          - label: "Investor List"
+            name: "investorList"
+            widget: "list"
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,100}$", "Must not exceed 100 characters"]}
+              - {label: Logo, name: logo, widget: image}
+              - {label: URL, name: url, widget: string}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+  - name: webinar
+    label: "Webinar Posts"
+    editor:
+      preview: true
+    folder: content/webinars
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: External Link (optional), name: link, widget: string, required: false}
+      - {label: External Image (optional), name: externalImage, widget: string, required: false}
+      - {label: Title, name: title, widget: string}
+      - {label: Excerpt, name: excerpt, widget: text}
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ["Published", "Draft"]
+        default: 'Draft'
+      - {label: Date/Time (GMT-0), name: date, widget: datetime, format: "LLL"}
+      - {label: Duration (minutes), name: duration, widget: number, required: false, default: '60'}
+      - {label: Location (optional), name: location, widget: string, required: false}
+      - {label: Widget ID (optional), name: widgetID, widget: string, required: false}
+      - {label: Google Form Link, name: googleForm, widget: string, required: false}
+      - label: 'Speaker'
+        name: 'speaker'
+        widget: 'list'
+        required: false
+        fields:
+          - label: "Preset Speaker"
+            name: "preset"
+            widget: "list"
+            collapsed: true
+            max: 1
+            required: false
+            fields:
+              - label: "Speaker"
+                name: "speaker"
+                widget: "relation"
+                collection: "webinarSpeakers"
+                searchFields: [ "title" ]
+                valueField: "title"
+                optionsLength: "1"
+          - label: "Customized Speaker"
+            name: "customized"
+            widget: "object"
+            collapsed: true
+            required: false
+            fields:
+              - {label: Name, name: speakerName, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Introduction, name: intro, widget: markdown}
+              - {label: Profile Image, name: image, widget: image}
+              - label: 'Social Media'
+                name: 'socialMedia'
+                widget: 'object'
+                fields:
+                  - {label: LinkedIn, name: linkedin, widget: string}
+                  - {label: Twitter, name: twitter, widget: string, required: false}
+                  - {label: GitHub, name: github, widget: string, required: false}
+      - {label: Post Featured Image, name: postFeaturedImage, widget: image, required: false}
+      - {label: Content, name: body, widget: markdown, required: false}
+      - label: "CTA Banner"
+        name: "ctaBanner"
+        widget: "list"
+        required: false
+        fields:
+          - label: "CTA Banner"
+            name: "banner"
+            widget: "relation"
+            collection: "ctaBanners"
+            searchFields: ["title"]
+            valueField: "title"
+            optionsLength: "1"
+      - label: "Meta"
+        required: false
+        name: "meta"
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+          - {label: Share Image (optional), name: shareImageUrl, widget: image, required: false}
+          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+          - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+  - name: events
+    label: "Events Posts"
+    editor:
+      preview: true
+    folder: content/events
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: External Link (optional), name: link, widget: string, required: false }
+      - { label: External Image (optional), name: externalImage, widget: string, required: false }
+      - {label: Title, name: title, widget: string}
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ["Published", "Draft"]
+        default: 'Draft'
+      - {label: Type, name: type, widget: hidden, default: "Events"}
+      - {label: Date/Time (GMT-0), name: date, widget: datetime, format: "LLL"}
+      - {label: Duration (minutes), name: duration, widget: number, required: false}
+      - {label: Location, name: location, widget: string, required: false}
+      - {label: Post Featured Image, name: postFeaturedImage, widget: image, required: false}
+      - {label: Excerpt, name: excerpt, widget: text}
+      - {label: Content, name: body, widget: markdown}
+      - label: "Meta"
+        required: false
+        name: "meta"
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+          - {label: Noindex, name: noindex, widget: boolean, required: false}
+          - {label: Share Image, name: shareImageUrl, widget: image, required: false}
+
+  - name: news
+    label: "News Posts"
+    editor:
+      preview: true
+    folder: content/news
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: External Link (optional), name: link, widget: string, required: false}
+      - {label: External Image (optional), name: externalImage, widget: string, required: false}
+      - {label: Title, name: title, widget: string}
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ["Published", "Draft"]
+        default: 'Draft'
+      - {label: Type, name: type, widget: hidden, default: "News"}
+      - {label: Original Post Date (GMT-0), name: date, widget: date, format: "LLL"}
+      - {label: News Post Date (GMT-0) (optional), name: postDate, widget: date, format: "LLL", required: false}
+      - {label: Post Featured Image, name: postFeaturedImage, widget: image, required: false}
+      - {label: Excerpt, name: excerpt, widget: text}
+      - {label: Content, name: body, widget: markdown, required: false}
+      - label: "Meta"
+        required: false
+        name: "meta"
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+          - {label: Noindex, name: noindex, widget: boolean, required: false}
+          - {label: Share Image, name: shareImageUrl, widget: image, required: false}
+
+  #  - name: newseventsCategories
+  #    label: "News and Events Category"
+  #    editor:
+  #      preview: false
+  #    folder: content/newseventsCategories
+  #    slug: "{{slug}}"
+  #    create: true # Allow users to create new documents in this collection
+  #    fields: # The fields each document in this collection have
+  #      - {label: Title, name: title, widget: string}
+  #      - label: "Meta"
+  #        required: false
+  #        name: "meta"
+  #        widget: "object"
+  #        fields:
+  #          - {label: Title, name: title, widget: string, required: false}
+  #          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+  #          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+  #          - {label: Noindex, name: noindex, widget: boolean, required: false}
 
   - name: posts
-    label: Post
+    label: Blog Posts
     editor:
       preview: true
     folder: content/posts
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
+      - {label: External Link (optional), name: link, widget: string, required: false}
+      - {label: External Image (optional), name: externalImage, widget: string, required: false}
       - {label: Title, name: title, widget: string}
       - label: 'Status'
         name: 'status'
         widget: 'select'
-        options: ["Published", "Featured", "Draft"]
+        options: ["Published", "Draft"]
         default: 'Published'
-      - {label: Date / Order, name: date, widget: date}
+      - {label: Date / Order (GMT-0), name: date, widget: date, format: "LLL"}
       - {label: Post Featured Image, name: postFeaturedImage, widget: image, required: false}
       - {label: Excerpt, name: excerpt, widget: text}
-      - {label: Content, name: body, widget: markdown}
+      - {label: Content, name: body, widget: markdown, required: false}
+      - label: "CTA Banner"
+        name: "ctaBanner"
+        widget: "list"
+        required: false
+        fields:
+          - label: "CTA Banner"
+            name: "banner"
+            widget: "relation"
+            collection: "ctaBanners"
+            searchFields: ["title"]
+            valueField: "title"
+            optionsLength: "1"
       - label: "Categories"
         name: "categories"
         widget: "list"
-        required: false
+        required: true
         fields:
           - label: "Category"
             name: "category"
@@ -124,14 +2398,47 @@ collections: # A list of collections the CMS should be able to edit
         name: "meta"
         widget: "object"
         fields:
-          - {label: Title, name: title, widget: string, required: false}
-          - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
           - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
           - {label: Noindex, name: noindex, widget: boolean, required: false}
+          - {label: Share Image, name: shareImageUrl, widget: image, required: false}
 
+  - name: ctaBanners
+    label: CTA Banners
+    editor:
+      preview: false
+    folder: content/ctaBanners
+    slug: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: img, widget: image}
+      - {label: Link, name: link, widget: string}
+
+  - name: webinarSpeakers
+    label: Webinar Speakers
+    editor:
+      preview: false
+    folder: content/webinarSpeakers
+    slug: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: Title, name: title, widget: string} # Title field is mandatory for folder collections
+      - { label: Name, name: speakerName, widget: string }
+      - { label: Position, name: position, widget: string }
+      - { label: Introduction, name: intro, widget: markdown, required: false }
+      - { label: Profile Image, name: image, widget: image }
+      - label: 'Social Media'
+        name: 'socialMedia'
+        widget: 'object'
+        fields:
+          - { label: LinkedIn, name: linkedin, widget: string, required: false }
+          - { label: Twitter, name: twitter, widget: string, required: false }
+          - { label: GitHub, name: github, widget: string, required: false }
 
   - name: postCategories
-    label: Post Category
+    label: Blog Category
     editor:
       preview: false
     folder: content/postCategories
@@ -144,11 +2451,208 @@ collections: # A list of collections the CMS should be able to edit
         name: "meta"
         widget: "object"
         fields:
-          - {label: Title, name: title, widget: string, required: false}
-          - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
           - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
           - {label: Noindex, name: noindex, widget: boolean, required: false}
 
+  - name: resources
+    label: "Resources Platform"
+    editor:
+      preview: true
+    folder: content/resources
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: Title, name: title, widget: string}
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ["Published", "Draft"]
+        default: 'Draft'
+      - {label: Date, name: date, widget: date}
+      - {label: Index, name: index, widget: number}
+      - {label: Level, name: level, widget: select, options: ["1", "2"], default: "1"}
+      - {label: Content, name: body, widget: markdown, required: false}
+      - label: "Second Level List"
+        name: "second"
+        widget: "list"
+        required: false
+        fields:
+          - {label: Title, name: title, widget: string, required: false}
+          - {label: Index, name: index, widget: number}
+          - {label: Content, name: body, widget: markdown, required: false}
+      - label: "Meta"
+        required: false
+        name: "meta"
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+          - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+  - name: resourcesCommander
+    label: "Resources Commander for Slack"
+    editor:
+      preview: true
+    folder: content/resourcesCommander
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: Title, name: title, widget: string}
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ["Published", "Draft"]
+        default: 'Draft'
+      - {label: Index, name: index, widget: number}
+      - label: "First Level List"
+        name: "anchor-subject"
+        widget: "list"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Anchor Link, name: anchor, widget: string}
+          - {label: Content, name: body, widget: markdown, required: false}
+          - label: "Second Level List"
+            name: "anchor-item"
+            widget: "list"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Anchor Link, name: anchor, widget: string}
+              - {label: Content, name: body, widget: markdown, required: false}
+      - label: "Meta"
+        required: false
+        name: "meta"
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+          - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+  - name: resourcesCommanderMattermost
+    label: "Resources Commander for Mattermost"
+    editor:
+      preview: true
+    folder: content/resourcesCommanderMattermost
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: Title, name: title, widget: string}
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ["Published", "Draft"]
+        default: 'Draft'
+      - {label: Index, name: index, widget: number}
+      - label: "First Level List"
+        name: "anchor-subject"
+        widget: "list"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Anchor Link, name: anchor, widget: string}
+          - {label: Content, name: body, widget: markdown, required: false}
+          - label: "Second Level List"
+            name: "anchor-item"
+            widget: "list"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Anchor Link, name: anchor, widget: string}
+              - {label: Content, name: body, widget: markdown, required: false}
+      - label: "Meta"
+        required: false
+        name: "meta"
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+          - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+  - name: resourcesCommanderTeams
+    label: "Resources Commander for Teams"
+    editor:
+      preview: true
+    folder: content/resourcesCommanderTeams
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: Title, name: title, widget: string}
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ["Published", "Draft"]
+        default: 'Draft'
+      - {label: Index, name: index, widget: number}
+      - label: "First Level List"
+        name: "anchor-subject"
+        widget: "list"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Anchor Link, name: anchor, widget: string}
+          - {label: Content, name: body, widget: markdown, required: false}
+          - label: "Second Level List"
+            name: "anchor-item"
+            widget: "list"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Anchor Link, name: anchor, widget: string}
+              - {label: Content, name: body, widget: markdown, required: false}
+      - label: "Meta"
+        required: false
+        name: "meta"
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+          - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+  - name: jobs
+    label: "Job Posts"
+    editor:
+      preview: true
+    folder: content/jobs
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: Title, name: title, widget: string}
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ["Published", "Draft"]
+        default: 'Draft'
+      - {label: Location, name: location, widget: string}
+      - {label: Content, name: body, widget: markdown}
+      - label: "Meta"
+        required: false
+        name: "meta"
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+          - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+  - name: integrationCategories
+    label: Integrations Category
+    editor:
+      preview: false
+    folder: content/integrationCategories
+    slug: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: Title, name: title, widget: string}
+      - label: "Meta"
+        required: false
+        name: "meta"
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+          - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+          - {label: Noindex, name: noindex, widget: boolean, required: false}
 
   - name: "settings"
     label: "Settings"
@@ -162,7 +2666,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Site Title, name: siteTitle, widget: string}
           - {label: Site Url, name: siteUrl, widget: string, required: false}
+          - {label: Service Email, name: siteEmail, widget: string, required: false}
           - {label: Site Description, name: siteDescription, widget: text, required: false}
+          - {label: Site Keywords, name: siteKeywords, widget: text, required: false}
+          - {label: Nimbella Address, name: address, widget: string}
+          - {label: Nimbella City Zip, name: city, widget: string}
+          - {label: Nimbella Phone, name: phone, widget: string}
           - label: Social Media Card
             name: socialMediaCard
             widget: object
@@ -170,5 +2679,218 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Image, name: image, widget: image, required: false}
               - {label: Twitter Site Account, name: twitterSiteAccount, widget: string, required: false}
               - {label: Twitter Creator Account, name: twitterCreatorAccount, widget: string, required: false}
+              - {label: Facebook App ID, name: facebookAppId, widget: string, required: false}
           - {label: Header Meta / Scripts, name: headerScripts, widget: text, required: false}
           - {label: Enable Service Worker Pre-Cache, name: enableServiceWorker, widget: boolean, required: false}
+          - label: "Social Media"
+            name: "socialMedia"
+            widget: "object"
+            fields:
+              - {label: linkedin, name: linkedinUrl, widget: string, required: true}
+              - {label: twitter, name: twitterUrl, widget: string, required: true}
+              - {label: instagram, name: instagramUrl, widget: string, required: true}
+              - {label: facebook, name: facebookUrl, widget: string, required: true}
+              - {label: meetup, name: meetupUrl, widget: string, required: true}
+              - {label: github, name: githubUrl, widget: string, required: true}
+              - {label: slack, name: slackUrl, widget: string, required: true}
+              - {label: youtube, name: youtubeUrl, widget: string, required: true}
+      - file: "content/settings/story.md"
+        label: "Our Story"
+        name: "story"
+        editor:
+          preview: true
+        widget: "object"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Date, name: date, widget: date}
+          - {label: Content, name: content, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+              - {label: Share Image, name: shareImageUrl, widget: image, required: false}
+      - file: "content/settings/founders.md"
+        label: "Our Founders"
+        name: "founders"
+        fields:
+          - label: Founders List
+            name: founderList
+            widget: list
+            fields:
+              - {label: Avatar, name: avatar, widget: image}
+              - {label: Name, name: name, widget: string}
+              - {label: Title, name: title, widget: string}
+              - {label: Introduction, name: intro, widget: text, pattern: [".{0,300}", "Must not exceed 300 characters"]}
+              - {label: LinkedIn, name: linkedin, widget: string}
+              - {label: Twitter, name: twitter, widget: string}
+              - {label: Github, name: github, widget: string}
+
+      - file: "content/settings/employees.md"
+        label: "Our Employees"
+        name: "employees"
+        fields:
+          - label: Employee List
+            name: employeeList
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Avatar, name: avatar, widget: image}
+              - {label: Title, name: title, widget: string}
+              - {label: Introduction, name: intro, widget: text, pattern: [".{0,300}", "Must not exceed 300 characters"]}
+              - {label: Address1, name: address1, widget: string}
+              - {label: Address2, name: address2, widget: string}
+              - {label: Phone, name: phone, widget: string}
+              - {label: Email, name: email, widget: string}
+              - {label: LinkedIn, name: linkedin, widget: string}
+              - {label: Twitter, name: twitter, widget: string}
+              - {label: Github, name: github, widget: string}
+
+      - file: "content/settings/clients.md"
+        label: "Our Clients"
+        name: "clients"
+        fields:
+          - label: Clients List
+            name: clientList
+            widget: list
+            fields:
+              - {label: image, name: image, widget: image}
+              - {label: Name, name: name, widget: string}
+
+      - file: "content/settings/terms.md"
+        label: "Terms"
+        name: "terms"
+        fields:
+          - {label: Introduction, name: intro, widget: markdown, required: false}
+          - label: Term List
+            name: termList
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/settings/policy.md"
+        label: "Policy"
+        name: "policy"
+        fields:
+          - {label: Introduction, name: intro, widget: markdown, required: false}
+          - label: Policy 1 - 3
+            name: policyList1
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: markdown}
+          - label: What device and usage data we process
+            name: policyList2
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Paragrapg, name: paragraph, widget: text}
+              - label: 4.1
+                name: sublist1
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content, name: content, widget: markdown}
+              - label: 4.2
+                name: sublist2
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content1, name: content1, widget: markdown}
+                  - label: Table Content
+                    name: table
+                    widget: list
+                    fields:
+                      - {label: Type of Cookies, name: type, widget: string}
+                      - {label: Description, name: desc, widget: markdown}
+                      - {label: Managing Settings, name: settings, widget: markdown}
+                  - {label: Content2, name: content2, widget: markdown}
+              - label: 4.3
+                name: sublist3
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content, name: content, widget: markdown}
+              - label: 4.4
+                name: sublist4
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content, name: content, widget: markdown}
+              - label: 4.5
+                name: sublist5
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content, name: content, widget: markdown}
+              - label: 4.6
+                name: sublist6
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content, name: content, widget: markdown}
+          - label: Policy 5 - 13
+            name: policyList3
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/settings/acceptable.md"
+        label: "Acceptable Use"
+        name: "acceptable"
+        fields:
+          - {label: Introduction, name: intro, widget: markdown, required: false}
+          - label: Acceptable List
+            name: acceptableList
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: markdown}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/settings/trademark.md"
+        label: "Trademark Usage"
+        name: "trademark"
+        fields:
+          - {label: Content, name: content, widget: markdown, required: false}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false, pattern: [ "^.{0,60}$", "Must not exceed 60 characters" ]}
+              - {label: Description, name: description, widget: text, required: false, pattern: ["^.{0,155}$", "Must not exceed 155 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}

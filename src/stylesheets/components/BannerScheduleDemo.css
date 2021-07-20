@@ -1,0 +1,91 @@
+.BannerScheduleDemo {
+  background-color: #120f4f;
+  display: flex;
+  align-items: baseline;
+  padding: 6rem;
+  justify-content: center;
+}
+
+.BannerScheduleDemo .banner-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.BannerScheduleDemo .banner-wrap h3 {
+  color: white;
+  margin: 0 1rem 0;
+  display: flex;
+  flex: 1;
+}
+
+
+.BannerScheduleDemo--Form {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1003;
+  padding-top: 3rem;
+  overflow-y: auto;
+}
+
+.BannerScheduleDemo--Form svg.fa-times {
+  position: absolute;
+  z-index: 99;
+  right: 4rem;
+  top: 2.5rem;
+  font-size: 1.6em;
+  color: darkgrey;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity .3s ease-in-out;
+}
+
+.BannerScheduleDemo--Form svg.fa-times:hover {
+  opacity: 1;
+}
+
+.BannerScheduleDemo--Form h2 {
+  text-indent: 0 !important;
+  margin: 0 0 1rem !important;
+  color: #586163;
+}
+
+.BannerScheduleDemo--Form p {
+  margin-bottom: 3rem;
+  color: #586163;
+}
+
+.BannerScheduleDemo--Form .mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.BannerScheduleDemo--Form .form-wrap {
+  background-color: white;
+  width: 100%;
+  padding: 3rem 5rem;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.BannerScheduleDemo--Form .EnquiryForm {
+  margin: 0;
+}
+
+@media (max-width: 414px) {
+  .BannerScheduleDemo {
+    padding: 3rem 2rem;
+  }
+  .BannerScheduleDemo .banner-wrap {
+    flex-direction: column;
+  }
+  .BannerScheduleDemo .banner-wrap h3 {
+    margin-bottom: 2rem;
+  }
+}

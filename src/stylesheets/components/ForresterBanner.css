@@ -1,0 +1,169 @@
+.ForresterBanner {
+  width: 100%;
+  margin-top: 95px;
+  padding: 8rem 0 10rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.ForresterBanner h1 {
+  font-size: 2.8em;
+}
+
+.ForresterBanner h1 .Content p {
+  font-size: 1em;
+}
+
+.ForresterBanner p {
+  font-size: 1.1em;
+}
+
+.ForresterBanner .note {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #005968;
+  margin-top: 5rem;
+}
+
+.ForresterBanner ul li {
+  list-style: none;
+  position: relative;
+  padding-right: 5rem;
+  padding-left: 10px;
+  margin-bottom: 2rem;
+}
+
+.ForresterBanner ul li:before {
+  content: '';
+  background: transparent url(/images/icons/checkmark-icon.svg) 100% 100% no-repeat;
+  width: 12px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  left: -2.5rem;
+  top: 5px;
+}
+
+.ForresterBanner .Content a strong {
+  font-weight: 700;
+  color: #ffcf7f;
+  border-bottom: 1px solid #ffcf7f;
+  transition: all .3s ease-in-out;
+}
+
+.ForresterBanner .Content a:hover strong {
+  border-bottom: 1px solid #e8a14a;
+  color: #e8a14a;
+}
+
+.ForresterBanner--Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.ForresterBanner--Form .pattern {
+  position: absolute;
+  top: -80px;
+  right: -30px;
+  z-index: 0;
+  width: 258px;
+  height: 436px;
+  background: transparent url(/images/uploads/poc-bg.png) 100% 100% no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.ForresterBanner--Form form {
+  position: relative;
+  z-index: 1;
+  background-color: #48A8B9;
+  box-shadow: 0 4px 4px rgba(51, 51, 51, 0.04), 0 4px 16px rgba(51, 51, 51, 0.08);
+  border-radius: 10px;
+  padding: 4rem 3rem;
+  max-width: 380px;
+}
+
+.ForresterBanner--Form h2 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.ForresterBanner--Form label {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.ForresterBanner--Form input {
+  font-size: 0.8em;
+  padding: 1rem;
+  width: 100%;
+  display: block;
+  border: 1px solid #005968;
+  border-radius: 4px;
+}
+
+.ForresterBanner--Form .checkbox-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 0.75em;
+  color: white;
+}
+
+.ForresterBanner--Form .checkbox-wrap a {
+  color: white;
+  border-bottom: 0.5px solid white;
+}
+
+.ForresterBanner--Form .checkbox-wrap a:hover {
+  border-bottom: 0;
+}
+
+.ForresterBanner--Form .checkbox-wrap input[type=checkbox] {
+  padding: 0;
+  width: auto;
+  margin-right: 1rem;
+}
+
+.ForresterBanner--Form .btn {
+  display: block;
+  margin: 2rem auto 0;
+  font-size: 1.2em;
+}
+
+.ForresterBanner--Form .btn[disabled]:hover {
+  background-color: #FF8815;
+  cursor: default
+}
+
+.ForresterBanner--Form .btn[disabled] {
+  opacity: 0.65;
+  cursor: default;
+  background-color: #FF8815 !important;
+}
+
+@media (max-width: 1024px) {
+  .ForresterBanner {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  .ForresterBanner {
+    padding: 5rem 0;
+  }
+  .ForresterBanner--Form {
+    margin-top: 8rem;
+  }
+
+  .ForresterBanner p,
+  .ForresterBanner .note {
+    font-size: 1.4em;
+  }
+}
+
+

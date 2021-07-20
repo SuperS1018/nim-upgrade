@@ -1,0 +1,159 @@
+.Signup {
+}
+
+.Signup .AuthComponent {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.Signup .AuthComponent .section {
+  padding-top: 0;
+}
+
+.Signup--List {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  padding: 5rem 15px;
+}
+
+.Signup--List > div {
+  float: right;
+  width: 100%;
+}
+
+.Signup--List ul {
+  width: 60%;
+  float: right;
+  margin-right: 10%;
+}
+
+.Signup--Item {
+  display: flex;
+  flex: 1 0;
+  margin: 2rem 0;
+}
+
+.Signup--Item:first-of-type {
+  margin-top: 4rem;
+}
+
+.Signup--Item img {
+  /*display: flex;*/
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.Signup--Item .text-wrap {
+  flex: 1 0;
+}
+
+.Signup--Item .text-wrap h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.Signup .auth0-lock.auth0-lock.auth0-lock-opened-in-frame {
+  margin: 0 0 0 10%;
+}
+
+.Signup .auth0-lock-header div {
+  background: white !important;
+}
+
+.Signup .auth0-lock-header img.auth0-lock-header-logo {
+  display: none;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-name {
+  font-size: 1.6em;
+  font-weight: 600;
+  padding: 0;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-content-body-wrapper {
+  margin-top: 50px !important;
+}
+
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-form {
+  padding: 20px 0;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-terms {
+  padding: 10px 0 20px;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-terms {
+  background-color: white;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-submit {
+  background-color: #f5a623 !important;
+  color: #070f2e;
+  padding: 0;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-submit, .Signup .auth0-lock.auth0-lock .auth0-lock-submit g {
+  transition: all .2s ease-in-out;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-submit[disabled] {
+  color: white;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-submit[disabled] g {
+  fill: white;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-submit g {
+  fill: #070f2e;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-terms a {
+  color: #0a9db7;
+}
+
+.Signup .auth0-lock.auth0-lock .auth0-lock-terms a:hover {
+  color: #027084;
+}
+
+.Signup .hiw-login-container {
+  position: relative;
+  z-index: 99;
+}
+
+@media (max-width: 1200px) {
+  .Signup--List ul {
+    width: 100%;
+    float: unset;
+    margin: 0 auto;
+  }
+  .Signup .auth0-lock.auth0-lock.auth0-lock-opened-in-frame {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 736px) {
+  .Signup .auth0-lock.auth0-lock .auth0-lock-cred-pane-internal-wrapper {
+    height: 60vh;
+  }
+  .Signup .AuthComponent .section {
+    padding-top: 5rem;
+  }
+  .Signup--List {
+    padding: 0 15px;
+  }
+}
+
+@media (min-height: 1024px) {
+  .Signup--List {
+    min-height: calc(100vh - 400px);
+  }
+}

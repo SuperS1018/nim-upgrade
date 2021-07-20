@@ -2,7 +2,7 @@ import React from 'react'
 import 'intersection-observer'
 import Observer from '@researchgate/react-intersection-observer'
 
-import './LazyEmbed.css'
+import '../stylesheets/components/LazyEmbed.css'
 
 class LazyEmbed extends React.Component {
   static defaultProps = {
@@ -24,12 +24,14 @@ class LazyEmbed extends React.Component {
     }
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (this.props.src === nextProps.src) return
-    this.setState({
-      src: nextProps.src,
-      dataSrc: nextProps.src
-    })
+  static getDerivedStateFromProps (nextProps, prevState) {
+    if(nextProps.src !== prevState.src) {
+      return {
+        src: nextProps.src,
+        dataSrc: nextProps.src
+      }
+    }
+    return null
   }
 
   render () {

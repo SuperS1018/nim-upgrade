@@ -1,0 +1,73 @@
+.Login {
+}
+
+.Login .auth0-lock.auth0-lock .auth0-lock-form {
+  padding: 20px 0;
+}
+
+.Login .auth0-lock-header div {
+  background: white !important;
+}
+
+.Login .auth0-lock-header img.auth0-lock-header-logo {
+  display: none;
+}
+
+.Login .auth0-lock.auth0-lock .auth0-lock-name {
+  font-size: 1.6em;
+  font-weight: 600;
+  padding: 0;
+}
+
+.Login .auth0-lock.auth0-lock .auth0-lock-content-body-wrapper {
+  margin-top: 50px !important;
+}
+
+.Login .auth0-lock.auth0-lock .auth0-lock-terms {
+  padding: 10px 0 20px;
+}
+
+.Login .auth0-lock.auth0-lock .auth0-lock-terms {
+  background-color: white;
+}
+
+.Login .auth0-lock.auth0-lock .auth0-lock-submit {
+  background-color: #f5a623 !important;
+  color: #070f2e;
+  padding: 0;
+  /*border-radius: 5rem;*/
+}
+
+.Login .auth0-lock.auth0-lock .auth0-lock-submit, .Login .auth0-lock.auth0-lock .auth0-lock-submit g {
+  transition: all .2s ease-in-out;
+}
+
+.Login .auth0-lock.auth0-lock .auth0-lock-submit[disabled] {
+  color: white;
+}
+
+.Login .auth0-lock.auth0-lock .auth0-lock-submit[disabled] g {
+  fill: white;
+}
+
+.Login .auth0-lock.auth0-lock .auth0-lock-submit g {
+  fill: #070f2e;
+}
+
+.Login .hiw-login-container {
+  position: relative;
+  z-index: 99;
+}
+
+@media (max-width: 414px) {
+  .Login .auth0-lock.auth0-lock .auth0-lock-cred-pane-internal-wrapper {
+    height: 50vh;
+  }
+}
+
+@media (min-height: 1024px) {
+  .Login.page {
+    min-height: calc(100vh - 340px);
+  }
+}
+

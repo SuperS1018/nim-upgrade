@@ -1,0 +1,11 @@
+.PostCategoriesNav {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.PostCategoriesNav .NavLink{ color: #565656 !important; text-decoration: none; box-sizing: border-box; height: 28px; }
+.PostCategoriesNav .NavLink.active,
+.PostCategoriesNav .NavLink:hover{ border-bottom: 2px solid #46a8b9; }

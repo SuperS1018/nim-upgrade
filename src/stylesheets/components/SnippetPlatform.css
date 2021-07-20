@@ -1,0 +1,71 @@
+.SnippetPlatform {}
+
+.SnippetPlatform--Frame {
+}
+
+
+.SnippetPlatform--Frame .hljs {
+  background-color: #000000;
+  border-radius: 0;
+  font-size: 0.9em;
+  height: 100%;
+}
+
+.SnippetPlatform--Code, .SnippetPlatform--Param {
+  background-color: #26282c;
+}
+
+.SnippetPlatform--Code pre, .SnippetPlatform--Param pre {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  width: 100%;
+}
+
+.SnippetPlatform--Code .head, .SnippetPlatform--Param .head {
+  color: #9098a0;
+  background-color: #202020;
+  font-size: 0.8em;
+  padding: 0 5px;
+}
+
+.SnippetPlatform--Code .head svg, .SnippetPlatform--Param .head svg {
+  margin-right: 1rem;
+}
+
+.SnippetPlatform--Code {
+}
+
+.SnippetPlatform--Code .code {
+  display: flex;
+}
+
+.SnippetPlatform--Param .icon-input {
+  position: relative;
+  border: 1px solid #9098a0;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.SnippetPlatform--Param .icon-input:before {
+  position: absolute;
+  right: 0;
+  top: -50%;
+  content: '\2192';
+  color: #9098a0;
+}
+
+.SnippetPlatform--Param .hljs {
+  min-height: 30px;
+}
+
+.SnippetPlatform--Code .code ul {
+  font-size: 0.9em;
+  padding: 5px 5px 0;
+  margin: 0;
+  line-height: 1.22em;
+  color: steelblue;
+  background-color: #2A112A;
+}

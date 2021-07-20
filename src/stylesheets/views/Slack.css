@@ -1,0 +1,24 @@
+.Slack {
+
+}
+
+.Slack .icons {
+  margin: 0 auto;
+  width: fit-content;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.Slack .icons img {
+  width: 100px;
+  height: 100px;
+}
+
+.Slack .icons svg {
+  font-size: 1.4em;
+  margin: auto 3rem;
+}
+
+.Slack .btn {
+  margin: 10rem auto 2rem !important;
+}

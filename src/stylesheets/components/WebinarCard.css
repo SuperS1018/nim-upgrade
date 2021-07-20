@@ -1,0 +1,145 @@
+.Webinar-Card {
+  text-decoration: none;
+  background: transparent;
+  color: inherit;
+  border-radius: 5px;
+  /*box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);*/
+  transition: all 0.15s ease-in-out;
+}
+
+/*.Webinar-Card:hover,*/
+/*.Webinar-Card:focus {*/
+/*transform: translateY(-1px);*/
+/*box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);*/
+/*}*/
+
+.Webinar-Card a{
+  text-decoration: none;
+}
+
+.Webinar-Card--Image {
+  background-color: #021d29;
+  margin: 0 0 2rem 0;
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Webinar-Card--Image h2 {
+  position: absolute;
+  left: 2.5%;
+  color: white;
+  text-shadow: 0 0 1px rgba(0,0,0,0.7);
+  text-align: center;
+  width: 95%;
+  font-weight: 600;
+}
+
+.Webinar-Card--Image .duration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #070f2e;
+  padding: 3px 5px;
+  background-color: #eaa945;
+}
+
+.Webinar-Card--Image:hover .Webinar-Card--Type {
+  opacity: 0;
+}
+
+.Webinar-Card--Image .Webinar-Card--Type {
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  right: 0;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px 0 0;
+  background-color: #696053;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  transition: opacity .3s ease-in-out;
+}
+
+/*.Webinar-Card--Type.Events {*/
+  /*background-color: #222222;*/
+/*}*/
+
+/*.Webinar-Card--Type.News {*/
+  /*background-color: #222222;*/
+/*}*/
+
+.Webinar-Card--Title {
+  margin: 0 0 15px 0;
+  text-decoration: none;
+  transition: color .3s ease-in-out;
+  color: #0a9db7;
+}
+
+.Webinar-Card--Title:hover{
+  color: #027084;
+}
+
+.Webinar-Card--Content {
+  padding: 0;
+}
+
+.Webinar-Card--Category {
+  font-size: 1rem;
+  text-align: right;
+}
+
+.Webinar-Card .Webinar--Info{
+  font-size: .8em;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Webinar-Card .react-add-to-calendar .react-add-to-calendar__button {
+  padding: 0;
+  border: 0;
+  color: #098398;
+}
+
+.Webinar-Card .react-add-to-calendar .react-add-to-calendar__icon--right {
+  display: none;
+}
+
+.Webinar-Card .react-add-to-calendar .react-add-to-calendar__dropdown {
+  width: unset;
+  padding: 1rem;
+}
+
+.Webinar-Card .react-add-to-calendar .react-add-to-calendar__dropdown ul {
+  padding: 0;
+}
+
+.Webinar-Card .react-add-to-calendar .react-add-to-calendar__dropdown ul li a {
+  white-space: nowrap;
+}
+
+@media (max-width: 812px) {
+  .Webinar-Card--Image {
+    font-size: 0.8em;
+    height: 17rem;
+  }
+}
+
+@media (height: 414px) {
+  .Webinar-Card--Image {
+    height: 25rem;
+  }
+}
+
+@media (height: 320px) {
+  .Webinar-Card--Image {
+    height: 28rem;
+  }
+}

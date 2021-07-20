@@ -1,0 +1,249 @@
+.PricingComparison {
+
+}
+
+.PricingComparison .section-title {
+  margin-top: 8rem;
+}
+
+.PricingComparison .select-wrap.select-mobile {
+  padding-right: 20px;
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 5rem;
+}
+
+.PricingComparison .select-wrap.select-mobile:after {
+  right: 0 !important;
+  top: 10px;
+}
+
+.PricingComparison table {
+  overflow: hidden;
+  width: 100%;
+}
+
+.PricingComparison table tr td {
+  /*width: 25%;*/
+}
+
+.PricingComparison table tr.table td .note {
+  font-size: 0.8em;
+  color: grey;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.PricingComparison table tr td p {
+  margin: 0;
+}
+
+.PricingComparison table tr.table.button td p {
+  font-size: 0.8em;
+}
+
+/*.PricingComparison table tr.table td {*/
+  /*position: relative;*/
+  /*padding-bottom: 8rem;*/
+/*}*/
+
+.PricingComparison table tr.table td .btn {
+  /*position: absolute;*/
+  text-align: center;
+  /*bottom: 2rem;*/
+  width: 80%;
+  /*left: 10%;*/
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.PricingComparison table tr.table td select {
+  width: fit-content;
+  font-weight: 600;
+  color: #212529;
+}
+
+.PricingComparison table tr.table td .select-wrap::after {
+  top: 1.5rem;
+}
+
+.PricingComparison table tr td,
+.PricingComparison table tr th {
+  padding: 1rem;
+  text-align: center;
+  border: none;
+}
+
+.PricingComparison table tr th {
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+  background-color: #46a8b9;
+  color: white;
+}
+
+.PricingComparison table tr th:first-of-type {
+  background-color: transparent;
+}
+
+.PricingComparison table tr th:nth-of-type(2) {
+  background-color: #a9a9a9;
+}
+
+.PricingComparison table tr th:nth-of-type(3) {
+  background-color: #46a8b9;
+}
+
+.PricingComparison table tr th:nth-of-type(4) {
+  background-color:#347d8a;
+}
+
+.PricingComparison table tr th:last-of-type {
+  background-color:#1d525b;
+}
+
+.PricingComparison table tr.comparison:nth-of-type(2n) {
+  background-color: #efefef;
+}
+
+.PricingComparison table tr.comparison:nth-of-type(2n) td:nth-of-type(2n) {
+  background-color: #d5d5d5;
+}
+
+.PricingComparison table tr.comparison:nth-of-type(2n + 1) td:nth-of-type(2n),
+.PricingComparison table tr.table td:nth-of-type(2n) {
+  background-color: #efefef;
+}
+
+.PricingComparison table tr td:first-of-type {
+  font-weight: 600;
+}
+
+.PricingComparison table tr.table td h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 3rem 0 0;
+}
+
+.PricingComparison table tr.table td p.description {
+  min-height: 100px;
+}
+
+/*.PricingComparison table tr:first-of-type {*/
+  /*background-color: #46a8b9;*/
+  /*color: white;*/
+/*}*/
+
+.PricingComparison a[href="/acceptable-use/"] {
+  color: #586163 !important;
+}
+
+.PricingComparison .fa-check {
+  color: #46a8b9;
+}
+
+.PricingComparison .fa-times {
+  color:#d28184;
+}
+
+/*Commander Slack*/
+.PricingCommander .PricingComparison table tr.table td h2 {
+  margin-bottom: 0;
+}
+
+.PricingCommander .PricingComparison table tr.table.button td {
+  vertical-align: bottom;
+}
+
+.PricingCommander .PricingComparison table tr.table td .btn-message code {
+  position: relative;
+  white-space: nowrap;
+}
+
+.PricingCommander .PricingComparison table tr.table td .Content.btn-message .copy-to-clipboard-btn {
+  right: 0 !important;
+}
+
+.PricingCommander .PricingComparison table tr th:nth-of-type(3) {
+  background-color: #2e2b75 !important;
+}
+
+.PricingCommander .PricingComparison table tr th:last-of-type {
+  background-color:#18173f !important;
+}
+
+.PricingCommander .PricingComparison table tr.comparison:nth-of-type(2n + 1) td:nth-of-type(2n),
+.PricingCommander .PricingComparison table tr.comparison:nth-of-type(2n) td:nth-of-type(2n + 1){
+  background-color: #efefef !important;
+}
+
+.PricingCommander .PricingComparison table tr.comparison:nth-of-type(2n + 1) td:nth-of-type(2n + 1),
+.PricingCommander .PricingComparison table tr.comparison:nth-of-type(2n) td:nth-of-type(2n){
+  background-color: #ffffff !important;
+}
+
+.PricingCommander .PricingComparison table tr.comparison:nth-of-type(2n) td:nth-of-type(2n) {
+  background-color: #d5d5d5 !important;
+}
+
+.PricingCommander .PricingComparison table tr.table td:nth-of-type(2n) {
+  background-color: #efefef !important;
+}
+
+/*.PricingCommander .PricingComparison table tr th:first-of-type,*/
+.PricingCommander .PricingComparison table tr:nth-of-type(2) td:first-of-type,
+.PricingCommander .PricingComparison table tr:nth-of-type(3) td:first-of-type {
+  background-color: transparent !important;
+}
+
+/*Commander Mattermost*/
+.PricingCommander .PricingComparison.Mattermost table tr th:nth-of-type(3) {
+  background-color: #013894 !important;
+}
+
+.PricingCommander .PricingComparison.Mattermost table tr th:last-of-type {
+  background-color:#012561 !important;
+}
+
+/*Commander Teams*/
+.PricingCommander .PricingComparison.Teams table tr th:nth-of-type(3) {
+  background-color: #40486f !important;
+}
+
+.PricingCommander .PricingComparison.Teams table tr th:last-of-type {
+  background-color:#303653 !important;
+}
+
+@media (max-width: 1024px) {
+  .PricingComparison table tr.table td .btn {
+    font-size: 0.8em;
+  }
+}
+
+
+@media (max-width: 812px) {
+  /*.PricingComparison table tr.table td {*/
+    /*padding-bottom: 12rem;*/
+  /*}*/
+  .PricingComparison table tr.table td .btn {
+    padding: 1rem;
+    width: 100%;
+    left: 5%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .PricingComparison table tr th {
+    font-size: 0.8em;
+  }
+  .PricingComparison table tr td {
+    font-size: 0.7em;
+  }
+  .PricingComparison table tr td:first-of-type,
+  .PricingComparison table tr th:first-of-type {
+    padding-left: 1rem;
+  }
+  /*.PricingComparison table tr.table td {*/
+    /*padding-bottom: 8rem;*/
+  /*}*/
+}

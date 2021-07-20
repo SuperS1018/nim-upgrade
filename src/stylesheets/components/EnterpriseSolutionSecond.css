@@ -1,0 +1,35 @@
+.EnterpriseSolutionSecond {
+  width: 100%;
+  background: #005968;
+  padding: 10rem 0;
+  color: white;
+}
+
+.EnterpriseSolutionSecond--Left h2 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.EnterpriseSolutionSecond--Left .Content {
+  font-size: 1.5em;
+}
+
+.EnterpriseSolutionSecond--Right ul {
+  padding: 0;
+}
+
+.EnterpriseSolutionSecond--Right ul li {
+  font-size: 1.1em;
+  background-color: white;
+  color: #19191B;
+  list-style: none;
+  padding: 24px;
+  margin-bottom: 32px;
+  border-radius: 8px;
+}
+
+.EnterpriseSolutionSecond--Right ul li .Content p {
+  margin: 0;
+}
+

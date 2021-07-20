@@ -1,0 +1,254 @@
+.Product.Commander {}
+
+.Product.Commander .ProductBanner {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#52bfd2+0,172163+100 */
+  background: #2555b4; /* Old browsers */
+  background: -moz-radial-gradient(50% 100%, ellipse cover, #2555b4 0%, #2555b4 20%, #3c0d6a 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(50% 100%, ellipse cover, #2555b4 0%, #2555b4 20%, #3c0d6a 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at 50% 100%,  #2555b4 0%, #2555b4 20%, #3c0d6a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2555b4', endColorstr='#3c0d6a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  padding: 10rem 0 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Product.Commander .ProductBanner img.banner-img {
+  box-shadow: 0 -1rem 1rem rgba(57, 12, 101, 0.75);
+}
+
+.Product.Commander .btn-slack {
+  margin: 3rem auto;
+}
+
+.Product.Commander .Content h2 {
+  text-indent: 0;
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
+.Product.Commander .Content ul li {
+  margin-bottom: 2rem;
+}
+
+.Product.Commander.Slack .ProductBanner {
+  padding: 13rem 0 0 !important;
+}
+
+.Product.Commander.Slack .btn {
+  margin: 4rem auto !important;
+}
+
+.Product.Commander .screen-height {
+  min-height: calc(100vh - 82px);
+  align-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 3rem 1rem;
+}
+
+.Product .screen-height {
+  min-height: calc(80vh - 82px);
+  align-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 3rem 1rem;
+}
+
+.Product .screen-height.bg {
+  background-color: #F5FEFF;
+}
+
+.Product .screen-height.flex-column {
+  flex-direction: column;
+  min-height: 80vh;
+  padding: 0;
+}
+
+.Product .screen-height.auto {
+  min-height: unset;
+  padding: 0 1rem 1rem;
+}
+
+.Product .HomeHighLights img {
+  margin-top: 2rem;
+}
+
+/*Common*/
+.Product.Commander.Postman .WhyAddCommander h2,
+.Product.Commander.Postman .WhyAddCommander p,
+.Product.Commander.Postman .Commander--Content h2,
+.Product.Commander.Netlify .WhyAddCommander h2,
+.Product.Commander.Netlify .WhyAddCommander p,
+.Product.Commander.Netlify .Commander--Content h2,
+.Product.Commander.Cli .WhyAddCommander h2,
+.Product.Commander.Cli .WhyAddCommander p,
+.Product.Commander.Cli .Commander--Content h2 {
+  text-align: left !important;
+}
+
+.Product.Commander.Postman .Content h2,
+.Product.Commander.Netlify .Content h2,
+.Product.Commander.Cli .Content h2 {
+  color: #120f4f;
+}
+
+/*Mattermost*/
+.Product.Commander.Mattermost .ProductBanner {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#52bfd2+0,172163+100 */
+  background: #013894; /* Old browsers */
+  background: -moz-radial-gradient(50% 100%, ellipse cover, #013894 0%, #013894 20%, #001943 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(50% 100%, ellipse cover, #013894 0%, #013894 20%, #001943 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at 50% 100%,  #013894 0%, #013894 20%, #001943 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013894', endColorstr='#001943',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  padding: 10rem 0 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Product.Commander.Mattermost .ProductBanner img.banner-img {
+  box-shadow: 0 -1rem 1rem rgba(1, 27, 70, 0.75);
+}
+
+/*Teams*/
+.Product.Commander.Teams .ProductBanner {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#52bfd2+0,172163+100 */
+  background: #40486f; /* Old browsers */
+  background: -moz-radial-gradient(50% 100%, ellipse cover, #40486f 0%, #40486f 20%, #1a1740 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(50% 100%, ellipse cover, #40486f 0%, #40486f 20%, #1a1740 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at 50% 100%,  #40486f 0%, #40486f 20%, #1a1740 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40486f', endColorstr='#1a1740',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  padding: 10rem 0 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Product.Commander.Teams .ProductBanner img.banner-img {
+  box-shadow: 0 -1rem 1rem rgba(27, 26, 58, 0.75);
+}
+
+/*CLI*/
+.Product.Commander.Cli .ProductBanner {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#52bfd2+0,172163+100 */
+  background: #300A24; /* Old browsers */
+  background: -moz-radial-gradient(50% 100%, ellipse cover, #c33597 0%, #c33597 20%, #300A24 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(50% 100%, ellipse cover, #c33597 0%, #c33597 20%, #300A24 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at 50% 100%,  #c33597 0%, #c33597 20%, #300A24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c33597', endColorstr='#300A24',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  padding: 10rem 0 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Product.Commander.Cli .ProductBanner img.banner-img {
+  box-shadow: none;
+  margin-top: -2px;
+}
+
+.Product.Commander.Cli .ProductBanner .ProductBanner--Image {
+  box-shadow: 0 -1rem 1rem rgba(48, 10, 36, 0.75);
+}
+
+.Product.Commander.Cli .ProductBanner .ProductBanner--Image {
+  padding: 0 25rem 0 3rem;
+  background-color: #000000;
+  max-height: 300px;
+  overflow-y: hidden;
+
+}
+
+/*Postman*/
+.Product.Commander.Postman .ProductBanner {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#52bfd2+0,172163+100 */
+  background: #e05220; /* Old browsers */
+  background: -moz-radial-gradient(50% 100%, ellipse cover, #ffab1f 0%, #ffab1f 20%, #e05220 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(50% 100%, ellipse cover, #ffab1f 0%, #ffab1f 20%, #e05220 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at 50% 100%,  #ffab1f 0%, #ffab1f 20%, #e05220 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffab1f', endColorstr='#e05220',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  padding: 10rem 0 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Product.Commander.Postman .ProductBanner img.banner-img {
+  box-shadow: 0 -1rem 1rem rgba(145, 53, 7, 0.75);
+}
+
+.Product.Commander.Postman .ProductBanner .btn {
+  color: white !important; background-color: #189ede;
+  border: 1px solid white;
+}
+
+.Product.Commander.Postman .ProductBanner .btn:hover {
+  background-color:#1484ba;
+}
+
+/*Netlify*/
+.Product.Commander.Netlify .ProductBanner {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#52bfd2+0,172163+100 */
+  background: #24c5bc; /* Old browsers */
+  background: -moz-radial-gradient(50% 100%, ellipse cover, #24c5bc 0%, #24c5bc 10%, #094469 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(50% 100%, ellipse cover, #24c5bc 0%, #24c5bc 10%, #094469 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at 50% 100%,  #24c5bc 0%, #24c5bc 10%, #094469 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24c5bc', endColorstr='#094469',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  padding: 10rem 0 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Product.Commander.Netlify .Commander--Content h2 {
+  text-align: center !important;
+}
+
+.Product.Commander.Netlify .ProductBanner img.banner-img {
+  box-shadow: 0 -1rem 1rem rgba(2, 45, 64, 0.75);
+}
+
+.Product.Commander.Netlify .ProductBanner .btn {
+  border: 1px solid white;
+}
+
+.Product.Commander.Netlify .Netlify--Item {
+  padding: 4rem 1rem;
+}
+
+.Product.Commander.Netlify .Netlify--Item h3 {
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+@media (max-width: 968px) {
+  .Product.Commander.Cli .ProductBanner .ProductBanner--Image {
+    padding: 0 10rem 0 3rem;
+    max-height: 210px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Home .screen-height {
+    height: auto;
+  }
+
+  .Product.Commander.Cli .ProductBanner .ProductBanner--Image {
+    padding: 0 3rem;
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 414px) {
+  .Product.Commander.Slack .ProductBanner {
+    padding: 10rem 0 0 !important;
+  }
+  .Product.Commander.Cli .ProductBanner .ProductBanner--Image {
+    padding: 0;
+    max-height: 120px;
+  }
+}
+
+@media (max-height: 414px) {
+  .Product.Commander.Slack .ProductBanner {
+    padding: 8rem 0 0 !important;
+  }
+}

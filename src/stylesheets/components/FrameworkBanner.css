@@ -1,0 +1,39 @@
+.FrameworkBanner {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#52bfd2+0,172163+100 */
+  background-color: #52bfd2; /* Old browsers */
+  background-color: -moz-radial-gradient(50% 100%, ellipse cover,  #52bfd2 0%, #52bfd2 20%, #172163 100%); /* FF3.6-15 */
+  background-color: -webkit-radial-gradient(50% 100%, ellipse cover,  #52bfd2 0%, #52bfd2 20%, #172163 100%); /* Chrome10-25,Safari5.1-6 */
+  background-color: radial-gradient(ellipse at 50% 100%,  #52bfd2 0%, #52bfd2 20%, #172163 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52bfd2', endColorstr='#172163',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 16rem 0 16rem;
+}
+
+.FrameworkBanner--Title {
+  margin-top: 4rem;
+  text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.FrameworkBanner--Title strong {
+  color: #ffc875;
+}
+
+.FrameworkBanner--Title p {
+  margin-bottom: 0;
+}
+
+.FrameworkBanner--Subtitle {
+  font-weight: 400;
+  font-size: 2rem;
+  text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+
+@media (max-width: 768px) {
+  .FrameworkBanner { padding: 5rem 0 !important; }
+  .FrameworkBanner h1 { font-size: 2.4em; }
+  .FrameworkBanner img { width: 60px; }
+}

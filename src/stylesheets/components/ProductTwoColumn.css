@@ -1,0 +1,23 @@
+.ProductTwoColumn img {
+  width: 40%;
+  float: right;
+  margin: 1rem;
+}
+
+.ProductTwoColumn p {
+  margin-bottom: 5rem;
+}
+
+.ProductTwoColumn li {
+  margin-bottom: 2rem;
+}
+
+.ProductTwoColumn .img-hidden {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .ProductTwoColumn img { width: 100%; margin: 2rem 0; }
+  .ProductTwoColumn .img-hidden { display: block; }
+  .ProductTwoColumn .img-show { display: none; }
+}

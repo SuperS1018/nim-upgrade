@@ -1,0 +1,87 @@
+.Breadcrumb {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.Breadcrumb.bg-g {
+  /*background-color: #efefef;*/
+  /*border: 1px solid #0000001a;*/
+}
+
+.Breadcrumb.banner {
+  position: absolute;
+  top: -10rem;
+  z-index: 99;
+}
+
+.Breadcrumb.no-banner {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  /*top: 9rem;*/
+  z-index: 99;
+}
+
+.Breadcrumb.top-0 { top: 0 !important; }
+.Breadcrumb.top-1 { top: -1rem; }
+.Breadcrumb.top-2 { top: -2rem; }
+.Breadcrumb.top-3 { top: -3rem; }
+.Breadcrumb.top-4 { top: -4rem; }
+.Breadcrumb.top-5 { top: -5rem; }
+.Breadcrumb.top-6 { top: -6rem; }
+.Breadcrumb.top-7 { top: -7rem; }
+.Breadcrumb.top-8 { top: -8rem; }
+.Breadcrumb.top-9 { top: -9rem; }
+.Breadcrumb.top-large { top: -16rem; }
+
+.Breadcrumb.banner.banner-small {
+  position: absolute;
+  top: 1rem;
+}
+
+.Breadcrumb .breadcrumb {
+  font-size: 0.9em;
+  background-color: transparent;
+  margin: 0 0 0 0.5rem;
+}
+
+.Breadcrumb.bg-tran .breadcrumb li,
+.Breadcrumb.bg-tran .breadcrumb li a,
+.Breadcrumb.bg-tran .breadcrumb li:before {
+  font-weight: 600;
+}
+
+.Breadcrumb.bg-tran .breadcrumb li a {
+  color: #7bebff;
+}
+
+.Breadcrumb.bg-tran .breadcrumb li:before {
+  color: white;
+}
+
+.Breadcrumb.bg-tran .breadcrumb li {
+  color: rgba(255, 255, 255, .7);
+  font-weight: 500;
+}
+
+.Breadcrumb .breadcrumb li a {
+  text-decoration: underline !important;
+}
+
+.Breadcrumb .breadcrumb li a:hover {
+  text-decoration: none !important;
+}
+
+.Breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: '>'
+}
+
+@media (max-width: 414px) {
+  .Breadcrumb {
+    font-size: 0.8em;
+  }
+
+  .Breadcrumb.banner {
+    top: -5rem;
+  }
+}

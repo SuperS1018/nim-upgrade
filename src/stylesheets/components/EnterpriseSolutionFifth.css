@@ -1,0 +1,39 @@
+.EnterpriseSolutionFifth{
+  width: 100%;
+}
+
+.EnterpriseSolutionFifth h2 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.EnterpriseSolutionFifth img {
+  max-width: 540px;
+}
+
+.EnterpriseSolutionFifth a {
+  font-size: 1em;
+  font-weight: 500;
+  color: #F2994A;
+  border-bottom: 1px solid #F2994A;
+  margin: 0 auto;
+}
+
+.EnterpriseSolutionFifth a:hover {
+  border-bottom-color: transparent;
+}
+
+.EnterpriseSolutionFifth .Content {
+  font-size: 1.07em;
+}
+
+.EnterpriseSolutionFifth .Content h3 {
+  margin-top: 0;
+}
+
+.EnterpriseSolutionFifth .Content ul li {
+  margin: 2rem 0;
+}
+

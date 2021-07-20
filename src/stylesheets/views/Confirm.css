@@ -1,0 +1,9 @@
+.Confirm {}
+
+.Confirm .details {
+  display: flex;
+}
+
+.Confirm .details .item-name {
+  flex: 1 0;
+}

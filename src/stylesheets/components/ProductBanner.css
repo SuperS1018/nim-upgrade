@@ -1,0 +1,58 @@
+.ProductBanner {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#52bfd2+0,172163+100 */
+  background: #52bfd2; /* Old browsers */
+  background: -moz-radial-gradient(50% 100%, ellipse cover,  #52bfd2 0%, #52bfd2 20%, #172163 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(50% 100%, ellipse cover,  #52bfd2 0%, #52bfd2 20%, #172163 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at 50% 100%,  #52bfd2 0%, #52bfd2 20%, #172163 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52bfd2', endColorstr='#172163',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  padding: 10rem 0 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.ProductBanner h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+.ProductBanner p {
+  margin-bottom: 0;
+}
+
+
+.ProductBanner .btn {
+  margin: 4rem 0;
+}
+
+.ProductBanner .btn:hover {
+  box-shadow: 0 0 0 rgba(0,0,0,0.3) !important;
+}
+
+.ProductBanner .try-btn {
+  display: block;
+  margin: 3rem auto;
+}
+
+.ProductBanner img.banner-img {
+  width: 100%;
+  box-shadow: 0 -1rem 1rem #2d6182;
+}
+
+.ProductBanner-large {
+  padding: 20rem 0;
+}
+
+.ProductBanner--Title {
+  margin-bottom: 0;
+}
+
+.ProductBanner--Subtitle {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.ProductBanner .BackgroundImage{ background-repeat: no-repeat; background-position: top center; }
+
+@media (max-width: 768px) {
+  .ProductBanner { padding-top: 5rem !important; }
+}

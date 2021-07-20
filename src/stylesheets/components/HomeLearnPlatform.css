@@ -1,0 +1,27 @@
+.HomeLearnPlatform {}
+
+.HomeLearnPlatform h2 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.HomeLearnPlatform .btn-wrap {
+  margin: 0 auto;
+}
+
+.HomeLearnPlatform .btn-wrap .btn:first-of-type {
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .HomeLearnPlatform .btn-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .HomeLearnPlatform .btn-wrap .btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

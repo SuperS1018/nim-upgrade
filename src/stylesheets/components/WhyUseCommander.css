@@ -1,0 +1,39 @@
+.WhyUseCommander {
+  padding: 6rem;
+}
+
+.WhyUseCommander h2 {
+  font-size: 3rem !important;
+  font-weight: 400 !important;
+  text-align: center;
+  text-indent: 0;
+  color: #120f4f;
+}
+
+.WhyUseCommander .Content p {
+  text-align: center;
+}
+
+.WhyUseCommander--Item {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.WhyUseCommander--Item img {
+  width: 80px;
+  height: 80px;
+}
+
+.WhyUseCommander--Item h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+@media (max-width: 414px) {
+  .WhyUseCommander {
+    padding: 3rem 2rem;
+  }
+  .WhyUseCommander--Item {
+    padding: 2rem 0;
+  }
+}

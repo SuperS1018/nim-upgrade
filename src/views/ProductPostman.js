@@ -1,0 +1,36 @@
+import React, { Component } from 'react'
+
+import ProductBanner from '../components/ProductBanner'
+import WhyAddCommander from '../components/WhyAddCommander'
+import Content from '../components/Content'
+
+import '../stylesheets/views/ProductNimbellaCommander.css'
+
+class ProductPostman extends Component {
+  render () {
+    console.log(this.props.fields)
+    const { productPostman } = this.props.fields
+    const { pageBanner, tableComparison, content } = productPostman
+    return (
+      <div className='Product Commander Postman page'>
+        {pageBanner && <ProductBanner title={pageBanner.title} subtitle={pageBanner.subtitle} image={pageBanner.backgroundImage} />}
+        {tableComparison && <WhyAddCommander data={tableComparison} />}
+        <div className='Commander--Content pb-5'>
+          <div className='container'>
+            <div className='row'>
+              <div className='WhyAddCommander--Head col-lg-12'>
+                {content.title && <h2>{content.title}</h2>}
+                {content.subtitle && <p>{content.subtitle}</p>}
+              </div>
+              <div className='col-lg-12'>
+                {content.body && <Content source={content.body}></Content>}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default ProductPostman

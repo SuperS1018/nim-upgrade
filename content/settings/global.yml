@@ -1,12 +1,27 @@
-siteTitle: Netlify CMS + React Starter
-siteUrl: 'https://netlify-cms-react-starter.netlify.com'
-siteDescription: >-
-  A starter project for creating lightning-fast, offline-first websites with
-  Netlify CMS and React.
+siteTitle: Nimbella.com®
+siteUrl: 'https://nimbella.com'
+siteEmail: info@nimbella.com
+siteDescription: "\U0001F680Skyrocket your serverless development. Kubernetes for developers made easy: ✓Code ✓Run ✓Deploy... in minutes! Sign up now or join through GitHub."
+siteKeywords: >-
+  nimbella, serverless, serverless platform, stateful serverless, stateful,
+  serverless applications, serverless framework, applications, framework
+address: '4677 Old Ironsides Drive, Suite 180'
+city: 'Santa Clara, CA 95054'
+phone: (408) 123-4567
 socialMediaCard:
-  image: /images/uploads/card-og.png
-  twitterCreatorAccount: '@Jinksi'
-  twitterSiteAccount: ''
-headerScripts: |-
-  <!-- Add your analytics scripts / verification meta here -->
+  facebookAppId: '352388969311006'
+  image: /images/uploads/nimbella-logo.png
+  twitterCreatorAccount: '@nimbella'
+  twitterSiteAccount: '@nimbella'
+headerScripts: <!-- Add your analytics scripts / verification meta here -->
 enableServiceWorker: false
+socialMedia:
+  facebookUrl: 'https://www.facebook.com/ServerlessPlatform'
+  githubUrl: 'https://github.com/nimbella'
+  instagramUrl: 'https://www.instagram.com/nimbella.serverless/'
+  linkedinUrl: 'https://www.linkedin.com/company/nimbella/'
+  meetupUrl: 'https://www.meetup.com/Containers/'
+  slackUrl: >-
+    https://nimbella-community.slack.com/join/shared_invite/enQtNjg1NzE1OTE3MDI4LWRmOTE0ODVmYzMzODMxNWQ5MDIyMTMxOWZlOTY4NGMxNWUwMmFkM2E2MjRjYWZlNDE1OTUyMjFhNDAyYjZhZDc
+  twitterUrl: 'https://twitter.com/nimbella'
+  youtubeUrl: 'https://www.youtube.com/channel/UCslZDQWtMIHH4UxwzVbG4FQ'

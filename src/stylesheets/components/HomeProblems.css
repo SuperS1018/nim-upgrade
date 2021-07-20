@@ -1,0 +1,34 @@
+.HomeProblems {
+  width: 100%;
+}
+
+.HomeProblems img {
+  width: 90%;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.HomeProblems h2 {
+  margin-bottom: 1rem;
+}
+
+.HomeProblems h2:last-of-type {
+  margin-top: 0;
+}
+
+.HomeProblems h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.HomeProblems p {
+  font-size: 1em;
+}
+
+.HomeProblems .Content {
+  margin-top: 6rem;
+}
+
+@media (max-width: 414px) {
+
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import './GithubCorner.css'
+import '../stylesheets/components/GithubCorner.css'
 
 export default ({ url, style, className = '', color = '#151513' }) => (
   <a

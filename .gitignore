@@ -10,9 +10,12 @@ coverage
 build
 
 # misc
+*~
 .DS_Store
 npm-debug.log
 .env*.local
 *error.log
 
 src/data.json
+.idea/
+.netlify/

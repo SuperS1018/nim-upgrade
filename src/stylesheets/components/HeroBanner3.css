@@ -1,0 +1,159 @@
+.HeroBanner3 { width: 100%; }
+.HeroBanner3 .HeroBanner--Top {
+  background-image: url(/images/uploads/banner-nimbella.jpg);
+  background-color: #092232;
+  /*background-position: bottom;*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: calc(100vh * 0.14 + 82px) 0 calc(100vh * 0.14);
+  /*display: flex;*/
+  /*align-items: center;*/
+  border-bottom: 2px solid white;
+  text-align: center;
+  min-height: calc(100vh * 0.6);
+}
+.HeroBanner3 .HeroBanner--Top h1 {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  font-size: 2.4em;
+  color: white;
+  text-shadow: 1px 1px 3px #00202B;
+}
+
+.HeroBanner3 .HeroBanner--Top p {
+  color: white;
+  font-size: 1.5em;
+}
+
+.HeroBanner3 .HeroBanner--Top .btn {
+  margin-top: calc(100vh * 0.05);
+}
+
+.HeroBanner--Bottom {
+  margin-top: -400px;
+  display: flex;
+  position: relative;
+}
+
+.HeroBanner--Bottom.single {
+  display: block;
+  margin: -450px auto 0 !important;
+}
+
+.HeroBanner3 .HeroBanner--Left, .HeroBanner3 .HeroBanner--Right {
+  background-color: white;
+  padding: 4rem 3rem 8rem;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.7);
+  flex: 1;
+  width: 45.5%;
+  position: relative;
+}
+
+
+.HeroBanner--Bottom.single .HeroBanner--Left, .HeroBanner--Bottom.single .HeroBanner--Right {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.HeroBanner3 .HeroBanner--Left {
+  margin-right: 9%;
+}
+
+.HeroBanner3 .HeroBanner--Left .text,
+.HeroBanner3 .HeroBanner--Right .text {
+  /*position: relative;*/
+}
+
+.HeroBanner3 .HeroBanner--Left .text .btn-wrap,
+.HeroBanner3 .HeroBanner--Right .text .btn-wrap {
+  margin-top: 3rem;
+  position: absolute;
+  bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 6rem)
+}
+
+.HeroBanner3 .HeroBanner--Left .text .btn-wrap .btn,
+.HeroBanner3 .HeroBanner--Right .text .btn-wrap .btn {
+  padding: 7px 30px;
+}
+
+.HeroBanner3 .HeroBanner--Left .text .btn-wrap .btn img,
+.HeroBanner3 .HeroBanner--Right .text .btn-wrap .btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.HeroBanner3 .HeroBanner--Left .text h3,
+.HeroBanner3 .HeroBanner--Right .text h3 {
+  font-size: 1.4em;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.HeroBanner3 .text h3 strong {
+  color: black;
+}
+
+.HeroBanner3 .HeroBanner--Left .text p:not(.result),
+.HeroBanner3 .HeroBanner--Right .text p:not(.result) {
+  font-size: 1em;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.HeroBanner3 .HeroBanner--Right .text h2,
+.HeroBanner3 .HeroBanner--Right .text p {
+}
+
+.HeroBanner3 .HeroBanner--Left .img {
+  background-color: #222222;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #00B5F2;
+}
+
+.HeroBanner3 .HeroBanner--Right .img {
+  background-color: #222222;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #C74DFF;
+}
+
+.HeroBanner3 .Content a strong {
+  font-weight: 700;
+  color: #ffcf7f;
+  border-bottom: 1px solid #ffcf7f;
+  transition: all .3s ease-in-out;
+}
+
+.HeroBanner3 .Content a:hover strong {
+  border-bottom: 1px solid #e8a14a;
+  color: #e8a14a;
+}
+
+@media (max-width: 1065px) {
+
+}
+
+@media (max-width: 800px) {
+  .HeroBanner3 .HeroBanner--Top h1 {
+    font-size: 2.2em;
+  }
+  .HeroBanner3 .HeroBanner--Top p {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 736px) {
+  /*.HeroBanner3 .HeroBanner--Top {*/
+    /*padding-top: 106px;*/
+  /*}*/
+}
+

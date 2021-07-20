@@ -1,0 +1,98 @@
+.Policy .Policy--Content {
+}
+
+.Policy .Policy--Content {
+  font-size: 0.8em;
+}
+
+.Policy .Policy--Content .title {
+  font-size: 1.2em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Policy .Policy--Content p {
+  margin-bottom: 2rem;
+}
+
+.Policy .Policy--Content .title:first-of-type {
+  margin-top: 0;
+}
+
+.Policy .Policy--Content ol.first-ol {
+  padding-left: 0;
+}
+
+.Policy .Policy--Content ol.first-ol li ol {
+  padding-left: 2.2rem;
+}
+
+.Policy .Policy--Content ol {
+  counter-reset: item;
+  margin: 2rem auto;
+}
+
+.Policy .Policy--Content ol li{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.Policy .Policy--Content ul {
+  counter-reset: none;
+  margin: 2rem auto;
+}
+
+.Policy .Policy--Content ul li{
+  display: list-item;
+}
+
+.Policy .Policy--Content ul li:before {
+  content: none !important;
+}
+
+.Policy .Policy--Content ol li.title:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+.Policy .Policy--Content ol li code {
+  display: block;
+  margin-bottom: -1rem;
+  background-color: transparent;
+  font-weight: 600;
+  color: #586163;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, arial, sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+.Policy .Policy--Content ol li code:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+  letter-spacing: 1px;
+}
+
+.Policy .Policy--Content ol table {
+  margin-bottom: 3rem;
+}
+
+.Policy .Policy--Content ol table tr td,
+.Policy .Policy--Content ol table tr th {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  vertical-align: top;
+}
+
+.Policy .Policy--Content ol table tr th {
+  vertical-align: middle;
+}
+
+.Policy a[href="https://www.salesforce.com/company/privacy/full_privacy/"] {
+  color: #586163 !important;
+}
+
+.Policy .copy-to-clipboard-btn {
+  display: none;
+}
+
+

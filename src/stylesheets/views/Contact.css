@@ -1,0 +1,36 @@
+.Contact {
+
+}
+
+.Contact .PageBanner {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#52bfd2+0,172163+100 */
+  background: #52bfd2; /* Old browsers */
+  background: -moz-linear-gradient(top, #52bfd2 0%, #172163 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #52bfd2 0%,#172163 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #52bfd2 0%,#172163 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52bfd2', endColorstr='#172163',GradientType=0 ); /* IE6-9 */
+}
+
+.Contact h2 {
+  margin-bottom: 3rem;
+}
+
+.Contact ul li {
+  margin: 1rem 0;
+}
+
+.Contact .info-wrap { background-color: var(--background); height: 100%; position: relative; background-size: cover; background-repeat: no-repeat; background-position: center; border-radius: 5px; overflow: hidden; padding-top: 13rem !important; padding-bottom: 13rem !important; }
+.Contact .info-wrap .mask{ background-color: rgba(0,0,0,.9); position: absolute; z-index:9; top: 0; left: 0; width: 100%; height: 100%; }
+.Contact .info-wrap .content{ position: relative; z-index: 10; }
+.Contact .info-wrap a { color: #46a8b9; display: block; margin-bottom: 10px; width: 100%; }
+.Contact .info-wrap a:hover{ color: #027084; }
+.Contact .Contact--Details--Item p{ font-size: 1em; margin-bottom: 0; }
+.Contact .Contact--Details--Item svg, .Contact .slack { color: #ffffff; opacity: 1; }
+.Contact .slack span { color: #ffffff; opacity: .7; }
+.Contact .slack a { display: inline; }
+
+.Contact .EnquiryForm { background-color: #efefef; padding: 3rem; border-radius: 5px; border: 1px solid #dcdcdc; }
+
+@media (width: 414px) {
+  .Contact .section { padding-bottom: 7.5rem; }
+}

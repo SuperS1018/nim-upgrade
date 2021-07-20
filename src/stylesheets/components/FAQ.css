@@ -1,0 +1,79 @@
+.FAQ{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#84c2d2+0,5badc5+100 */
+  background: #60a7b9; /* Old browsers */
+  background: -moz-linear-gradient(top, #60a7b9 0%, #439ab3 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #60a7b9 0%,#439ab3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #60a7b9 0%,#439ab3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60a7b9', endColorstr='#439ab3',GradientType=0 ); /* IE6-9 */
+}
+
+.FAQ h2{
+  color: #ffffff;
+  margin-bottom: 5rem;
+}
+
+.FAQ .FAQ--Item {
+  margin-bottom: 5rem;
+}
+
+.FAQ .FAQ--Item .item-wrap p {
+  font-size: 1em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.FAQ .question {
+  font-weight: bold;
+}
+
+.FAQ .Content a {
+  color: white;
+  text-decoration: underline !important;
+}
+
+.FAQ .Content a:hover{
+  color:white !important;
+  text-decoration:none !important;
+}
+
+/*Commander Slack*/
+.PricingCommander .FAQ {
+  background: #2e2b75;
+  background: -moz-linear-gradient(top, #2e2b75 0%, #24215b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #2e2b75 0%,#24215b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #2e2b75 0%,#24215b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e2b75', endColorstr='#24215b',GradientType=0 ); /* IE6-9 */
+}
+
+.PricingCommander .FAQ code {
+  background-color: #3e3a86;
+  color: #ec64a3;
+}
+
+/*Commander Mattermost*/
+.PricingCommander.Mattermost .FAQ {
+  background: #013894;
+  background: -moz-linear-gradient(top, #013894 0%, #1a1740 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #013894 0%,#1a1740 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #013894 0%,#1a1740 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013894', endColorstr='#1a1740',GradientType=0 ); /* IE6-9 */
+}
+
+.PricingCommander.Mattermost .FAQ code {
+  background-color:#443b7a;
+  color: #ec64a3;
+}
+
+/*Commander Mattermost*/
+.PricingCommander.Teams .FAQ {
+  background: #40486f;
+  background: -moz-linear-gradient(top, #40486f 0%, #1a1740 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #40486f 0%,#1a1740 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #40486f 0%,#1a1740 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40486f', endColorstr='#1a1740',GradientType=0 ); /* IE6-9 */
+}
+
+.PricingCommander.Teams .FAQ code {
+  background-color:#443b7a;
+  color: #ec64a3;
+}

@@ -1,0 +1,24 @@
+.Clients{
+  background-color: whitesmoke;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.Clients .Clients--List {
+  margin: 0 auto;
+}
+
+.Clients .Clients--Item {
+  float: left;
+  margin: 0 1rem;
+}
+
+.Clients .Clients--Item .brand {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

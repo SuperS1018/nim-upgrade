@@ -1,0 +1,14 @@
+.Tools {}
+
+.Tools h5 {
+  margin-top: 3rem;
+}
+
+.Tools .copy-to-clipboard-btn {
+  cursor: pointer;
+  transition: color .3s ease-in-out;
+}
+
+.Tools .copy-to-clipboard-btn:hover {
+  color: darkgrey;
+}

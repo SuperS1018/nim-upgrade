@@ -1,0 +1,74 @@
+.Frameworks {
+
+}
+
+.Frameworks .section h2 {
+  margin: 5rem auto 4rem;
+}
+
+.Frameworks .section:not(.FAQ) h2 {
+  color: #000e12;
+}
+
+.Frameworks .section:not(.FAQ) h2 strong {
+  color: #eaa945;
+}
+
+.FrameworkContent blockquote,
+.FrameworkChange blockquote {
+  padding: 5rem 3rem;
+  display: flex;
+  border: none;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+
+.FrameworkContent blockquote p,
+.FrameworkChange blockquote p {
+  text-align: center;
+  position: relative;
+  display: inline;
+  margin: 0 auto;
+  font-style: normal;
+}
+
+.FrameworkContent blockquote p::before,
+.FrameworkChange blockquote p::before {
+  content: open-quote;
+  vertical-align: middle;
+  font-size: 2.5em;
+  position: absolute;
+  top: -20px;
+  left: -3rem;
+  font-family: "Secular One";
+  font-weight: 400;
+  color: #eaa945;
+}
+
+.FrameworkContent blockquote p::after,
+.FrameworkChange blockquote p::after {
+  content: close-quote;
+  vertical-align: middle;
+  font-size: 2.5em;
+  position: absolute;
+  bottom: -40px;
+  right: -3rem;
+  font-family: "Secular One";
+  font-weight: 400;
+  color: #eaa945;
+}
+
+.FrameworkContent blockquote,
+.FrameworkChange blockquote {
+  quotes: "“" "”" "‘" "’";
+}
+
+@media (max-width: 414px) {
+  .Frameworks h2 {
+    font-size: 1.4em;
+  }
+
+  .Frameworks h3 {
+    font-size: 1.2em;
+  }
+}

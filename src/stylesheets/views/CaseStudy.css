@@ -1,0 +1,277 @@
+/*Case Study Second Section*/
+.CaseStudySecond {
+  padding-top: 5rem;
+}
+/**** original style from Wistia ****/
+.CaseStudySecond .wistia_responsive_padding {
+  padding: 100.0% 0 0 0;
+  position:relative;
+}
+
+.CaseStudySecond .wistia_responsive_wrapper {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.CaseStudySecond .wistia_swatch {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.CaseStudySecond .wistia_swatch img {
+  filter: blur(5px);
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+/**** Customized style for video ****/
+.CaseStudySecond .wistia_embed.wistia_embed_initialized {
+  width: 544px;
+  height: 544px;
+  position: relative;
+}
+
+.CaseStudySecond .w-video-wrapper.w-css-reset,
+.CaseStudySecond .w-ui-container {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.CaseStudySecond .w-bottom-bar.w-css-reset {
+  display: none !important;
+}
+
+.CaseStudySecond#CaseStudySecond #video-wrap .w-bpb-wrapper .w-vulcan-v2-button,
+.CaseStudySecond#CaseStudySecond #video-wrap .w-bpb-wrapper .w-vulcan-v2-button div {
+  height: 61px !important;
+  width: 61px !important;
+  border-radius: 61px !important;
+  background-color: white !important;
+  transition: opacity .3s ease-in-out;
+}
+
+.CaseStudySecond#CaseStudySecond #video-wrap .w-vulcan-v2-button:hover,
+.CaseStudySecond#CaseStudySecond #video-wrap .w-vulcan-v2-button:hover div {
+  opacity: 0.7;
+}
+
+.CaseStudySecond#CaseStudySecond #video-wrap .w-vulcan-v2-button svg,
+.CaseStudySecond#CaseStudySecond #video-wrap .w-vulcan-v2-button polygon {
+  top: -2px !important;
+  fill: #48A8B9 !important;
+}
+
+.CaseStudySecond .Content {
+  font-weight: 500;
+  font-size: 1.7em;
+  line-height: 1.1em;
+}
+
+.CaseStudySecond h2 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+.CaseStudySecond h3 {
+  font-weight: 400;
+  font-size: 1.1em;
+  color: #48A8B9;
+}
+
+/*Case Study Third Section*/
+.CaseStudyThird {
+  padding-bottom: 10rem;
+}
+
+.CaseStudyThird h2 {
+  font-size: 2.2em;
+  margin-bottom: 0;
+}
+
+.CaseStudyThird .hash {
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #48A8B9;
+}
+
+.CaseStudyThird .content-top,
+.CaseStudyThird .content-bottom {
+  font-size: 1.1em;
+}
+
+.CaseStudyThird .content-top {
+  margin-top: 3rem;
+}
+
+.CaseStudyThird .avatar {
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.CaseStudyThird .msg-wrap {
+  position: relative;
+  margin-left: 50px;
+}
+
+.CaseStudyThird .msg-wrap .Content {
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+.CaseStudyThird .msg-wrap .Content p {
+  margin-bottom: 0;
+}
+
+.CaseStudyThird .msg-wrap::before {
+  position: absolute;
+  left: -50px;
+  top: 10px;
+  content: '';
+  width: 27px;
+  height: 21px;
+  background: transparent url(/images/icons/quote-icon.svg) 100% 100% no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.CaseStudyThird .msg-wrap .profile-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.CaseStudyThird .msg-wrap .profile-wrap > div {
+  width: fit-content;
+}
+
+.CaseStudyThird .msg-wrap .profile-wrap hr {
+  width: 80%;
+  margin: 2rem 0;
+  border-color: #8D8D8D;
+}
+
+.CaseStudyThird .msg-wrap .profile-wrap h4 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.CaseStudyThird .msg-wrap .profile-wrap .position {
+  color: #48A8B9;
+  width: fit-content;
+  font-size: 1.1em;
+}
+
+/*Case Study Fourth Section*/
+.CaseStudyFourth {
+  position: relative;
+  background: #005968;
+  color: white;
+  padding: 7rem 0;
+}
+
+.CaseStudyFourth .pattern {
+  position: absolute;
+  top: -91px;
+  right: 142px;
+  z-index: 1;
+  width: 285px;
+  height: 182px;
+  background: transparent url(/images/uploads/poc-bg.png) 100% 100% no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.CaseStudyFourth h2 {
+  font-size: 1.7em;
+}
+
+.CaseStudyFourth .Content {
+  font-size: 1.1em;
+}
+
+/*Case Study Fifth Section*/
+.CaseStudyFifth {
+  padding: 8rem 0 4rem;
+}
+
+.CaseStudyFifth h2 {
+  font-size: 1.7em;
+}
+
+.CaseStudyFifth .Content {
+  font-size: 1.1em;
+}
+
+/*Case Study Sixth Section*/
+.CaseStudySixth {
+  padding-bottom: 15rem;
+}
+.CaseStudySixth .content-wrap {
+  padding: 8rem;
+  width: 100%;
+  background: #48A8B9;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.CaseStudySixth .content-wrap h2 {
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.CaseStudySixth .Content {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .CaseStudy {
+    font-size: 0.9em;
+  }
+
+  .CaseStudy h1 {
+    font-size: 2.2em !important;
+  }
+
+  .CaseStudy h2 {
+    font-size: 1.8em !important;
+  }
+
+  .CaseStudySecond .Content {
+    font-size: 1.6em;
+  }
+
+  .CaseStudyFourth .pattern {
+    top: -51px;
+    right: 0px;
+    z-index: 1;
+    width: 185px;
+    height: 102px;
+    background: transparent url(/images/uploads/poc-bg.png) 100% 100% no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  .CaseStudySixth .content-wrap {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .CaseStudySixth {
+    padding-bottom: 3rem;
+  }
+}

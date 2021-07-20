@@ -1,0 +1,18 @@
+.Sales {
+
+}
+.Sales .info-wrap { background-color: var(--background); height: 100%; position: relative; background-size: cover; background-repeat: no-repeat; background-position: center; padding-bottom: 5rem; }
+.Sales .info-wrap .mask{ background-color: rgba(0,0,0,.9); position: absolute; z-index:9; top: 0; left: 0; width: 100%; height: 100%; }
+.Sales .info-wrap .Content{ position: relative; z-index: 10; padding: 3rem; }
+/*.Sales .info-wrap a { display: block; margin-bottom: 10px; width: 100%; }*/
+
+.Sales .Content h1 { font-size: 2em; margin-bottom: 4rem; }
+.Sales .Content p { margin-bottom: 2rem; }
+.Sales .Content p,
+.Sales .Content li { font-size: 1em; }
+.Sales .Content { color: #ffffff; }
+
+@media (max-width: 768px) {
+  .Sales .info-wrap{ width: 100%; min-height: 400px; }
+  .Sales .Content { width: 100%; }
+}

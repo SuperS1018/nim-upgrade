@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import MoveTo from 'moveto'
+import { withRouter } from 'react-router-dom'
 
 const AnchorLink = ({
   children,
@@ -8,12 +9,14 @@ const AnchorLink = ({
   className = '',
   options,
   onClick = () => {},
-  toleranceElement // elementQuery e.g. '.Nav' – element height will be used as tolerance
+  toleranceElement, // elementQuery e.g. '.Nav' – element height will be used as tolerance
+  ...props
 }) => {
   const defaultOptions = {
     tolerance: 50,
     duration: 800,
-    easing: 'easeOutQuart'
+    easing: 'easeOutQuart',
+    container: window
   }
 
   const target = href.replace(/^\//, '')
@@ -26,7 +29,10 @@ const AnchorLink = ({
       console.log(defaultOptions.tolerance)
     }
     const moveTo = new MoveTo(Object.assign(defaultOptions, options))
-    moveTo.move(document.querySelector(target))
+    try {
+      moveTo.move(document.querySelector(target))
+    } catch (err) {}
+    props.history.replace(`${props.history.location.pathname}${target}`)
     if (onClick) onClick(e)
   }
 
@@ -45,4 +51,4 @@ AnchorLink.propTypes = {
   toleranceElement: PropTypes.string
 }
 
-export default AnchorLink
+export default withRouter(AnchorLink)

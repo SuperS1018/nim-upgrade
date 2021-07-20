@@ -1,0 +1,39 @@
+.COPSCloudError {}
+
+.COPSCloudError h2 {
+  margin-top: 5rem;
+}
+
+.COPSCloudError .rv-xy-plot,
+.COPSCloudError .rv-xy-plot__inner {
+  height: 340px !important;
+  overflow: unset;
+}
+
+.COPSCloudError .rv-xy-plot {
+  margin-bottom: 2rem;
+}
+
+.COPSCloudError .screenshot {
+  position: relative;
+}
+
+.COPSCloudError .screenshot .fa-camera {
+  position: absolute;
+  right: -10px;
+  color: #cccccc;
+  cursor: pointer;
+  transition: color .3s ease-in-out;
+}
+
+.COPSCloudError .screenshot.adjust .fa-camera {
+  right: -20px;
+}
+
+.COPSCloudError .screenshot .fa-camera:hover {
+  color: #52bfd2;
+}
+
+iframe.cops-iframe {
+  margin-left: -999999px;
+}

@@ -4,7 +4,7 @@ import 'intersection-observer'
 import Observer from '@researchgate/react-intersection-observer'
 
 import { getImageSrc, getImageSrcset } from '../util/getImageUrl'
-import './LazyImage.css'
+import '../stylesheets/components/LazyImage.css'
 
 class LazyImage extends React.Component {
   static defaultProps = {
@@ -38,14 +38,16 @@ class LazyImage extends React.Component {
     }
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (this.props.src === nextProps.src) return
-    this.setState({
-      src: getImageSrc(nextProps.src, '10'),
-      srcSet: '',
-      dataSrc: getImageSrc(nextProps.src, '300'),
-      dataSrcSet: getImageSrcset(nextProps.src)
-    })
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if(nextProps.src !== prevState.src) {
+      return {
+        src: getImageSrc(nextProps.src, '10'),
+        srcSet: '',
+        dataSrc: getImageSrc(nextProps.src, '300'),
+        dataSrcSet: getImageSrcset(nextProps.src)
+      }
+    }
+    return null
   }
 
   render () {

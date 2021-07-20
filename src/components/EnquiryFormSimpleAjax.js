@@ -1,23 +1,25 @@
 import React from 'react'
 import { stringify } from 'qs'
 import { serialize } from 'dom-form-serializer'
+import { Alert } from 'reactstrap'
 
-import './EnquiryForm.css'
+import '../stylesheets/components/EnquiryForm.css'
 
 const fetch = window.fetch
 
 class Form extends React.Component {
   static defaultProps = {
-    name: 'Simple Form Ajax',
+    name: 'Contact Form Ajax',
     subject: '', // optional subject of the notification email
     action: '',
-    successMessage: 'Thanks for your enquiry, we will get back to you soon',
+    successMessage: 'Thanks you, we will get back to you soon',
     errorMessage:
       'There is a problem, your message has not been sent, please try contacting us via email'
   }
 
   state = {
     alert: '',
+    success: false,
     disabled: false
   }
 
@@ -42,6 +44,7 @@ class Form extends React.Component {
         form.reset()
         this.setState({
           alert: this.props.successMessage,
+          success: true,
           disabled: false
         })
       })
@@ -49,13 +52,15 @@ class Form extends React.Component {
         console.error(err)
         this.setState({
           disabled: false,
-          alert: this.props.errorMessage
+          alert: this.props.errorMessage,
+          success: false
         })
       })
   }
 
   render () {
     const { name, subject, action } = this.props
+    const { alert, success } = this.state
 
     return (
       <form
@@ -66,10 +71,7 @@ class Form extends React.Component {
         data-netlify=''
         data-netlify-honeypot='_gotcha'
       >
-        {this.state.alert && (
-          <div className='EnquiryForm--Alert'>{this.state.alert}</div>
-        )}
-        <label className='EnquiryForm--Label'>
+        <label className='EnquiryForm--Label required'>
           <input
             className='EnquiryForm--Input'
             type='text'
@@ -78,7 +80,7 @@ class Form extends React.Component {
             required
           />
         </label>
-        <label className='EnquiryForm--Label'>
+        <label className='EnquiryForm--Label required'>
           <input
             className='EnquiryForm--Input'
             type='email'
@@ -87,22 +89,16 @@ class Form extends React.Component {
             required
           />
         </label>
-        <label className='EnquiryForm--Label has-arrow'>
-          <select
-            className='EnquiryForm--Input EnquiryForm--Select'
-            name='type'
-            defaultValue='Type of Enquiry'
+        <label className='EnquiryForm--Label required'>
+          <input
+            className='EnquiryForm--Input'
+            type='text'
+            placeholder='Subject'
+            name='subject'
             required
-          >
-            <option disabled hidden>
-              Type of Enquiry
-            </option>
-            <option>Need to know more</option>
-            <option>Found a bug</option>
-            <option>Want to say hello</option>
-          </select>
+          />
         </label>
-        <label className='EnquiryForm--Label'>
+        <label className='EnquiryForm--Label required'>
           <textarea
             className='EnquiryForm--Input EnquiryForm--Textarea'
             placeholder='Message'
@@ -111,14 +107,25 @@ class Form extends React.Component {
             required
           />
         </label>
+
+        {alert && (
+          <Alert color={success ? 'primary' : 'danger'}>{alert}</Alert>
+        )}
+
+        <p className='note'><span className='text text-red'>*</span> = required</p>
         <input type='text' name='_gotcha' style={{ display: 'none' }} />
         {!!subject && <input type='hidden' name='subject' value={subject} />}
         <input type='hidden' name='form-name' value={name} />
         <input
-          className='Button EnquiryForm--SubmitButton'
+          className='btn btn-app mr-4'
           type='submit'
-          value='Enquire'
+          value='Submit'
           disabled={this.state.disabled}
+        />
+        <input
+          className='btn btn-outline-app'
+          type="reset"
+          value='Clear'
         />
       </form>
     )

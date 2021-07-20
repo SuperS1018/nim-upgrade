@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import 'intersection-observer'
 import Observer from '@researchgate/react-intersection-observer'
 
-import './BackgroundImage.css'
+import '../stylesheets/components/BackgroundImage.css'
 import { getImageSrc } from '../util/getImageUrl'
 
 export default class BackgroundImage extends React.Component {
@@ -41,22 +41,23 @@ export default class BackgroundImage extends React.Component {
     }
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (this.props.src === nextProps.src) return
-
-    this.setState({
-      src: getImageSrc(
-        nextProps.src,
-        nextProps.lazy ? 10 : this.props.imageSize
-      ),
-      dataSrc: getImageSrc(nextProps.src, this.props.imageSize)
-    })
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if(nextProps.src !== prevState.src) {
+      return {
+        src: getImageSrc(
+          nextProps.src,
+          nextProps.lazy ? 10 : prevState.imageSize
+        ),
+        dataSrc: getImageSrc(nextProps.src, prevState.imageSize)
+      }
+    }
+    return null
   }
 
   render () {
     let { className, contain, opacity, lazy, imageSize } = this.props
+    // eslint-disable-next-line
     let { loaded, src } = this.state
-
     if (!lazy) {
       return (
         <div
@@ -83,7 +84,7 @@ export default class BackgroundImage extends React.Component {
         <div
           className={`BackgroundImage absolute ${className}`}
           style={{
-            backgroundImage: `url(${src})`,
+            backgroundImage: `url(${this.state.dataSrc})`,
             backgroundSize: contain ? 'contain' : 'cover',
             opacity: opacity
           }}

@@ -1,0 +1,13 @@
+.NavLink {
+  color: #586163;
+  transition: color .3s ease-in-out;
+  font-weight: 400;
+}
+
+.NavLink:hover,
+.NavLink.active,
+.NavLink:focus {
+  color: #ffffff;
+  border-bottom-color: currentColor;
+  outline: none;
+}

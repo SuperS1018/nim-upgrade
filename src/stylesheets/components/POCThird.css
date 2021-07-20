@@ -1,0 +1,55 @@
+.POCThird {
+  padding: 10rem 0;
+  background: #F3F4F6;
+}
+
+.POCThird .container {
+  position: relative;
+}
+
+.POCThird .pattern {
+  position: absolute;
+  top: -430px;
+  left: 15px;
+  z-index: 1;
+  width: 258px;
+  height: 436px;
+  background: transparent url(/images/uploads/poc-bg.png) 100% 100% no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.POCThird h2 {
+  font-size: 2.3em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.POCThird--Left {
+  align-self: center;
+  flex-direction: row;
+}
+
+.POCThird--Left div.col-md-6:not(:nth-child(3), :nth-child(4)) {
+  margin-bottom: 2rem;
+}
+
+.POCThird--Left h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #48A8B9;
+}
+
+.POCThird--Right img {
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(51, 51, 51, 0.4);
+}
+
+@media (max-width: 736px) {
+  .POCThird .pattern {
+    display: none;
+  }
+}

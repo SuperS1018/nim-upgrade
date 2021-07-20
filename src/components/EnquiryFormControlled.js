@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { stringify } from 'qs'
+import { Alert } from 'reactstrap'
 
-import './EnquiryForm.css'
-import './EnquiryFormControlled.css'
+import '../stylesheets/components/EnquiryForm.css'
+import '../stylesheets/components/EnquiryFormControlled.css'
 
 const fetch = window.fetch
 
@@ -14,11 +15,15 @@ class Form extends Component {
   initialState = {
     name: '',
     email: '',
+    phone: '',
+    job: '',
+    company: '',
     message: '',
     subject: `New Submission from ${this.props.siteTitle}!`,
     _gotcha: '',
     disabled: false,
     alert: '',
+    success: false,
     action: '/contact/',
     'form-name': this.props.name
   }
@@ -48,7 +53,7 @@ class Form extends Component {
   }
 
   resetForm = customState => {
-    this.setState({ ...this.initialState, ...customState })
+    this.setState({ ...this.initialState, ...customState, success: true })
     this.inputs.forEach(input => {
       delete input.dataset.touched
     })
@@ -59,6 +64,9 @@ class Form extends Component {
     const data = {
       name: this.state.name,
       email: this.state.email,
+      phone: this.state.phone,
+      job: this.state.job,
+      company: this.state.company,
       message: this.state.message,
       subject: this.state.subject,
       _gotcha: this.state._gotcha,
@@ -85,7 +93,8 @@ class Form extends Component {
         this.setState({
           disabled: false,
           alert:
-            '❗️ There is a problem, your message has not been sent, please try contacting us via email'
+            '❗️ There is a problem, your message has not been sent, please try contacting us via email',
+          success: false
         })
       })
   }
@@ -96,6 +105,7 @@ class Form extends Component {
     })
 
   render () {
+    const { alert, success } = this.state
     return (
       <form
         className='EnquiryForm EnquiryForm-controlled'
@@ -108,17 +118,40 @@ class Form extends Component {
         data-netlify=''
         data-netlify-honeypot='_gotcha'
       >
-        {this.state.alert && (
-          <div className='EnquiryForm--Alert'>{this.state.alert}</div>
-        )}
-        <label className='EnquiryForm--Label'>
+        <label className='EnquiryForm--Label required'>
           <input
             className='EnquiryForm--Input'
             value={this.state.name}
             onChange={this.handleChange}
             type='text'
-            placeholder='Your Name'
+            placeholder='Name'
             name='name'
+            required
+            disabled={this.state.disabled ? 'disabled' : ''}
+          />
+          <LineGroup />
+        </label>
+        <label className='EnquiryForm--Label required'>
+          <input
+            className='EnquiryForm--Input'
+            value={this.state.email}
+            onChange={this.handleChange}
+            type='email'
+            placeholder='Email'
+            name='email'
+            required
+            disabled={this.state.disabled ? 'disabled' : ''}
+          />
+          <LineGroup />
+        </label>
+        <label className='EnquiryForm--Label required'>
+          <input
+            className='EnquiryForm--Input'
+            value={this.state.phone}
+            onChange={this.handleChange}
+            type='phone'
+            placeholder='Phone Number'
+            name='phone'
             required
             disabled={this.state.disabled ? 'disabled' : ''}
           />
@@ -127,12 +160,23 @@ class Form extends Component {
         <label className='EnquiryForm--Label'>
           <input
             className='EnquiryForm--Input'
-            value={this.state.email}
+            value={this.state.job}
             onChange={this.handleChange}
-            type='email'
-            placeholder='Your Email'
-            name='email'
-            required
+            type='text'
+            placeholder='Job Title'
+            name='job'
+            disabled={this.state.disabled ? 'disabled' : ''}
+          />
+          <LineGroup />
+        </label>
+        <label className='EnquiryForm--Label'>
+          <input
+            className='EnquiryForm--Input'
+            value={this.state.company}
+            onChange={this.handleChange}
+            type='text'
+            placeholder='Company Name'
+            name='company'
             disabled={this.state.disabled ? 'disabled' : ''}
           />
           <LineGroup />
@@ -142,7 +186,7 @@ class Form extends Component {
             className='EnquiryForm--Input EnquiryForm--Textarea'
             value={this.state.message}
             onChange={this.handleChange}
-            placeholder='Message'
+            placeholder='What can we help you?'
             name='message'
             rows='10'
             required
@@ -170,14 +214,25 @@ class Form extends Component {
           name='form-name'
           value={this.state['form-name']}
         />
+
+        {alert && (
+          <Alert color={success ? 'primary' : 'danger'}>{alert}</Alert>
+        )}
+
         <button
-          className='Button EnquiryForm--SubmitButton'
+          className='Button EnquiryForm--SubmitButton btn btn-app mr-4'
           type='submit'
           value='Send'
           disabled={this.state.disabled ? 'disabled' : ''}
         >
-          Enquire
+          Submit
         </button>
+        <input
+          className='btn btn-outline-app'
+          type="reset"
+          onClick={this.resetForm}
+          value='Clear'
+        />
       </form>
     )
   }

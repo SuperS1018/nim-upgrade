@@ -1,0 +1,194 @@
+.HeroBanner1 {
+  width: 100%;
+  margin-top: 95px;
+  background:#F3F4F6 url(/images/uploads/homepage-bg.png) no-repeat center right;
+  background-size: auto 100%;
+  padding: 5rem 0;
+}
+
+.HeroBanner1 h1 {
+  font-size: 2.8em;
+}
+
+.HeroBanner1 p {
+  font-size: 1.1em;
+}
+
+.HeroBanner1 ul {
+  list-style: none;
+}
+
+.HeroBanner1 ul li:before {
+  content: '\2022';
+  color: #48A8B9;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.HeroBanner1 .note {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #4732C8;
+}
+
+.HeroBanner1 .Content a strong {
+  font-weight: 700;
+  color: #ffcf7f;
+  border-bottom: 1px solid #ffcf7f;
+  transition: all .3s ease-in-out;
+}
+
+.HeroBanner1 .Content a:hover strong {
+  border-bottom: 1px solid #e8a14a;
+  color: #e8a14a;
+}
+
+.HeroBanner1 .logged-in {
+  background-color: white;
+  max-width: 380px;
+  min-height: 460px;
+  box-shadow: 0 4px 4px rgb(51 51 51/4%), 0 4px 16px rgb(51 51 51/8%);
+  border-radius: 10px;
+  padding: 2rem 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.HeroBanner1 .logged-in .fa-check-circle {
+  color: #1e7e34;
+  font-size: 3em;
+  display: block;
+  margin: 2rem auto;
+}
+
+.HeroBanner1 .logged-in h3 {
+  font-size: 1.1em;
+  margin-top: 2rem;
+  color: #46a8b9;
+  font-weight: bold;
+}
+
+.HeroBanner1 .logged-in p {
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+
+
+/*Auth0 style*/
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-form {
+  padding-bottom: 0;
+}
+
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-header-bg,
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-header-bg .auth0-lock-header-bg-solid {
+  background-color: white !important;
+}
+
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-center {
+  padding: 0;
+}
+
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-cred-pane {
+  padding: 0 0 32px;
+}
+
+.HeroBanner1 .auth0-lock-social-button[data-provider="github"] {
+  background-color: #0D0831;
+}
+
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-input-wrap {
+  border-color: #005968;
+  background-color: white;
+}
+
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-terms {
+  background-color: white;
+}
+
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-terms a {
+  color: #48A8B9;
+}
+
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-submit {
+  width: 40%;
+  margin: 1rem auto;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.HeroBanner1 .auth0-lock-header .auth0-lock-header-bg {
+  background-color: white !important;
+}
+
+.HeroBanner1 .auth0-lock-header .auth0-lock-header-welcome .auth0-lock-name {
+  color: white;
+  position: relative;
+}
+
+.HeroBAnner1 .auth0-lock.auth0-lock.auth0-lock-opened-in-frame .auth0-lock-widget {
+  margin: 0;
+  width: 100%;
+}
+
+.HeroBanner1 .AuthComponent {
+  background: white;
+  max-width: 380px;
+  width: 100%;
+  min-height: 460px;
+  z-index: 1;
+  box-shadow: 0 4px 4px rgba(51, 51, 51, 0.04), 0 4px 16px rgba(51, 51, 51, 0.08);
+  border-radius: 10px;
+  padding-top: 4rem;
+  margin: 0 auto;
+}
+
+.HeroBanner1 .AuthComponent h2 {
+  text-align: center;
+  color: black;
+  font-weight: 700;
+  font-size: 2.2em;
+}
+
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-form,
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-terms {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.HeroBanner1 .auth0-lock.auth0-lock .auth0-lock-header {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .HeroBanner1 {
+    background-position: 120%;
+  }
+}
+
+@media (max-width: 736px) {
+  .HeroBanner1 {
+    color: white;
+    text-align: center;
+    background-image: none;
+    background-color: #48A8B9;
+    border-radius: 0 0 50px 50px;
+  }
+
+  .HeroBanner1 p,
+  .HeroBanner1 .note {
+    font-size: 1.4em;
+  }
+
+  .HeroBanner1 .note {
+    color: white;
+  }
+
+  .HeroBanner--Form {
+    display: none;
+  }
+}
+

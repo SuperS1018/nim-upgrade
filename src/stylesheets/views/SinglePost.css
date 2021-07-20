@@ -1,0 +1,156 @@
+.SinglePost {
+  padding: 0 0 7.5rem 0;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.SinglePage p, .SinglePost ul {
+  margin-bottom: 2rem;
+}
+
+.SinglePost--BackgroundImage {
+  height: 30rem;
+  width: 100%;
+  display: inline-block;
+  position: relative !important;
+}
+
+.SinglePost--BackgroundImage::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.SinglePost--TOC {
+  background-color: #efefef;
+  display: block;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.SinglePost--TOC h4 {
+  margin: 0;
+}
+
+.SinglePost--TOC h4 span {
+  float: right;
+  color: #b2b2b2;
+  cursor: pointer;
+}
+
+.SinglePost--TOC .styles-module_react-toc__2CQL2 ul {
+  font-weight: 400;
+}
+
+.SinglePost--TOC .styles-module_react-toc__2CQL2 > ul {
+  font-weight: 700;
+  padding-left: 0;
+}
+
+.SinglePost--TOC ul,
+.SinglePost--TOC a {
+  margin-bottom: 0;
+  color: #098398 !important;
+}
+
+.SinglePost--TOC a:hover {
+  color: #004d5b !important;
+}
+
+.SinglePost--Content {
+  margin-top: 0;
+}
+
+.SinglePost--ContentTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 750px) {
+  .SinglePost--Content {
+    padding: 4rem 2rem;
+  }
+}
+
+.SinglePost .SinglePost--Banner {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#84c2d2+0,5badc5+100 */
+  background: #3c8f9d; /* Old browsers */
+  background: -moz-linear-gradient(top, #30a0b5 0%, #48adbf 30%, #48adbf 70%, #30a0b5 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #30a0b5 0%, #48adbf 30%, #48adbf 70%, #30a0b5 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #30a0b5 0%, #48adbf 30%, #48adbf 70%, #30a0b5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30a0b5', endColorstr='#48adbf',GradientType=0 ); /* IE6-9 */
+  padding: 8rem 0;
+  position: relative;
+}
+
+.SinglePost--Title {
+  font-size: 2.2em;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 1px 1px rgba(15,36,39, 0.7);
+}
+
+.SinglePost--InnerContent {
+  padding: 3rem 0 0;
+}
+
+.SinglePost--InnerContent blockquote{
+  line-height: 0.5em;
+  letter-spacing: 5px;
+  border-left-color: #098398;
+  border-left-width: 4px;
+  background-color: #efefef;
+  padding: 2rem 3rem;
+  border-radius: 0 5px 5px 0;
+}
+.SinglePost--InnerContent blockquote p {
+  font-family: 'Open Sans', helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.6em;
+  font-style: italic;
+  letter-spacing: 0.1px;
+}
+
+@media (max-width: 812px) {
+  .SinglePost--TOC {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .SinglePost--InnerContent {
+    padding: 1rem 0 0;
+  }
+
+  .SinglePost--ContentTop {
+    display: block;
+    padding-bottom: 3rem;
+  }
+}
+
+.SinglePost--Side ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+.SinglePost--Side ul li {
+  margin-bottom: 1rem;
+}
+
+.SinglePost .linkedin-share button{
+  font-size: 13px !important;
+  height: 28px !important;
+  padding: 2px 10px 1px 14px !important;
+  font-weight: 500 !important;
+  display: inline-block !important;
+  border-radius: 4px !important;
+}

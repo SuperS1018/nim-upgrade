@@ -1,0 +1,97 @@
+.CommandSetList {
+  background-color: #492D98;
+  padding: 5rem 0;
+}
+
+.CommandSetList h2,
+.CommandSetList p.desc {
+  text-indent: 0 !important;
+  font-size: 3rem !important;
+  font-weight: 400 !important;
+  text-align: center;
+  color: #ffffff;
+}
+
+.CommandSetList h2 {
+  margin-bottom: 0 !important;
+}
+
+.CommandSetList p.desc {
+}
+
+.CommandSetList .btm-txt {
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5rem;
+  color: #ffffff;
+}
+
+.CommandSetList .btm-txt a {
+  color: #00D5F1;
+}
+
+.CommandSetList .btm-txt a:hover {
+  color:#008a9c;
+}
+
+.CommandSetList--Cata .cata-name {
+  text-align: center;
+  position: relative;
+  margin: 3rem 0 5rem;
+  color: #ffffff;
+}
+
+.CommandSetList--Cata .cata-name::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 3px;
+  background-color: #AB5DFF;
+}
+
+.CommandSetList--Item {
+  background-color: white;
+  border: 1px solid #d6d6d6;
+  padding: 4rem 2rem;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.CommandSetList--Item .Content p {
+  font-size: 0.85em;
+  letter-spacing: -0.4px;
+}
+
+.CommandSetList--Item .command-name {
+  font-weight: 600;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.CommandSetList--Item a.readme svg {
+  color: #586163;
+  font-size: 0.6em;
+  transition: color .3s ease-in;
+}
+
+.CommandSetList--Item a.readme:hover svg {
+  color: #004d5b;
+}
+
+.CommandSetList--Item .Content .code-block .inline {
+  white-space: pre-wrap;
+}
+
+.CommandSetList--Item .Content .code-block .inline .copy-to-clipboard-btn {
+  top: auto;
+  bottom: -9px;
+}
+
+@media (max-width: 414px) {
+  .CommandSetList--Item {
+    text-align: center;
+  }
+}

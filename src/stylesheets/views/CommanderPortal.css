@@ -1,0 +1,28 @@
+.CommanderPortal--Banner {
+  padding: 5rem 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #586163;
+}
+
+.CommanderPortal--Banner h1 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0 0 1rem;
+  width: 100%;
+}
+
+.CommanderPortal--Banner p {
+  font-size: 1.4em;
+  margin-bottom: 4rem;
+  text-align: center;
+  width: 100%;
+}
+
+.CommanderPortal--Banner .btn-wrap {
+  text-align: center;
+  width: 100%;
+}

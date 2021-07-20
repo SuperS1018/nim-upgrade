@@ -9,6 +9,7 @@ const Meta = props => {
   const {
     title,
     url,
+    postFeaturedImage,
     description,
     absoluteImageUrl,
     twitterSiteAccount,
@@ -22,21 +23,22 @@ const Meta = props => {
     ...onlyTruthyValues(_get(props, 'fields')),
     ...onlyTruthyValues(_get(props, 'fields.meta'))
   }
-
   // write headerScripts
   const headerScriptsElement = document.head.querySelector('#headerScripts')
   if (headerScripts && headerScriptsElement) {
     headerScriptsElement.outerHTML = headerScripts
   }
-
   return (
     <Helmet>
       {title && <title>{title}</title>}
-      {title && <meta property='og:title' content={title} />}
+      {title && <meta property='og:title' content={`${title} | Nimbella.com®`} />}
       {description && <meta name='description' content={description} />}
       {description && <meta property='og:description' content={description} />}
       {url && <meta property='og:type' content='website' />}
       {url && <meta property='og:url' content={url} />}
+      {postFeaturedImage && (
+        <meta property='og:image' content={`https://nimbella.com${postFeaturedImage}`} />
+      )}
       {absoluteImageUrl && (
         <meta name='twitter:card' content='summary_large_image' />
       )}
@@ -51,6 +53,8 @@ const Meta = props => {
       )}
       {noindex && <meta name='robots' content='noindex' />}
       {canonicalLink && <link rel='canonical' href={canonicalLink} />}
+      <meta name='google-site-verification' content='IzuwJgzl9iUPT1KVtgFhUqXaI7xSr-RQQ8NR-fRoaNE' />
+      <meta name='insight-app-sec-validation' content='763bb93b-9bda-4689-b600-9ebea0ace42b' />
     </Helmet>
   )
 }

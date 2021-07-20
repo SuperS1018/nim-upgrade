@@ -1,0 +1,17 @@
+.JoinCommunity {
+  background-color: #398794;
+  color: white;
+  display: flex;
+  align-items: baseline;
+  padding: 3rem;
+  justify-content: center;
+}
+
+.JoinCommunity h3 {
+  margin-right: 2rem;
+}
+
+@media (max-width: 414px) {
+  .JoinCommunity { display: block; font-size: 0.9em; }
+  .JoinCommunity .btn { width: 100%; }
+}

@@ -1,0 +1,156 @@
+.HomeExperience, .HomeIntegrations {
+  text-align: center;
+}
+
+.HomeExperience h2, .HomeIntegrations h2 {
+  font-size: 2.2em;
+}
+
+.HomeExperience h3, .HomeIntegrations h3 {
+  font-size: 1.7em;
+  margin: 3rem;
+}
+
+.HomeExperience h3 {
+  margin-bottom: 15rem;
+}
+
+/*Experience*/
+.HomeExperience--Item {
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  border-radius: 20px;
+  padding: 94px 67px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.HomeExperience--Item img {
+  position: absolute;
+  width: 98px;
+  height: 98px;
+  top: -49px;
+}
+
+.HomeExperience--Item .Content {
+  margin-bottom: 3rem;
+  min-height: 80px;
+}
+
+.HomeExperience--Item .Content p {
+  margin: 0;
+}
+
+.HomeExperience--Item .btn {
+  position: absolute;
+  bottom: 54px;
+}
+
+/*Integrations*/
+.HomeIntegrations h2 {
+  margin-bottom: 0;
+}
+
+.HomeIntegrations h3 {
+  font-weight: 500;
+  margin: 3rem 0 9rem;
+}
+
+.HomeIntegrations .Content.note {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 6rem;
+}
+
+.HomeIntegrations .Content.note strong {
+  color: #48A8B9;
+}
+
+.HomeIntegrations--Item {
+  position: relative;
+  background-color: #005968;
+  padding: 38px 38px 90px;
+  border-radius: 15px;
+  color: white;
+  text-align: left;
+  height: 100%;
+}
+
+.HomeIntegrations--Item .image-wrap {
+  background-color: white;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.HomeIntegrations--Item .image-wrap img {
+  width: 35px;
+  height: 35px;
+}
+
+.HomeIntegrations--Item a {
+  position: absolute;
+  bottom: 38px;
+  color: #FF8815;
+  border-bottom: 1px solid #FF8815;
+  padding-bottom: 2px;
+}
+
+.HomeIntegrations--Item a:hover {
+  border-bottom: 0;
+}
+
+.HomeIntegrations--Item h4 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.HomeIntegrations--Item a {
+  font-weight: 500;
+}
+
+.HomeIntegrations--Item .Content {
+  font-size: 1em;
+  min-height: 100px;
+}
+
+@media (max-width: 767px){
+  .HomeExperience .col-md-6:not(:last-of-type) {
+    margin-bottom: 8rem;
+  }
+
+  .HomeExperience h2,
+  .HomeIntegrations h2 {
+    text-align:center;
+  }
+
+  .HomeExperience h3,
+  .HomeIntegrations h3,
+  .HomeIntegrations .Content.note {
+    text-align:center;
+  }
+
+  .HomeExperience h3 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8rem;
+  }
+
+  .HomeExperience--Item {
+    padding: 8rem 3rem;
+  }
+
+  .HomeExperience--Item .Content,
+  .HomeIntegrations .Content {
+    font-size: 1.4em;
+  }
+
+  .HomeIntegrations--Item {
+    padding: 3rem 3rem 58px;
+  }
+}

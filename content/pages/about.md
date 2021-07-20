@@ -1,32 +1,31 @@
 ---
-title: About page title
-featuredImage: /images/uploads/tim-marshall-155597.jpg
-section1: |-
-  ## Lorem Ipsum
+title: About Nimbella
+featuredImage: /images/uploads/about-banner1.jpg
+subtitle: ''
+section1: >-
+  Nimbella is a serverless cloud that helps developers and organizations adopt a
+  cloud strategy focused on rapidly delivering business value in a changing
+  cloud landscape. Nimbella is backed by proven enterprise-grade open source
+  software, and offers organizations the peace of mind of being able to run
+  across multiple clouds, including private infrastructure.
 
-  Netlify CMS works with both `.md` and `.json`.
 
-  ![Image test](/images/uploads/isabella juskova.jpg)
-
-  [Link test](/images/uploads/isabella juskova.jpg)
-
-  ### Embed Test
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Js00yn142ic" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-section2: |-
-  ## This is a Container component
-
-  A sem vel nec sodales mi vivamus senectus sed potenti a parturient nascetur
-  tincidunt nisi pulvinar rhoncus a. Risus imperdiet taciti suspendisse facilisi
-  a per metus cubilia varius a nostra adipiscing amet ultrices quisque ac mi a.
-  Dictumst a ultrices mi a dignissim ad fermentum eget a nam et a blandit
-  scelerisque. Taciti lorem tempor quam vestibulum dis habitasse vestibulum diam
-  vel est ut proin dis auctor. Suscipit scelerisque orci magna interdum vel
-  bibendum duis netus a consectetur dui magnis ac aliquet sem posuere tincidunt
-  vestibulum.
-
-  The image below will have a `srcset` attribute generated:
-
-  ![Tim Marshall](/images/uploads/tim-marshall-155597.jpg)
+  At Nimbella, we obsess over the developer experience. Our mission is borne out
+  of our frustrations in using the public cloud vendors. Our technology fills
+  the technology gaps that slow down and distract developers from delivering
+  business value to their organizations and clients. The Nimbella platform
+  unifies the programming experience for the cloud with a serverless foundation.
+  In this way, we are able to deliver a complete and integrated solution that is
+  enterprise-ready and works across clouds. Our technology is designed from the
+  ground up to address the needs of event-based applications, long running
+  applications, stateful workloads, and more complex use cases that employ
+  artificial intelligence and machine learning.
+section2: ''
+meta:
+  canonicalLink: ''
+  description: >-
+    Use Nimbella: trusted by hi-tech companies, easy to use, serverless cloud
+    platform backed by proven enterprise-grade open source software ✔
+  title: Serverless Cloud Computing Platform for Developers
 ---
+

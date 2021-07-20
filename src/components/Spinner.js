@@ -1,5 +1,5 @@
 import React from 'react'
-import './Spinner.css'
+import '../stylesheets/components/Spinner.css'
 
 export default () => (
   <div className='Spinner'>

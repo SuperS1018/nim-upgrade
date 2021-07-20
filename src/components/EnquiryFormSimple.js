@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './EnquiryForm.css'
+import '../stylesheets/components/EnquiryForm.css'
 
 export default ({
   name = 'Simple Form',

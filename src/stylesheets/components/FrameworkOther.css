@@ -1,0 +1,27 @@
+.FrameworkOther {
+
+}
+
+.FrameworkOther .center-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.FrameworkOther--Item {
+  width: 100%;
+  border: 1px solid #efefef;
+  text-align: center;
+  padding: 4rem 0;
+  margin: 1.5rem 0;
+}
+
+.FrameworkOther--Item img {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .FrameworkOther .center-cards {
+    display: unset;
+  }
+}

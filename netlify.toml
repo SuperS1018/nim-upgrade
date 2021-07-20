@@ -3,6 +3,263 @@
 # “publish” is the directory to publish (relative to root of your repo),
 # “command” is your build command
 
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+
 [build]
-  publish = "build"
-  command = "npm run build"
+command = "CI=false && npm ci && npm run build"
+publish = "build"
+
+[build.environment]
+NODE_OPTIONS = "--max_old_space_size=8096"
+VARIABLE = "https://nimbella.com"
+
+[context.production]
+command = "CI=false && npm ci && npm run build"
+
+[context.deploy-preview]
+command = "CI=false && npm ci && npm run build:staging"
+
+[context.local]
+command = "CI=false && npm ci && npm run build:staging"
+
+[context.master]
+command = "CI=false && npm ci && npm run build:staging"
+
+# RSS Feed
+[[plugins]]
+package = "netlify-plugin-rss"
+[plugins.inputs]
+# required configs, customize as needed
+dirToScan = "/blog" # a subfolder to scan. "/" to scan all
+authorName = "Nimbella"
+site_url = "https://nimbella.com"
+title = "Nimbella RSS Feed"
+rssDescription = "Nimbella.com RSS Feed"
+categories = ['Technology', 'Announcement', 'Commander', 'Turorials']
+titleSelector = "h1.SinglePost--Title"
+publishDateSelector = "span.SinglePage--Date"
+ttl = "1"
+
+# # optional configs, defaults shown
+# rssFaviconUrl = "https://swyx.io/favicon.png"
+# docs = "http://example.com/rss/docs.html"
+# managingEditor = "authorName"
+# webMaster = "authorName"
+# copyright = "2020 ${authorName}"
+# language = "en"
+# pubDate = "new Date().toUTCString(),"
+# ttl = "60" # aka refresh every hour
+
+# # cheerio selectors for extractMetadataFromFile
+# # defaults shown
+# contentSelector = "main"
+# publishDateSelector = # if not specified, we use the date of file creation
+# descriptionSelector = "meta[name=description]" # probably no need to change
+# titleSelector = "title" # probably no need to change
+
+# # developer configs
+# debugMode = false # (for development) turn true for extra diagnostic logging
+
+# Redirects
+[[redirects]]
+from = "https://nimbella.com/admin/*"
+to = "/"
+status = 404
+force = true
+
+[[redirects]]
+from = "http://nimbella.com/admin/*"
+to = "/"
+status = 404
+force = true
+
+[[redirects]]
+from = "https://www.nimbella.com/admin/*"
+to = "/"
+status = 404
+force = true
+
+[[redirects]]
+from = "http://www.nimbella.com/admin/*"
+to = "/"
+status = 404
+force = true
+
+[[redirects]]
+from = "/commander/slack/install"
+to = "https://slack.com/oauth/v2/authorize?client_id=876870346995.892105847680&scope=chat:write,commands,users:read,users:read.email"
+status = 302
+force = true
+query = {version = ":version"}
+
+[[redirects]]
+from = "/commander/slack/install"
+to = "https://slack.com/oauth/authorize?client_id=876870346995.892105847680&scope=commands"
+status = 302
+force = true
+
+[[redirects]]
+from = "/product/platform"
+to = "/platform"
+force = true
+
+[[redirects]]
+from = "/commander"
+to = "/integrations/commander"
+force = true
+
+[[redirects]]
+from = "/product/commander"
+to = "/integrations/commander"
+force = true
+
+[[redirects]]
+from = "/pricing"
+to = "/pricing/platform"
+force = true
+
+[[redirects]]
+from = "/pricing-commander"
+to = "/pricing/commander"
+force = true
+
+[[redirects]]
+from = "/pricing/commander/slack"
+to = "/pricing/commander#slack"
+force = true
+
+[[redirects]]
+from = "/pricing/commander/mattermost"
+to = "/pricing/commander#mattermost"
+force = true
+
+[[redirects]]
+from = "/pricing/commander/microsoft-teams"
+to = "/pricing/commander#microsoft-teams"
+force = true
+
+[[redirects]]
+from = "/resources-commander/microsoft-teams/*"
+to = "/docs/commander/microsoft-teams/:splat"
+force = true
+
+[[redirects]]
+from = "/resources-commander/mattermost/*"
+to = "/docs/commander/mattermost/:splat"
+force = true
+
+[[redirects]]
+from = "/resources-commander/*"
+to = "/docs/commander/slack/:splat"
+force = true
+
+
+[[redirects]]
+from = "/product/com"
+to = "/"
+force = true
+
+[[redirects]]
+from = "/careers"
+to = "/join-us/"
+force = true
+
+[[redirects]]
+from = "/product/postman"
+to = "/integrations/postman"
+force = true
+
+[[redirects]]
+from = "/blog/get-your-digitalocean-billing-info-in-slack-with-nimbella-commander/"
+to = "/blog/how-to-fetch-your-digital-ocean-billing-info-on-slack"
+force = true
+
+[[redirects]]
+from = "/blog/get-your-aws-billing-info-in-slack-with-nimbella-commander/"
+to = "/blog/how-to-fetch-your-aws-billing-info-on-slack"
+force = true
+
+[[redirects]]
+from = "/blog/category/reading-time-5-minutes"
+to = "/blog"
+force = true
+
+[[redirects]]
+from = "/blog/category/reading-time-6-minutes"
+to = "/blog"
+force = true
+
+[[redirects]]
+from = "/blog-category/reading-time-5-minutes"
+to = "/blog"
+force = true
+
+[[redirects]]
+from = "/blog-category/reading-time-6-minutes"
+to = "/blog"
+force = true
+
+[[redirects]]
+from = "/makeathon/index"
+to = "/"
+force = true
+
+[[redirects]]
+from = "/makeathon"
+to = "/"
+force = true
+
+[[redirects]]
+from = "/developeripl"
+to = "/"
+force = true
+
+[[redirects]]
+from = "/resources/platform/*"
+to = "https://docs.nimbella.com/"
+force = true
+
+[[redirects]]
+from = "/resources/commander/slack/*"
+to = "/docs/commander/slack/:splat"
+force = true
+
+[[redirects]]
+from = "/resources/commander/mattermost/*"
+to = "/docs/commander/mattermost/:splat"
+force = true
+
+[[redirects]]
+from = "/resources/commander/microsoft-teams/*"
+to = "/docs/commander/microsoft-teams/:splat"
+force = true
+
+[[redirects]]
+from = "/resources/*"
+to = "https://docs.nimbella.com/"
+force = true
+
+[[redirects]]
+from = "/docs/platform/*"
+to = "https://docs.nimbella.com/"
+force = true
+
+[[redirects]]
+from = "/blog/category/*"
+to = "/blog-category/:splat"
+force = true
+
+[[redirects]]
+from = "https://faaswars.nimbella.com/*"
+to = "https://nimbella.com/blog/results-and-feedback-of-faas-wars-may-the-faas-be-with-you"
+force = true
+
+[[redirects]]
+from = "http://faaswars.nimbella.com/*"
+to = "https://nimbella.com/blog/results-and-feedback-of-faas-wars-may-the-faas-be-with-you"
+force = true
+

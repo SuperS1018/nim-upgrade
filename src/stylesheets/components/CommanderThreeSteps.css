@@ -1,0 +1,92 @@
+.CommanderThreeSteps {
+  padding: 8rem 0;
+}
+
+.CommanderThreeSteps .h2,
+.CommanderThreeSteps .h3,
+.CommanderThreeSteps .p,
+.CommanderThreeSteps h3 {
+  font-weight: 400;
+  text-align: center;
+}
+
+.CommanderThreeSteps .h2 strong,
+.CommanderThreeSteps .h3 strong,
+.CommanderThreeSteps .p strong {
+  color: #4700e9;
+}
+
+.CommanderThreeSteps .h2 {
+  font-size: 3rem;
+  color: #120f4f;
+}
+
+.CommanderThreeSteps .h3 p,
+.CommanderThreeSteps h3 {
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.modal-dialog.CommanderThreeSteps--Modal .modal-body ul {
+  list-style: none !important;
+  padding: 0;
+  margin: 2rem 1rem;
+}
+
+.modal-dialog.CommanderThreeSteps--Modal .modal-body ul li {
+  width: 25%;
+  float: left;
+}
+
+.modal-dialog.CommanderThreeSteps--Modal .modal-body ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-dialog.CommanderThreeSteps--Modal .modal-body ul li a img {
+  border: 0;
+  margin: 0 0 10px;
+}
+
+.CommanderThreeSteps--Item {
+  background-color: transparent;
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  padding-top: 80%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.CommanderThreeSteps--Item .Content {
+  position: absolute;
+  top: 65%;
+  text-align: center;
+  width: 100%;
+}
+
+.CommanderThreeSteps--Item .Content .code-block {
+  background-color: transparent;
+}
+
+@media (max-width: 450px) {
+  .modal-dialog.CommanderThreeSteps--Modal {
+    top: 1rem;
+  }
+  .modal-dialog.CommanderThreeSteps--Modal .modal-body {
+    height: 60vh;
+    overflow-y: auto;
+  }
+  .modal-dialog.CommanderThreeSteps--Modal .modal-body ul {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .modal-dialog.CommanderThreeSteps--Modal .modal-body ul li {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+

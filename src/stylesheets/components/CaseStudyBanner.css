@@ -1,0 +1,57 @@
+.CaseStudyBanner {
+  width: 100%;
+  margin-top: 9rem;
+  padding-top: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.CaseStudyBanner .pattern {
+  position: absolute;
+  top: -99px;
+  right: 142px;
+  z-index: 1;
+  width: 285px;
+  height: 99px;
+  background: transparent url(/images/uploads/poc-bg.png) 100% 100% no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.CaseStudyBanner .bg-color {
+  position: relative;
+  background-color: #48A8B9;
+  padding: 8rem 0;
+}
+
+.CaseStudyBanner h1 {
+  font-size: 2.9em;
+  font-weight: 700;
+  color: white;
+}
+
+.CaseStudyBanner img {
+  margin-bottom: 0;
+}
+
+.CaseStudyBanner .Content strong {
+  color: #ffcf7f;
+}
+
+.CaseStudyBanner .description {
+  color: white;
+  font-weight: 600;
+  font-size: 1.4em;
+}
+
+@media (max-width: 768px) {
+  .CaseStudyBanner .btn {
+    margin: 2rem auto;
+  }
+
+  .CaseStudyBanner .pattern {
+    display: none;
+  }
+}
+
+

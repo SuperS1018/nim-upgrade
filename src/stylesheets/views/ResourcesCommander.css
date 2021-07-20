@@ -1,0 +1,410 @@
+.Commander .sidebar{ position: fixed; top: 98px; padding-bottom: 10rem !important; }
+.Commander main#containerElement{ padding-bottom: calc(100vh - 500px) !important; }
+.Commander nav#commander-sidebar{ padding-bottom: calc(100vh - 100px) !important; }
+/*.Commander .Content{ padding-bottom: 100vh; }*/
+/*.Commander .Content h1 span::before, .Commander .Content h2 span::before {*/
+  /*display: block;*/
+  /*content: ' ';*/
+  /*margin-top: -78px;*/
+  /*height: 78px;*/
+  /*visibility: hidden;*/
+  /*pointer-events: none;*/
+/*}*/
+
+/*.Commander .Content h1:first-of-type span::before {*/
+  /*margin-top: -42px;*/
+/*}*/
+.Commander .sidebar {
+  height: 100vh;
+  display: flex;
+  font-size: 0.9em;
+}
+.Commander .sidebar ul ul {
+  padding: 0;
+}
+.Commander .sidebar li {
+
+}
+.Commander main#containerElement .anchor-subject .anchor {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+}
+.Commander main#containerElement .anchor-subject {
+  position: relative;
+}
+
+.Commander main h2 {
+  font-size: 1.2em !important;
+  /*margin-top: 5rem !important;*/
+}
+
+.Commander main h3 {
+  font-size: 1em !important;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.Commander h1:first-of-type .anchor {
+  top: -80px;
+}
+.Commander .sidebar-sticky ul.nav li.nav-item {
+  width: 100%;
+  /*padding: 0.5rem 2rem;*/
+}
+.Commander .sidebar-sticky ul.nav li.nav-item > a {
+  transition: none;
+  width: 100%;
+  color: #586163;
+  display: block;
+  padding: 0.4rem 2rem;
+  font-weight: 600;
+}
+.Commander .sidebar-sticky ul.nav li.nav-item.indent > a {
+  font-weight: 400;
+}
+.Commander .sidebar-sticky ul.nav li.nav-item.subject-active a {
+  color: #46a8b9;
+}
+.Commander .sidebar-sticky ul.nav li.nav-item.is-active > a{
+  color: white !important;
+  background-color: #52bfd2;
+  width: 100%;
+}
+.Commander .anchor-subject .Content {
+  padding-left: 0;
+}
+.Commander .anchor-subject h1 {
+  font-size: 1.4em;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+}
+.Commander .anchor-subject:first-of-type h1 {
+  font-size: 1.9em;
+  font-weight: 600;
+}
+.Commander h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  text-indent: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  /*margin-top: 3rem;*/
+}
+.Commander .Content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.Commander .Content pre {
+  margin-left: 0;
+}
+.Commander .Content h1 a, .Resources.Commander .Content h2 a, .Resources.Commander .Content table a{
+  pointer-events: none;
+  cursor: default;
+  color: #586163;
+}
+.Commander .sidebar-sticky ul.nav li.nav-item.indent > a {
+  padding-left: 4rem;
+}
+.Commander .sidebar-sticky ul.nav li.nav-item.no-indent > a {
+  padding-left: 3rem !important;
+}
+.Commander .Content img{
+  border: 1px solid #dddddd;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  align-self: end;
+}
+.Commander .Content table.slack-table {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  border: none;
+}
+.Commander .Content table.slack-table td {
+  border: none;
+  color: #a9a9a9;
+  vertical-align: baseline;
+}
+.Commander .Content table{
+  margin-bottom: 3rem;
+}
+.Commander .Content table.slack-table td.command {
+  background: none;
+}
+.Commander .Content table.slack-table td.command .td-copy {
+  background-color: #d0d4ff;
+  padding: 1px 0.5rem;
+  border-radius: 5px;
+  color: #121415;
+  white-space: nowrap;
+}
+.Commander .Content blockquote{
+  line-height: 0.5em;
+  letter-spacing: 5px;
+  border-left-color: white;
+}
+.Commander .Content blockquote p {
+  font-family: 'Open Sans', helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.6em;
+  font-style: normal;
+  letter-spacing: 0.1px;
+  margin-top: 0 !important;
+  margin-left: 1rem;
+}
+.Commander .Content blockquote.schedule {
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+.Content--Slack {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border: 1px solid #dddddd;
+  padding: 0 1rem;
+}
+
+.Content--Slack .slack {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.Content--Slack .line {
+  position: relative;
+}
+
+.Content--Slack .line .copy-to-clipboard-btn {
+  top: unset !important;
+  right: -20px;
+}
+
+.Content--Slack img {
+  align-self: center;
+  width: 50px !important;
+  border-radius: 50px;
+  overflow: hidden;
+  border: none !important;
+}
+
+.Content--Slack .text p {
+  margin: 0 !important;
+  word-break: break-word;
+}
+
+.Content--Slack .text {
+  margin-left: 10px;
+}
+
+.Content--Slack .text .name {
+  font-weight: 600;
+}
+
+.Content--Slack .text .time {
+  color: #8f9c9e;
+  font-size: 0.8em;
+}
+
+.Content--Slack .text .app {
+  font-size: 0.8em;
+  background-color: #efefef;
+  text-transform: uppercase;
+  padding: 0 2px;
+}
+
+.Content--Slack .slack-admin .text {
+  flex: 1;
+}
+
+.Content--Slack .slack-admin .code-block .inline {
+  padding-right: 0;
+}
+
+.Content--Slack .slack-admin .code-block:after {
+  content: '' !important;
+}
+
+.Content--Slack .slack-admin .code-block .copy-to-clipboard-btn {
+  display: none;
+}
+
+.Content--Slack .slack-user .text,
+.Content--Slack .slack-admin .text {
+  flex: 1;
+}
+
+.Content--Slack .slack-user .text .line,
+.Content--Slack .slack-admin .text .line {
+  word-break: break-all;
+  display: inline-block !important;
+}
+
+.Content--Slack .slack-admin a,
+.Content--Slack .slack-user a {
+  color: #0a9db7;
+  cursor: default;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.Commander .Footer {
+  width: 100%;
+}
+
+/*Page specific*/
+.Commander .anchor-subject#quick-start-guide ul li,
+.Commander#page-docs-commander-opencsi ul li,
+.Commander#page-docs-commander-slack-opencsi ul li,
+.Commander#page-docs-commander-mattermost-opencsi ul li,
+.Commander#page-docs-commander-microsoft-teams-opencsi ul li {
+  list-style: none;
+}
+
+.Commander#page-docs-commander-overview p strong,
+.Commander#page-docs-commander-slack-overview p strong,
+.Commander#page-docs-commander-mattermost-overview p strong,
+.Commander#page-docs-commander-microsoft-teams-overview p strong {
+  color: #e83e8c !important;
+  background-color: #efefef;
+  font-weight: 400;
+}
+
+.Commander#page-docs-commander-quickstart ol li ul,
+.Commander#page-docs-commander-slack-quickstart ol li ul,
+.Commander#page-docs-commander-mattermost-quickstart ol li ul,
+.Commander#page-docs-commander-microsoft-teams-quickstart ol li ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.Commander#page-docs-commander-videos .anchor-subject h1,
+.Commander#page-docs-commander-slack-videos .anchor-subject h1,
+.Commander#page-docs-commander-mattermost-videos .anchor-subject h1,
+.Commander#page-docs-commander-microsoft-teams-videos .anchor-subject h1 {
+  font-size: 1.4em !important;
+  margin-bottom: 1rem;
+}
+
+.Commander#page-docs-commander-videos .Content.videos,
+.Commander#page-docs-commander-slack-videos .Content.videos,
+.Commander#page-docs-commander-mattermost-videos .Content.videos,
+.Commander#page-docs-commander-microsoft-teams-videos .Content.videos {
+  display: flex;
+}
+
+.Commander#page-docs-commander-videos .Content.videos ul,
+.Commander#page-docs-commander-slack-videos .Content.videos ul,
+.Commander#page-docs-commander-mattermost-videos .Content.videos ul,
+.Commander#page-docs-commander-microsoft-teams-videos .Content.videos ul {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  list-style: none;
+  padding-left: 0;
+}
+
+.Commander#page-docs-commander-videos .Content.videos p,
+.Commander#page-docs-commander-slack-videos .Content.videos p,
+.Commander#page-docs-commander-mattermost-videos .Content.videos p,
+.Commander#page-docs-commander-microsoft-teams-videos .Content.videos p {
+  width: 70%;
+}
+
+.Commander#page-docs-commander-videos .Content.videos .Content--Video,
+.Commander#page-docs-commander-slack-videos .Content.videos .Content--Video,
+.Commander#page-docs-commander-mattermost-videos .Content.videos .Content--Video,
+.Commander#page-docs-commander-microsoft-teams-videos .Content.videos .Content--Video {
+  width: 25% !important;
+  margin: 0 0 0 5%;
+}
+
+@media (max-width: 812px) {
+  .Commander .slack-table .td-copy { word-break: break-word; white-space: pre-wrap !important; }
+  .Commander .slack-table td { word-break: break-word; white-space: pre-wrap !important; }
+  .Commander .Content .slack .copy-to-clipboard-btn,
+  .Commander .Content .slack-table .copy-to-clipboard-btn { display: none !important; }
+  .Commander nav#commander-sidebar .sidebar-sticky { width: 100%; }
+  .Commander#page-docs-commander-videos .Content.videos,
+  .Commander#page-docs-commander-slack-videos .Content.videos,
+  .Commander#page-docs-commander-mattermost-videos .Content.videos,
+  .Commander#page-docs-commander-microsoft-teams-videos .Content.videos { display: block; }
+  .Commander#page-docs-commander-videos .Content.videos p,
+  .Commander#page-docs-commander-slack-videos .Content.videos p,
+  .Commander#page-docs-commander-mattermost-videos .Content.videos p,
+  .Commander#page-docs-commander-microsoft-teams-videos .Content.videos p,
+  .Commander#page-docs-commander-videos .Content.videos .Content--Video,
+  .Commander#page-docs-commander-slack-videos .Content.videos .Content--Video,
+  .Commander#page-docs-commander-mattermost-videos .Content.videos .Content--Video,
+  .Commander#page-docs-commander-microsoft-teams-videos .Content.videos .Content--Video { width: 100% !important; margin: 0 !important; }
+}
+
+@media (max-width: 767px) {
+  .Commander main#containerElement { padding-bottom: 10rem !important; }
+  .Commander nav#commander-sidebar { padding-bottom: 0 !important; height: 0; }
+  .Commander main h2 { text-indent: unset; }
+  .Commander .sidebar { padding-bottom: 10rem !important; }
+}
+
+@media (max-height: 414px) {
+  .Commander .sidebar {
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 98px;
+  }
+  .Commander main#containerElement {
+    margin-top: 31px;
+  }
+  .Commander nav#commander-sidebar {
+    padding-bottom: 0 !important;
+  }
+  .Commander nav#commander-sidebar ul.nav {
+    padding-bottom: 10rem !important;
+  }
+  .Commander nav#commander-sidebar .sidebar-sticky {
+    width: 100%;
+  }
+}
+
+@media (max-width: 414px) {
+  .Commander .sidebar {
+    height: 0;
+    display: block;
+    position: fixed;
+    top: 85px;
+  }
+  .Commander .sidebar .show-list {
+    top: 85px;
+  }
+  .Commander nav#commander-sidebar {
+    padding-bottom: 0 !important;
+  }
+  .Commander nav#commander-sidebar ul.nav {
+    padding-bottom: 50px !important;
+  }
+  .Commander main {
+    margin-top: 30px;
+  }
+  .Commander .Content {
+    padding: 0;
+  }
+  .Commander .Content .slack .line {
+    word-break: keep-all !important;
+    word-wrap: break-spaces !important;
+  }
+  .Commander .Content .slack .line a {
+    word-break: break-word !important;
+  }
+  .Commander .Content--Slack {
+    margin-left: 0;
+  }
+  .Commander .Content--Image {
+    width: 100% !important;
+  }
+}

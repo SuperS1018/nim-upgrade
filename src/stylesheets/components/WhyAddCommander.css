@@ -1,0 +1,97 @@
+.WhyAddCommander {
+  padding: 3rem 0 0;
+  background-color: #ffffff;
+}
+
+.WhyAddCommander--Head h2 {
+  text-indent: 0 !important;
+  font-size: 3rem !important;
+  font-weight: 400 !important;
+  text-align: center;
+  color: #120f4f;
+}
+
+.WhyAddCommander--Head p {
+  text-align: center;
+}
+
+.WhyAddCommander table tr td:last-of-type {
+  /*border-right: 1px solid #efefef;*/
+}
+
+.WhyAddCommander table tr td:nth-of-type(2) {
+  /*border-left: 1px solid #efefef;*/
+}
+
+.WhyAddCommander table thead tr,
+.WhyAddCommander table tbody tr:not(:last-of-type) {
+  /*border-bottom: 1px solid #c3b3e6;*/
+}
+
+.WhyAddCommander table tr td {
+  /*border-left: 5px solid white;*/
+  padding: 2rem 1rem;
+  /*color: #c3b3e6;*/
+}
+
+.WhyAddCommander table tr td p {
+  white-space: pre-wrap;
+  word-break: keep-all;
+}
+
+.WhyAddCommander table thead tr td p {
+  font-weight: 600;
+  margin: 0;
+}
+
+/*.WhyAddCommander table thead tr td:nth-of-type(2) {*/
+/*background-color: #EED6F3;*/
+
+/*}*/
+
+/*.WhyAddCommander table thead tr td:last-of-type {*/
+/*background-color: #DAD7FF;*/
+/*}*/
+
+.WhyAddCommander table tbody tr:nth-of-type(2n + 1) td {
+  background-color: #efefef;
+  height: 100%;
+}
+
+.WhyAddCommander table tbody tr td:first-of-type {
+  font-weight: 600;
+  /*background-color: white;*/
+  text-align: left;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  word-break: initial;
+
+}
+
+.WhyAddCommander table tbody tr td:first-of-type,
+.WhyAddCommander table thead tr td {
+  /*color: white;*/
+}
+
+.WhyAddCommander .Content p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 414px) {
+  .WhyAddCommander table tr td {
+    padding: 10px 0;
+    font-size: 0.8em;
+  }
+  .WhyAddCommander table tbody tr td:first-of-type {
+    padding-left: 1rem;
+  }
+
+  .WhyAddCommander table thead td:nth-of-type(2) img {
+    width: 35px;
+  }
+
+  .WhyAddCommander table thead td:last-of-type img {
+    width: 90px;
+  }
+
+}

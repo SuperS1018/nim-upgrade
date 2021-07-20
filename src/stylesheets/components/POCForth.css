@@ -1,0 +1,141 @@
+.POCForth {
+  width: 100%;
+  background: #48A8B9;
+  padding: 10rem 0;
+  color: white;
+}
+
+.POCForth .container {
+  position: relative;
+}
+
+.POCForth .pattern {
+  position: absolute;
+  top: -430px;
+  left: 15px;
+  z-index: 1;
+  width: 258px;
+  height: 436px;
+  background: transparent url(/images/uploads/poc-bg.png) 100% 100% no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.POCForth h2 {
+  font-size: 3em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.POCForth .Content {
+  font-size: 1.7em;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.POCForth form {
+  width: 100%;
+}
+
+.POCForth .top-wrap {
+  margin: 3rem 0;
+}
+
+.POCForth form label,
+.POCForth form label input:not([type=checkbox]),
+.POCForth form label.EnquiryForm--Select1 select {
+  width: 100%;
+}
+
+.POCForth form label input:not([type=checkbox]),
+.POCForth form label.EnquiryForm--Select1 select,
+.POCForth form label textarea {
+  font-size: 0.8em;
+  padding: 1.5rem;
+  width: 100%;
+  display: block;
+  border: 1px solid #005968;
+  border-radius: 4px;
+}
+
+.POCForth form label.EnquiryForm--Select1 {
+  position: relative;
+}
+
+.POCForth form label.EnquiryForm--Select1::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #48A8B9;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.POCForth form label:not(:last-of-type) input:not([type=checkbox]) {
+  margin-bottom: 0.7rem;
+}
+
+.POCForth form h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.POCForth form textarea {
+  margin-top: 0.5rem;
+}
+
+.POCForth .bottom-wrap label {
+  margin-bottom: 2rem;
+}
+
+.POCForth .bottom-wrap .checkbox-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 0.75em;
+  color: white;
+}
+
+.POCForth .bottom-wrap .checkbox-wrap a {
+  color: white;
+  border-bottom: 0.5px solid white;
+}
+
+.POCForth .bottom-wrap .checkbox-wrap a:hover {
+  border-bottom: 0;
+}
+
+.POCForth .bottom-wrap .checkbox-wrap input[type=checkbox] {
+  padding: 0;
+  width: auto;
+  margin-right: 1rem;
+}
+
+.POCForth form input[type=submit] {
+  font-weight: 400 !important;
+  display: block;
+  margin: 5rem auto 0;
+}
+
+.POCForth form input[type=submit][disabled] {
+  background-color: #FF8815 !important;
+}
+
+.POCForth form .alert-primary {
+  color: #005f85;
+  background-color: #ccfdff;
+  border-color: #b8f4ff;
+}
+
+@media (max-width: 736px) {
+  .POCForth .pattern {
+    display: none;
+  }
+}
+

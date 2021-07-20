@@ -1,0 +1,72 @@
+.Founders {
+  background: #ffffff;
+}
+.Founders .Founders--Item {
+  text-align: center;
+}
+.Founders .Founders--Item .avatar {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 200px;
+  border: 1px solid #dbdbdb;
+  margin: 0 auto 2rem;
+}
+
+.Founders .Founders--Item ul {
+  display: inline-block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.Founders .Founders--Item ul li {
+  float: left;
+}
+
+.Founders .Founders--Item .link {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+  box-sizing: content-box;
+  margin: 0 0.3rem;
+}
+
+.Founders .Founders--Item .link svg {
+  font-size: 1.5em;
+  color: #a9a9a9;
+  transition: color .3s ease-in-out;
+}
+
+.Founders .Founders--Item .link svg.fa-linkedin:hover {
+  color: #2f73ad;
+}
+
+.Founders .Founders--Item .link svg.fa-twitter:hover {
+  color: #1DA1F2;
+}
+
+.Founders .Founders--Item .link svg.fa-github:hover {
+   color: #000000;
+ }
+
+
+.Founders .Founders--Item .avatar svg:hover {
+  opacity: 0.8;
+}
+
+.Founders .Founders--Item h6 {
+  font-weight: 600;
+}
+
+.Founders .Founders--Item p {
+  font-size: 1em;
+  color: #a9a9a9;
+  margin-bottom: 1rem;
+}
+

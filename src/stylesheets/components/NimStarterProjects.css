@@ -1,0 +1,88 @@
+.NimStarterProjects {
+  text-align: center;
+}
+
+.NimStarterProjects h2 {
+  text-align: left;
+}
+
+.NimStarterProjects .block {
+  display: block;
+  padding: 0.15em 0.5em;
+  position: relative;
+  width: calc(100% - 15px);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.NimStarterProjects code.block svg.fa-copy {
+  height: 100%;
+  top: 0;
+  margin-top: 0;
+  color: white;
+  background-color: #747474;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+  position: absolute;
+  right: -16px;
+  padding: 5px 2px;
+  font-size: 1.6em;
+}
+
+.NimStarterProjects code.block svg.fa-copy:hover {
+  background-color: #55BFD1;
+}
+
+.NimStarterProjects .divider {
+  border-bottom: 1px solid #b2b2b2;
+  width: 100%;
+  height: 1.2rem;
+  display: block;
+  margin: 2rem auto 5rem;
+  position: relative;
+}
+
+.NimStarterProjects .divider::after {
+  content: 'OR';
+  background-color: white;
+  position: absolute;
+  top: 0;
+  padding: 0 1rem;
+}
+
+.NimStarterProjects--Item h3 {
+  font-size: 1.3em;
+}
+
+.NimStarterProjects--Item p {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
+.NimStarterProjects--Other h2 {
+  margin-bottom: 2rem;
+}
+
+.NimStarterProjects--Other .project-select {
+  display: flex;
+  align-items: baseline;
+}
+
+.NimStarterProjects--Other .project-select .select-wrap {
+  padding: 0 2rem 0 1rem;
+}
+
+.NimStarterProjects--Other .project-select .select-wrap select {
+  font-weight: 600;
+}
+
+.NimStarterProjects--Other .project-select .select-wrap::after {
+  right: 0;
+  top: 0.7em;
+  border-color: #0a9db7 transparent transparent;
+}
+
+.NimStarterProjects--Other .list .block {
+  text-align: left;
+}

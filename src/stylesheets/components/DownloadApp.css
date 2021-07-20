@@ -1,0 +1,19 @@
+.DownloadApp {
+  background-color: #275c65;
+  padding: 3rem 0;
+}
+
+.DownloadApp .DownloadApp--Button {
+  /*max-width: 50rem;*/
+  border-radius: 20rem;
+  /*margin: 0 auto !important;*/
+}
+
+.DownloadApp .DownloadApp--Button svg {
+  font-size: 2em;
+  max-width: 45px;
+}
+
+@media (max-width: 768px) {
+  .DownloadApp .DownloadApp--Button { margin-bottom: 1rem; width: 100%; }
+}

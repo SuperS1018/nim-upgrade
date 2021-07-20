@@ -1,0 +1,118 @@
+.NewsEventsPage {
+}
+
+.SinglePage p, .NewsEventsPage ul {
+  margin-bottom: 2rem;
+}
+
+.NewsEventsPage--BackgroundImage {
+  height: 40rem;
+  position: unset;
+}
+
+.NewsEventsPage--BackButton {
+  color: white;
+  position: relative;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+.NewsEventsPage--BackButton svg {
+  transition: transform 0.2s ease-out;
+  transform: translateX(0);
+  height: 1.2em;
+}
+
+.NewsEventsPage--BackButton:hover svg,
+.NewsEventsPage--BackButton:focus svg {
+  transform: translateX(-0.25em);
+}
+
+.NewsEventsPage--Content {
+  background: white;
+}
+
+@media screen and (max-width: 750px) {
+  .NewsEventsPage--Content {
+    padding: 4rem 2rem;
+  }
+}
+
+.NewsEventsPage--Meta {
+  font-size: 1.2rem;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.NewsEventsPage--Meta > * + * {
+  margin-left: 0.75em;
+}
+
+.NewsEventsPage--Meta--Date,
+.NewsEventsPage--Meta--Time,
+.NewsEventsPage--Meta--Location{
+  display: block;
+  font-size: 1.2em;
+  margin: 1rem 0;
+}
+
+.NewsEventsPage--Meta--Date svg,
+.NewsEventsPage--Meta--Time svg,
+.NewsEventsPage--Meta--Location svg{
+  margin-right: 1rem;
+}
+
+.NewsEventsPage--Meta--Date,
+.NewsEventsPage--Meta--Location,
+.NewsEventsPage--Meta--Category{
+  color: var(--gray);
+}
+
+.NewsEventsPage--Meta--Date,
+.NewsEventsPage--Meta--Time{
+  margin-right: 2rem;
+}
+
+.NewsEventsPage--Meta--Date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.NewsEventsPage--Title {
+  line-height: 1.2;
+  margin-top: 5rem;
+  margin-bottom: 5px;
+}
+
+.NewsEventsPage--InnerContent {
+  padding: 6rem 0 0;
+}
+
+@media screen and (max-width: 750px) {
+  .NewsEventsPage--InnerContent {
+    padding: 0;
+  }
+}
+
+.NewsEventsPage--Pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 414px) {
+  .NewsEventsPage--Pagination {
+    /*justify-content: space-between;*/
+    flex-direction: row;
+  }
+  .NewsEventsPage--BackgroundImage {
+    height: 20rem;
+  }
+  .NewsEventsPage--Content {
+    margin-top: 15rem;
+    padding: 2rem 0;
+  }
+}

@@ -1,0 +1,33 @@
+.modal .modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal .modal-header {
+  padding: 1rem 3rem;
+  background-color: #46a8b9;
+  color: #ffffff;
+}
+
+.modal .modal-header button {
+  transition: opacity .3s ease-in-out;
+}
+
+.modal .modal-header button span {
+  color: #ffffff;
+  font-size: 2em;
+}
+
+.modal .modal-body {
+  padding: 1rem 3rem;
+}
+
+.modal .modal-body img {
+  border: 1px solid #efefef;
+  margin: 2rem 0;
+}
+
+.modal .modal-footer {
+  padding: 1rem 3rem;
+  border-top: none;
+}

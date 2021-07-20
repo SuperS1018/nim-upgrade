@@ -1,0 +1,19 @@
+.HomeHighLights {
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.HomeHighLights img {
+  width: 70px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.HomeHighLights h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.HomeHighLights p {
+  font-size: 1em;
+}

@@ -1,0 +1,40 @@
+.BannerCTASignup {
+  background-color: #120f4f;
+  color: white;
+  display: flex;
+  align-items: baseline;
+  padding: 6rem;
+  justify-content: center;
+}
+
+.BannerCTASignup .banner-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.BannerCTASignup .banner-wrap .Content {
+  display: flex;
+  flex: 1;
+}
+
+.BannerCTASignup .banner-wrap .Content p {
+  color: white;
+  font-size: 1.4em;
+  margin: 0 1rem 0;
+}
+
+.BannerCTASignup .banner-wrap .Content p strong {
+  color: #f5a623;
+}
+
+@media (max-width: 414px) {
+  .BannerCTASignup {
+    padding: 4rem 2rem;
+  }
+  .BannerCTASignup .banner-wrap {
+    flex-direction: column;
+  }
+  .BannerCTASignup .banner-wrap .Content {
+    margin-bottom: 2rem;
+  }
+}

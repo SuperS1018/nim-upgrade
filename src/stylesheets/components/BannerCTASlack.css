@@ -1,0 +1,35 @@
+.BannerCTASlack {
+  text-align: center;
+  background: #005968;
+  color: white;
+  padding: 7rem 0;
+}
+
+.BannerCTASlack h2 {
+  font-size: 1.8em;
+}
+
+.BannerCTASlack p {
+  font-size: 1.1em;
+  margin-bottom: 4rem;
+}
+
+.BannerCTASlack img {
+  width: 127px;
+  height: 34px;
+}
+
+@media (max-width: 768px) {
+  .BannerCTASlack {
+    padding: 7rem 5rem;
+  }
+
+  .BannerCTASlack h2 img {
+    display: block;
+    margin: 3rem auto;
+  }
+
+  .BannerCTASlack p {
+    font-size: 1.4em;
+  }
+}

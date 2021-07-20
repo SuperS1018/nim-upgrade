@@ -1,0 +1,97 @@
+.Employee {
+  padding-bottom: 5rem;
+}
+
+.Employee--Head {
+  position: relative;
+  width: 100%;
+  background-color: #398794;
+  color: white;
+  text-align: center;
+  padding: 5rem 0 3rem;
+  margin-bottom: 100px;
+}
+
+.Employee--Head h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.Employee--Head p {
+  font-size: 1.2em;
+  margin-bottom: 5rem;
+}
+
+.Employee--Head .avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto calc(-3rem - 100px);
+  background-color: #efefef;
+  background-position: center;
+  background-size: cover;
+  border-radius: 200px;
+  border: 1px solid white;
+}
+
+.Employee--Content {
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.Employee--Content h3 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.Employee--Content li {
+  margin-bottom: 1rem;
+}
+
+.Employee--Content svg {
+  color: #a9a9a9;
+}
+
+.Employee--Content ul.social-media {
+  display: inline-block;
+  margin: 2rem auto 0;
+  width: fit-content;
+}
+
+.Employee--Content ul.social-media li {
+  float: left;
+}
+
+.Employee--Content ul.social-media li .link {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+  box-sizing: content-box;
+  margin: 0 0.3rem;
+}
+
+.Employee--Content ul.social-media li .link svg {
+  font-size: 1.5em;
+  transition: color .3s ease-in-out;
+}
+
+.Employee--Content ul.social-media li .link svg.fa-linkedin:hover {
+  color: #2f73ad;
+}
+
+.Employee--Content ul.social-media li .link svg.fa-twitter:hover {
+  color: #1DA1F2;
+}
+
+.Employee--Content ul.social-media li .link svg.fa-github:hover {
+  color: #000000;
+}
+
+
+.Employee--Content ul.social-media li .avatar svg:hover {
+  opacity: 0.8;
+}

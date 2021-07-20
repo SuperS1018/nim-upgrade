@@ -1,0 +1,44 @@
+.Integrations{
+  background-color: #efefef;
+}
+
+.Integrations--Card {
+  border: 1px solid #dbdbdb;
+  background-color: #ffffff;
+  padding: 8rem 3rem 4rem;
+  position: relative;
+  border-radius: 5px;
+}
+
+.Integrations--Card .title {
+  text-align: center;
+  display: block;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.Integrations--Card .image-wrap{
+  min-height: 80px;
+}
+
+.Integrations--Card .Integrations--Icon {
+  height: 80px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.Integrations--Card p {
+  font-size: 0.8em;
+  margin-bottom: 0;
+}
+
+.Integrations--Card .category {
+  position: absolute;
+  top: 2rem;
+  left: -0.5rem;
+  padding: 0 2rem;
+  background-color: #46a8b9);
+  color: var(--white);
+}

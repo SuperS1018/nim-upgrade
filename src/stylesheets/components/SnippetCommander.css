@@ -1,0 +1,43 @@
+.SnippetCommander {
+  font-size: 0.7em;
+}
+
+.SnippetCommander .Content--Slack {
+  padding: 0 5px;
+}
+
+.SnippetCommander .Content--Slack img {
+  align-self: baseline;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.SnippetCommander .Content--Slack .text {
+  margin-left: 5px;
+}
+
+.SnippetCommander .slack.slack-admin {
+  opacity: 0;
+}
+
+.SnippetCommander .slack.slack-admin.show {
+  opacity: 1;
+}
+
+/*.SnippetCommander .slack.slack-user .line {*/
+  /*position: relative;*/
+/*}*/
+
+/*.SnippetCommander .slack.slack-user .line .mask {*/
+  /*position: absolute;*/
+  /*display: inline-block;*/
+  /*height: 100%;*/
+  /*width: 100px;*/
+  /*background-color: white;*/
+  /*left: 0;*/
+  /*transition: left .7s ease-in;*/
+/*}*/
+
+/*.SnippetCommander .slack.slack-user .line .mask.show {*/
+  /*left: 100px;*/
+/*}*/

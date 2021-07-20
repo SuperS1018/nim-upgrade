@@ -1,0 +1,46 @@
+.Webinar {
+  background-color: #ffffff;
+}
+
+.Webinar .screen-height {
+  min-height: calc(80vh - 150px);
+}
+
+.Webinar .screen-height.bg-color {
+  background-color: #F5FEFF;
+  padding: 2rem 0;
+}
+
+.Webinar .nav-tabs {
+  list-style: none;
+  border: none;
+  padding: 0;
+}
+
+.Webinar .nav-item {
+  display: inline;
+  margin-right: 1rem;
+  padding: 5px;
+}
+
+.Webinar .pageBanner {
+  padding: 5rem;
+}
+
+.Webinar .PostSection .BackgroundImage, .Webinar .Webinar--Blog .BackgroundImage {
+  border: 1px solid #b2b2b2;
+}
+
+.Webinar .nav-item.active, .Webinar .nav-item:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #52bfd2;
+}
+
+.Webinar--Blog, .Webinar .JoinCommunity {
+  /*margin-top: -120px;*/
+}
+
+.Webinar--Blog .PostCard--Image {
+  height: 25rem;
+}
+

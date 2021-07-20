@@ -1,0 +1,405 @@
+.Content {
+  white-space: pre-line;
+  width: 100%;
+}
+
+.Content hr {
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  height: 1px;
+}
+
+.Content hr:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.Content p > a {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: inline-block;
+}
+
+.Content p > a .Content--Image {
+  position: relative;
+  z-index: -1;
+}
+
+.Content--Image {
+  max-width: 100%;
+  height: auto;
+}
+
+.Content--Video,
+.Content--PDF{
+  border: 1px solid #b2b2b2;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.Content--Image.w25,
+.Content--Video.w25,
+.Content-PDF.w25,
+.Podcast.w25 {
+  width: 25%;
+}
+
+.Content--Image.w50,
+.Content--Video.w50,
+.Content-PDF.w50,
+.Podcast.w50 {
+  width: 50%;
+}
+
+.Content--Image.w75,
+.Content--Video.w75,
+.Content-PDF.w75,
+.Podcast.w75 {
+  width: 75%;
+}
+
+.Content--Image.w100,
+.Content--Video.w100,
+.Content-PDF.w100,
+.Podcast.w100 {
+  width: 100%;
+}
+
+.Content--Video.center {
+  margin: 0 auto;
+}
+
+.Content--Video .youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.Content--Video .youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+.Content--Iframe {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.Content--Iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Markdown Content Style*/
+.Content h1,
+.Content h2,
+.Content h3,
+.Content h4,
+.Content h5,
+.Content h6 {
+  margin: 3rem 0 2rem;
+}
+
+.Content h1:first-of-type,
+/*.Content h2:first-of-type,*/
+/*.Content h3:first-of-type,*/
+.Content h4:first-of-type,
+.Content h5:first-of-type,
+.Content h6:first-of-type {
+  margin: 1rem 0 2rem;
+}
+
+.Content ul,
+.Content ol {
+  margin: 2rem 0;
+}
+
+/*.Content ul li {*/
+  /*margin: 1rem 0;*/
+/*}*/
+
+.Content .indent-0 {
+  margin-left: 0;
+}
+
+.Content .indent-1 {
+  margin-left: 4rem;
+}
+
+.Content .indent-2 {
+  margin-left: 8rem;
+}
+
+.Content .indent-3 {
+  margin-left: 12rem;
+}
+
+.Content .caption {
+  font-size: 0.8em;
+  color: #7d7c7c;
+}
+
+.Content .caption a {
+  color: inherit;
+  text-decoration: underline !important;
+}
+
+.Content .code-block pre {
+  background: none;
+  padding: 0;
+}
+
+.Content .code-block pre code {
+  padding: 0.5em !important;
+}
+
+.Content .code-block .line,
+.Content .code-block .inline,
+.Content .code-block .block {
+  position: relative;
+  margin-bottom: 2rem;
+  height: 100%;
+}
+
+.Content .code-block .inline {
+  padding-right: 5px;
+  white-space: nowrap;
+}
+
+.Content .code-block .inline .copy-to-clipboard-btn {
+  height: 32px;
+  top: -8px;
+  right: -3px;
+
+}
+.Content .code-block .inline .copy-to-clipboard-btn svg {
+  height: 100%;
+  vertical-align: middle;
+}
+
+.Content .code-block .line .copy-to-clipboard-btn {
+  height: 100%;
+}
+
+.Content .copy-to-clipboard-btn {
+  margin-left: 1rem;
+  cursor: pointer;
+  color: #cccccc;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.Content .copy-to-clipboard-btn:hover {
+  color: #46a8b9;
+}
+
+.Content .code-block pre .copy-to-clipboard-btn {
+  color:#898989;
+}
+
+.Content .code-block pre .copy-to-clipboard-btn:hover {
+  color: #46a8b9 !important;
+}
+
+.Content .copy-to-clipboard-btn.block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.3rem 0.5rem;
+  background-color: #a9a9a9;
+  color: white;
+}
+
+.Content .copy-to-clipboard-btn.block:hover {
+  color: #46a8b9 !important;
+  background-color: #efefef;
+}
+
+.Content--Copied {
+  position: fixed;
+  top: 82px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: #52bfd2;
+  color: white;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.Content--Copied.show-msg {
+  display: block;
+  opacity: 1;
+}
+
+.Content .td-copy {
+  position: relative;
+  margin-right: 30px;
+}
+
+.Content .td-copy .copy-to-clipboard-btn {
+  right: -20px;
+}
+
+.Content .cms-code {
+  background-color: #232323 !important;
+  color: #e6e1dc !important;
+  display: block !important;
+  overflow-x: auto !important;
+  padding: 0.5em !important;
+}
+
+/*.Content .gif_player {*/
+  /*border: 1px solid #efefef;*/
+  /*margin: 1rem 0;*/
+/*}*/
+
+/*.Content .gif_player .play_button {*/
+  /*border: 1px solid white;*/
+  /*padding: 10px 17px 10px 23px;*/
+/*}*/
+
+/*.Content .gif_player .play_button:after {*/
+  /*content: '';*/
+  /*width: 20px;*/
+  /*height: 20px;*/
+  /*display: block;*/
+  /*border-top: 20px solid transparent;*/
+  /*border-bottom: 20px solid transparent;*/
+  /*border-left: 20px solid white;*/
+/*}*/
+
+/*.Content .gif_player .play_button:hover {*/
+  /*opacity: 0.5;*/
+/*}*/
+
+.Content .animated-image {
+  /*display: block;*/
+  /*width: 100%;*/
+  /*height: 200px;*/
+  /*margin: 0 auto;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: 0 0;*/
+  /*background-size: 3000%;*/
+  animation: like-gif steps(28) 1s infinite both;
+}
+
+.Content .cms-twitter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes like-gif {
+  0% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+
+/*PDF*/
+.Content--PDF {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #efefef;
+  border: 1px solid #d1d1d1;
+  padding: 4rem 0 0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 3rem 0;
+}
+
+.Content--PDF .pager {
+  color: white;
+  margin-top: 3rem;
+  background-color: #222222;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+}
+
+.Content--PDF .pager .pager-right,
+.Content--PDF .pager .pager-left,
+.Content--PDF .pager .pager-center {
+  display: flex;
+}
+
+.Content--PDF .pager .pager-center {
+  justify-content: center;
+}
+
+.Content--PDF .pager .pager-left {
+  justify-content: flex-start;
+}
+
+.Content--PDF .pager .pager-right {
+  justify-content: flex-end;
+}
+
+.Content--PDF .pager .pager-center {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.Content--PDF .pager button {
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.Content--PDF .pager span {
+  margin: 0 2rem;
+}
+
+.Content--PDF .pager button[disabled] {
+  color:#5f5f5f;
+}
+
+@media (max-width: 768px) {
+  .Content--Image.w25,
+  .Content--Image.w50,
+  .Content--Image.w75,
+  .Content--Image.w100,
+  .Content--Video.w25,
+  .Content--Video.w50,
+  .Content--Video.w75,
+  .Content--Video.w100,
+  .Content--PDF.w25,
+  .Content--PDF.w50,
+  .Content--PDF.w75,
+  .Content--PDF.w100,
+  .Podcast.w25,
+  .Podcast.w50,
+  .Podcast.w75,
+  .Podcast.w100 {
+
+    width: 100% !important;
+  }
+  .Content a {
+    word-break: break-word;
+  }
+}

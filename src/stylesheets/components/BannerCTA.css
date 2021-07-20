@@ -1,0 +1,44 @@
+.BannerCTA {
+  background-color: #398794;
+  color: white;
+  display: flex;
+  align-items: baseline;
+  padding: 6rem;
+  justify-content: center;
+}
+
+.BannerCTA .banner-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.BannerCTA .banner-wrap .Content {
+  display: flex;
+  flex: 1;
+}
+
+.BannerCTA .banner-wrap .Content p {
+  color: white;
+  font-size: 1.4em;
+  margin: 0 1rem 0;
+}
+
+.BannerCTA .banner-wrap .Content p strong {
+  color: #f5a623;
+}
+
+@media (max-width: 767px) {
+  .BannerCTA .banner-wrap {
+    flex-direction: column;
+  }
+  .BannerCTA .banner-wrap .Content {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .BannerCTA {
+    padding: 4rem 2rem;
+  }
+
+}

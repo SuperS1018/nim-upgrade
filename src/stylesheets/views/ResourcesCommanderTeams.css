@@ -1,0 +1,11 @@
+.Resources.Commander.app-implement main#containerElement {
+  padding-bottom: calc(100vh - 100px) !important;
+}
+
+.Resources.Commander.app-implement .sidebar {
+  top: 0 !important;
+}
+
+.Resources.Commander.app-implement .anchor-subject h1 {
+  margin-top: 0 !important;
+}

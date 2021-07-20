@@ -1,0 +1,84 @@
+.Resources{ flex: 1 0 auto; }
+.Resources input[aria-label=Search] { font-size: 1.6rem; padding: 10px; }
+.Resources .sidebar{ border-right: 1px solid var(--border); }
+
+.Resources .search-input { padding: 0 2rem; }
+.Resources .search-input input{ width: 100%; border: 1px solid var(--border); padding: 10px; }
+
+.Resources .show-list{ background-color: #eaeaea; border: none; border-bottom: 1px solid rgba(0,0,0,0.1); width: 100%; height: 30px; display: none; outline: none; position: fixed; top: 98px; }
+.Resources .show-list .sign{ position: relative; color: #0a9db7; }
+.Resources .show-list .sign:before{ content: ''; width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; position: absolute; left: -20px; top: 9px; }
+.Resources .show-list .sign.down:before{ border-bottom: none; border-top: 6px solid #0a9db7; }
+.Resources .show-list .sign.up:before{ border-top: none; border-bottom: 6px solid #0a9db7; }
+.Resources .nav-link { color: #586163 !important; font-size: 0.9em !important; }
+.Resources .nav-link.active{ background-color: #52bfd2; color: #ffffff !important; }
+.Resources .nav-link.active.deactive{ background-color: transparent; color: #586163 !important; }
+
+.Resources .sidebar { padding: 0; }
+.Resources .sidebar ul{ list-style: none; }
+.Resources .sidebar ul li .nav-link { padding-left: 2rem; }
+.Resources .sidebar ul ul{ padding-left: 0;}
+.Resources .sidebar ul ul li .nav-link { padding-left: 4rem; width: 100%; }
+.Resources .sidebar .nav-link.indent { padding-left: 4rem; width: 100%; }
+
+.Resources .nav-link.no-link{ cursor: auto !important; color: #586163 !important; }
+.Resources .link-head{ font-weight: 600; }
+
+.Resources .Content{ padding: 0 3rem 2rem; }
+.Resources .Content p,
+.Resources .Content ul,
+.Resources .Content ol,
+.Resources .Content blockquote{ margin-bottom: 1rem; margin-top: 1rem; line-height: unset; word-spacing: unset; }
+.Resources .Content li{ margin-top: 1rem; margin-bottom: 1rem; line-height: 2em; }
+.Resources .Content h1{ margin-bottom: 3rem; }
+.Resources .Content h2{ margin-top: 3rem; margin-bottom: 3rem; }
+/*.Resources .Content ul li,*/
+/*.Resources .Content ol li*/
+/*{ margin: 1rem 0; }*/
+
+.Resources .Content pre {
+  margin-bottom: 0;
+}
+
+/*Resource Specific*/
+.Resources pre { margin-left: 4rem; }
+
+.Resources .getting-started img { width: 70%; margin-left: 4rem; border: 1px solid #dddddd; }
+
+.Resources img[alt='Initial Check'] { width: 70%; margin-left: 4rem; border: 1px solid #dddddd;  }
+.Resources img[alt='Workbench Download'] { width: 20%; margin-left: 4rem; border: 1px solid #dddddd; }
+.Resources img[alt='Workbench'] { width: 40px; }
+
+.Resources .use-cases img { height: 160px; }
+.Resources .use-cases img[alt='IoT'], .Resources .use-cases img[alt='AI/ML'] { height: 300px; }
+
+.Resources .static-assets img, .Resources .add-function img, .Resources .add-packages img, .Resources .add-state img { width: 70%; margin-left: 4rem; border: 1px solid #dddddd; }
+
+.Resources .nav-posts { display: flex; flex-direction: row; justify-content: flex-end; }
+
+@media (max-width: 1024px) {
+  .Resources .use-cases img { height: auto !important; }
+}
+
+@media (max-width: 767px) {
+  .Resources .sidebar{ border: none; border-bottom: 1px solid var(--border); position: fixed; z-index: 999; padding: 30px 0 0 !important; }
+  .Resources .sidebar-sticky { background-color: white; }
+  .Resources .sidebar-sticky .search-input { margin-top: 0 !important; }
+  .Resources .sidebar-sticky .search-input input[type=search] { border: none; padding: 1.5rem 1rem; }
+  .Resources .sidebar-sticky hr { margin-top: 0 !important; }
+  .Resources .sidebar-sticky{ display: none; }
+  .Resources .sidebar-sticky.show{ display: block; padding-bottom: 30px; }
+  .Resources .show-list{ display: block; }
+  .Resources .Content{ padding: 5rem 0; }
+
+  .Resources .getting-started img,
+  .Resources .setting-up img[alt='Initial Check'],
+  .Resources .static-assets img,
+  .Resources .add-function img{ width: 90%; }
+
+  .Resources .setting-up img[alt='Workbench Download'] { width: 50%; }
+}
+
+@media (max-width: 414px) {
+  .Resources .nav-posts { justify-content: space-between; }
+}

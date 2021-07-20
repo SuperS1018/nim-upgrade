@@ -1,0 +1,18 @@
+.FrameworkChange {
+  background-color: #f7fdff;
+}
+.FrameworkChange--Item {
+  text-align: center;
+}
+
+.FrameworkChange--Item .image-wrap {
+  min-height: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+}
+
+.FrameworkChange--Item .image-wrap img {
+  margin: 0 auto;
+}

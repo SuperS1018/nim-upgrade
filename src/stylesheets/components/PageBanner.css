@@ -1,0 +1,41 @@
+.PageBanner {
+  background-color: #565656;
+  color: white;
+  padding: 9rem 0 11rem;
+  position: relative;
+}
+
+.PageBanner p {
+  margin-bottom: 0;
+}
+
+.PageBanner-large {
+  padding: 20rem 0;
+}
+
+.PageBanner-small {
+  padding: 5rem 0;
+}
+
+.PageBanner--Title {
+  margin-bottom: 0;
+  text-shadow: 0 0 3px rgba(0,0,0,.5);
+}
+
+.PageBanner--Title.text-title {
+  font-size: 1.4em;
+  text-align: left !important;
+}
+
+.PageBanner--Subtitle {
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.PageBanner .BackgroundImage{ background-repeat: no-repeat; background-position: center; }
+
+@media (max-width: 414px) {
+  .PageBanner {
+    padding: 4rem 0 5rem;
+  }
+}

@@ -1,0 +1,23 @@
+.EnterpriseSolution {}
+
+.EnterpriseSolution .POCForth h2 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.EnterpriseSolution .POCForth .Content h3 {
+  font-size: 0.86em;
+  font-weight: 400;
+}
+
+.EnterpriseSolution .POCForth .Content p {
+  font-size: 0.6em;
+  font-weight: 400;
+}
+
+@media (max-width: 812px) {
+  .EnterpriseSolution {
+    font-size: 0.8em;
+  }
+}

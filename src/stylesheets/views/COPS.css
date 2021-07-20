@@ -1,0 +1,115 @@
+.COPS {}
+
+/*Content*/
+.COPS .date-wrap {
+  display: flex;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.COPS .date-wrap .title {
+  flex: 1;
+}
+
+.COPS .recharts-wrapper text {
+  font-size: 0.8em;
+}
+
+.COPS .rdt input[type=text],
+.COPS input[type=number] {
+  font-size: 0.8em;
+}
+
+.COPS input[type=number] {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.375rem 0.75rem;
+}
+
+.COPS .rdtPicker {
+  font-size: 0.8em;
+}
+
+
+.COPS .details {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+.COPS .details .item-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.COPS .details .item-top .name {
+  text-transform: uppercase;
+}
+
+.COPS .details .item-top input[type=checkbox],
+.COPS .details .item-top .name {
+  margin-right: 5px !important;
+}
+
+.COPS .details .color-block {
+  height: 2px;
+  flex-grow: 1;
+  margin-right: 5px;
+}
+
+.COPS .details .item-bottom {
+  width: 100%;
+  display: block;
+  font-size: 0.8em;
+  color:#989898;
+  margin-left: 20px;
+  margin-top: -5px;
+  margin-bottom: 1rem;
+}
+
+.COPS .custom-tooltip {
+  border: 1px solid #dddddd;
+  background-color: rgba(255,255,255,.7);
+  padding: 2px 5px;
+}
+
+.COPS .custom-tooltip .label {
+  font-size: 0.8em;
+}
+
+.COPS .ping-error .item {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.COPS .zingchart-react-0-graph-id0-scale-y-label.zingchart-react-0-graph-id0-scale-label.zc-scale-label {
+  transform-origin: left !important;
+  transform: translateX(14px) rotate(270deg) !important;
+}
+
+.COPS .cloud-error pre {
+  background: none;
+  padding: 0;
+}
+
+.COPS .cloud-error pre code.json {
+  padding: 2rem;
+}
+
+/*.COPS .cloud-error pre code.json .hljs-string {*/
+  /*word-break: break-word;*/
+  /*white-space: pre-line;*/
+/*}*/
+
+@media screen and (max-width: 414px) {
+  .COPS .date-wrap {
+    display: block;
+  }
+  .COPS .date-wrap .title {
+    width: 100%;
+  }
+}
+
+

@@ -1,0 +1,83 @@
+.EnterpriseSolutionBanner {
+  width: 100%;
+  margin-top: 95px;
+  padding: 8rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.EnterpriseSolutionBanner .pattern {
+  position: absolute;
+  top: -70px;
+  right: 40px;
+  z-index: 0;
+  width: 285px;
+  height: 669px;
+  background: transparent url(/images/uploads/poc-bg.png) 100% 100% repeat-y;
+  background-position: center 0;
+  background-size: 100%;
+}
+
+.EnterpriseSolutionBanner h1 {
+  font-size: 2.8em;
+}
+
+.EnterpriseSolutionBanner p {
+  font-size: 1.1em;
+}
+
+.EnterpriseSolutionBanner .note {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 5rem;
+}
+
+.EnterpriseSolutionBanner .Content {
+  font-size: 1.35em;
+}
+
+.EnterpriseSolutionBanner ul li {
+  list-style: none;
+  position: relative;
+  padding-right: 5rem;
+  padding-left: 10px;
+  margin-bottom: 2rem;
+}
+
+.EnterpriseSolutionBanner ul li:before {
+  content: '';
+  background: transparent url(/images/icons/checkmark-icon.svg) 100% 100% no-repeat;
+  width: 12px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  left: -2.5rem;
+  top: 5px;
+}
+
+.EnterpriseSolutionBanner .Content a strong {
+  font-weight: 700;
+  color: #ffcf7f;
+  border-bottom: 1px solid #ffcf7f;
+  transition: all .3s ease-in-out;
+}
+
+.EnterpriseSolutionBanner .Content a:hover strong {
+  border-bottom: 1px solid #e8a14a;
+  color: #e8a14a;
+}
+
+@media (max-width: 1024px) {
+  .EnterpriseSolutionBanner {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 736px) {
+  .EnterpriseSolutionBanner .pattern {
+    background: none;
+  }
+}
+
+

@@ -1,0 +1,7 @@
+/*Loader*/
+.loader-wrap{ position: fixed; z-index: 1020; top: 0; left: 0; height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; }
+.loader-wrap .mask{ position: fixed; z-index: 9999; top: 0; left: 0; height: 100%; width: 100%; background-color: white; }
+.loader-wrap img{ position: relative; z-index: 99999; margin: 10% auto; }
+
+.loader-wrap.bg-trans .mask{ opacity: 0.7; }
+/*.loader-wrap.bg-dk .mask{ background-color: #122A2E; }*/

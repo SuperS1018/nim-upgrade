@@ -1,0 +1,198 @@
+.PromotionBanner > div {
+  position: relative;
+  top: 0;
+  width: 100%;
+  background: url(/images/uploads/forrester-bg.png) 0 0/cover no-repeat fixed;
+  background-size: cover;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.PromotionBanner .text-mobile {
+  color: inherit;
+}
+
+.PromotionBanner--Content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.PromotionBanner--Content .animated-container {
+  position: absolute;
+  left: 0px;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  z-index: 99;
+  background: transparent url(/images/img/faaswars-fg) center center no-repeat;
+  background-size: cover;
+  animation-name: slideIn;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes slideIn {
+  from { left: -5rem; }
+  to { left: 0px; }
+}
+
+.PromotionBanner--Content a .logo {
+  width: 87px;
+  height: 15px;
+  background: transparent url(https://reprints2.forrester.com/app/modules/reprint-v2/assets/images/forrester-white.svg) center center no-repeat;
+  background-size: cover;
+  margin: 0 2rem 4px 1rem;
+  display: block;
+  transition: opacity .3s ease-in-out;
+}
+
+.PromotionBanner--Content a:hover .logo {
+  opacity: 0.7;
+}
+
+.PromotionBanner--Content .title {
+  width: 80%;
+  display: flex;
+  white-space: nowrap;
+  word-break: break-word;
+  flex-direction: row;
+  align-items: center;
+}
+
+.PromotionBanner--Content .title p {
+  font-size: 1.2em;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+  width: 100%;
+}
+
+.PromotionBanner--Content .title strong {
+  font-weight: bold;
+}
+
+/*.PromotionBanner--Content .title a {*/
+/*  width: 100%;*/
+/*  white-space: nowrap;*/
+/*  overflow: hidden;*/
+/*  text-overflow: ellipsis;*/
+/*  color: #ffffff;*/
+/*}*/
+
+/*.PromotionBanner--Content .title a:hover {*/
+/*  color: #ffffff;*/
+/*}*/
+
+.PromotionBanner--Content .btn {
+  background-color: #93f9ff;
+  color: #110227;
+}
+
+.PromotionBanner--Content .btn:hover {
+  background-color:#64c7cd;
+}
+
+.PromotionBanner--Content p,
+.PromotionBanner--Content strong,
+.PromotionBanner--Content span {
+  color: #c3ffee;
+  margin: 0;
+}
+
+.PromotionBanner--Content span.desktop {
+  display: inline;
+}
+
+.PromotionBanner--Content span.mobile {
+  display: none;
+}
+
+/*.PromotionBanner--Content .text-wrap .mask {*/
+/*background-color: #dcb700;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*position: absolute;*/
+/*}*/
+
+/*.PromotionBanner--Content:hover .text-wrap {*/
+/*opacity: 0.7;*/
+/*}*/
+
+@media (max-width: 968px) {
+  .PromotionBanner--Content a .logo {
+    margin-left: 10px;
+    background-size: 100%;
+  }
+
+  .PromotionBanner--Content .title strong {
+    font-size: 0.8em;
+  }
+
+  .PromotionBanner--Content .text-mobile {
+    display: none;
+  }
+
+  .PromotionBanner--Content a .logo,
+  .PromotionBanner--Content .animated-container {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .PromotionBanner > div {
+    padding: 1rem;
+  }
+
+  .PromotionBanner--Content .title {
+    width: 60%;
+  }
+
+  .PromotionBanner--Content .title strong {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .PromotionBanner { font-size: 0.8em; }
+  .PromotionBanner--Content .title p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .PromotionBanner--Content span.desktop {
+    display: none;
+  }
+
+  .PromotionBanner--Content span.mobile {
+    display: inline;
+  }
+
+  .PromotionBanner--Content a .logo {
+    display: block;
+    margin: 0 1rem;
+    width: 116px;
+    height: 20px;
+  }
+
+  .PromotionBanner--Content .title strong,
+  .PromotionBanner--Content .title p {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .PromotionBanner--Content .title {
+    width: 60%;
+  }
+  .PromotionBanner--Content .btn-wrap {
+    width: 40%;
+  }
+}

@@ -1,0 +1,83 @@
+.Examples{
+  background-color: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.Examples .Examples--Item {
+  width: 100%;
+}
+
+.Examples.Commander h2 {
+  margin-bottom: 0;
+  font-size: 1.6em;
+  font-weight: inherit;
+  text-indent: 0;
+}
+
+.Examples.Commander .btn-wrap {
+  position: unset;
+}
+
+.Examples--Info {
+  text-align: center;
+}
+
+.Examples .Examples--Item .title {
+  font-weight: 600;
+  font-size: 1.1em;
+  min-height: 4.5rem;
+}
+
+.Examples .Examples--Item .runtime {
+  margin-top: 5rem;
+  font-size: 0.8em;
+  min-height: 3rem;
+}
+
+.Examples .Examples--Item .desc {
+  font-size: 0.8em;
+}
+
+.Examples--Item .btn-wrap{
+  width:100%;
+  position:absolute;
+  left:0;
+  bottom:0;
+  padding:0 5rem;
+}
+
+.Examples .Examples--Item img {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Examples--Image {
+  transition: margin-left .5s ease-in-out;
+}
+
+.Examples--Image-0, .Examples--Image-2 {
+  transform: translateX(-1000);
+  opacity: 0;
+}
+
+.Examples--Image-1 {
+  transform: translateX(2000);
+  opacity: 0;
+}
+
+@media (max-width: 991px) {
+  .Examples .Examples--Item .title,
+  .Examples .Examples--Item .runtime { min-height: auto; }
+}
+
+@media (max-width: 768px){
+  .Examples > h2{ margin-bottom:3rem;}
+  .Examples .text-right{ text-align:left !important; }
+  .Examples .float-right{ float: left !important; }
+  .Examples--Item{ margin-bottom: 3rem; }
+}
+
+@media (max-width: 414px) {
+  .Examples .btn{ width: 100%; }
+}

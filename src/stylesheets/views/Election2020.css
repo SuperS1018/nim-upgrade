@@ -1,0 +1,53 @@
+.Election2020 {
+
+}
+
+.Election2020 .ProductBanner2 {
+  padding: 4rem 0;
+}
+
+.Election2020 .ProductBanner2--Content {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.Election2020 .ProductBanner2--Image {
+  width: 400px;
+  height: 226px;
+  margin: 0 auto;
+  background-size: 100%;
+}
+
+.Election2020 .ProductBanner2--Image .gif_player {
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+/*.Election2020 .ProductBanner2--Image .gif_player,*/
+.Election2020 .ProductBanner2--Image .web-head {
+  display: none;
+}
+
+.Election2020--Form h3 {
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .Election2020--Form {
+    background-color: #F5FEFF;
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 823px) {
+  .Election2020 .ProductBanner2--Image {
+    width: 100%;
+    height: 280px
+  }
+  .Election2020 .ProductBanner2--Image .gif_player {
+    border: none;
+    box-shadow: none;
+  }
+}

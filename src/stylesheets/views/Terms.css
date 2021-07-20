@@ -1,0 +1,70 @@
+.Terms .Terms--Content {
+}
+
+.Terms .Terms--Content {
+  font-size: 0.8em;
+}
+
+.Terms .Terms--Content .title {
+  font-size: 1.2em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Terms .Terms--Content .title:first-of-type {
+  margin-top: 0;
+}
+
+.Terms .Terms--Content ol.first-ol {
+  padding-left: 0;
+}
+
+.Terms .Terms--Content ol.first-ol ol {
+  padding-left: 2.2rem;
+}
+
+.Terms .Terms--Content ol {
+  counter-reset: item;
+}
+
+.Terms .Terms--Content ol li,
+.Terms .Terms--Content ul li{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.Terms .Terms--Content ol li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+/*Acceptable*/
+.Terms.Acceptable ol li,
+.Terms.Acceptable ul li{
+  display: list-item;
+}
+
+.Terms.Acceptable ol li:before {
+  content: none;
+}
+
+.Terms.Acceptable a[href="https://www.heroku.com/policy/aup"] {
+  color: #586163 !important;
+}
+
+.Terms.Acceptable h2 {
+  font-size: 1.2em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Terms.Acceptable h2:first-of-type {
+  font-size: 1.6em;
+  margin-top: 0;
+}
+
+.Terms .copy-to-clipboard-btn {
+  display: none;
+}
+
+

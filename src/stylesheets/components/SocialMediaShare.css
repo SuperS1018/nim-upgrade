@@ -1,0 +1,29 @@
+.SocialMediaShare {
+
+}
+
+.SocialMediaShare .social-share {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+}
+
+.SocialMediaShare .social-share.left {
+  justify-content: flex-start;
+}
+
+.SocialMediaShare .social-share.right {
+  justify-content: flex-end;
+}
+
+.SocialMediaShare .social-share.center {
+  justify-content: center;
+}
+
+.SocialMediaShare .social-share li {
+  /*display: inline;*/
+}
+
+.SocialMediaShare .social-share li div {
+  /*display: inline-block;*/
+}

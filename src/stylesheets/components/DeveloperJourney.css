@@ -1,0 +1,113 @@
+.DeveloperJourney {
+  background-color: whitesmoke;
+  color: #586163;
+  position: relative;
+  z-index: 10;
+}
+
+.DeveloperJourney--Item {
+  position: relative;
+}
+
+.DeveloperJourney--Item h4 {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.DeveloperJourney--Item p {
+  margin-bottom: 0;
+}
+
+.DeveloperJourney--Item svg {
+  position: relative;
+  z-index: 10;
+  background-color: whitesmoke;
+  color: #46a8b9;
+  font-size: 1.2em;
+}
+
+.DeveloperJourney--Item .md-show {
+  display: none;
+}
+
+.DeveloperJourney--Item .dashed {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  border-bottom: 4px dashed #46a8b9;
+  top: 107px;
+}
+
+.DeveloperJourney--Item:first-of-type .dashed {
+  width: 50%;
+  right: 0;
+}
+
+.DeveloperJourney--Item:last-of-type .dashed {
+  width: 50%;
+  left: 0;
+}
+
+.DeveloperJourney--Item .desc {
+  min-height: 110px;
+}
+
+@media (max-width: 767px) {
+  .DeveloperJourney--Item {
+    padding: 5rem 0 !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .DeveloperJourney--Item .mask {
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 11;
+  }
+
+  .DeveloperJourney--Item .dashed {
+    border-bottom: none;
+    border-left: 4px dashed #46a8b9;
+    height: 100%;
+    right: 2px !important;
+    left: auto !important;
+    width: 50%;
+    top: 50%;
+  }
+
+  .DeveloperJourney--Item .btm-circle {
+    padding-top: 0 !important;
+  }
+
+  .DeveloperJourney--Item:last-of-type .dashed,
+  .DeveloperJourney--Item:last-of-type .btm-circle {
+    display: none;
+  }
+
+  .DeveloperJourney--Item:first-of-type {
+    padding-top: 0 !important;
+  }
+
+  .DeveloperJourney--Item:last-of-type {
+    padding-bottom: 0 !important;
+  }
+
+  .DeveloperJourney--Item .md-show {
+    display: inline-block !important;
+  }
+
+  .DeveloperJourney--Item .btm-circle {
+    display: none;
+  }
+
+  .DeveloperJourney--Item .desc {
+    min-height: auto;
+  }
+
+  .DeveloperJourney--Item h4 {
+    margin-top: 0 !important;
+  }
+
+  .DeveloperJourney--Item a {
+    margin-bottom: 2rem;
+  }
+}

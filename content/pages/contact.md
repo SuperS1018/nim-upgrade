@@ -1,18 +1,34 @@
 ---
-title: Contact us
-subtitle: ''
-featuredImage: '/images/uploads/mark-chang-74-3.jpg'
-address: 404 James St, Burleigh Heads QLD 4220
-phone: 0987 123 456
-email: example@example.com
+message: We want your experience with Nimbella to be amazing and we are here to help.
+backgroundImage: /images/uploads/contact-bg.jpg
+meta:
+  canonicalLink: ''
+  description: >-
+    We're here to help. Contact us via email, Slack or on Github. Feel free to
+    schedule a demo as per your convenience. 
+  title: 'How to contact Nimbella over email, GitHub or Slack?'
+---
+## You can reach us on [GitHub](https://github.com/nimbella), [Slack](https://nimbella-community.slack.com/join/shared_invite/enQtNjg1NzE1OTE3MDI4LWRmOTE0ODVmYzMzODMxNWQ5MDIyMTMxOWZlOTY4NGMxNWUwMmFkM2E2MjRjYWZlNDE1OTUyMjFhNDAyYjZhZDc#/) and [Email](mailto:support@nimbella.com):
+
+* If you found a bug in our platform or tools or have a feature request, please tell us on [GitHub](https://github.com/nimbella).
+* Connect with us on Nimbella Community [Slack](https://nimbella-community.slack.com/join/shared_invite/enQtNjg1NzE1OTE3MDI4LWRmOTE0ODVmYzMzODMxNWQ5MDIyMTMxOWZlOTY4NGMxNWUwMmFkM2E2MjRjYWZlNDE1OTUyMjFhNDAyYjZhZDc#/) for the fastest response.
+* [Email](mailto:support@nimbella.com) us your issue. 
+
 ---
 
-# Example contact form
 
-This form is setup to use Netlify's form handling:
+## Our offices:
 
-* the form action is set to the current absolute url: `action: '/contact/'`
-* a name attribute is sent with the form's data `'form-name': 'Contact'`
-* netlify data attributes are added to the form `data-netlify data-netlify-honeypot`
+**USA:** 
 
-Find out more in the [Netlify Docs](https://www.netlify.com/docs/form-handling/).
+4677 Old Ironsides Dr, Suite 180,
+Santa Clara, CA - 95054
+
+**India:**
+
+308, iThum Tower A, Sector 62,
+Noida, UP - 201301
+
+**Italy:**
+
+[Nimbella's European contact](https://nimbella.com/employees/michele-sciabarra)

@@ -1,0 +1,72 @@
+.CheckoutForm {
+  padding: 3rem;
+}
+
+.CheckoutForm .error {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.CheckoutForm .CheckoutForm--Section {
+  padding: 1rem 0 2rem;
+  border-bottom: 1px solid #efefef;
+}
+
+.CheckoutForm .CheckoutForm--Item {
+
+}
+
+.CheckoutForm .CheckoutForm--Item input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.CheckoutForm .CheckoutForm--Item input[disabled],
+.CheckoutForm .CheckoutForm--Item .select-wrap.disabled {
+  border: none !important;
+  padding-left: 0 !important;
+  color: #434A4C !important;
+}
+
+.CheckoutForm .CheckoutForm--Item .select-wrap.disabled::after {
+  border: none !important;
+}
+
+.CheckoutForm .CheckoutForm--Item .form-title {
+  font-size: 0.8em;
+  color: #a9a9a9;
+  position: relative;
+}
+
+.CheckoutForm .CheckoutForm--Item .form-title.required::after {
+  content: '*';
+  position: absolute;
+  color: #ff3d3d;
+  top: 0.2rem;
+  right: -1rem;
+}
+
+.CheckoutForm .CheckoutForm--Item .form-item {
+  border: 1px solid #efefef;
+  padding: 1rem 2rem;
+  align-self: center;
+}
+
+.CheckoutForm .CheckoutForm--Item .form-item-validate {
+  color: #ff3d3d;
+}
+
+.CheckoutForm .CheckoutForm--Item .form-item-validate input {
+  border: 1px solid #efefef;
+  padding: 1rem 2rem;
+  align-self: center;
+}
+
+.CheckoutForm .btn-wrap {
+  margin: 3rem 0 5rem;
+}
+
+.CheckoutForm .hide {
+  display: none;
+}

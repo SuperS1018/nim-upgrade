@@ -1,0 +1,64 @@
+.BannerCTAGetStarted {
+  position: relative;
+  background: #48A8B9;
+  padding: 12rem 0 10rem;
+  margin-top: 8rem;
+}
+
+.BannerCTAGetStarted .logo-wrap {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: #48A8B9 url(/images/nimbella-logo-short-white.svg) no-repeat;
+  background-size: 60%;
+  background-position: center;
+  border-radius: 80px;
+  border: 3px solid white;
+  top: -80px;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.BannerCTAGetStarted h2 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: white;
+}
+
+.BannerCTAGetStarted .btn-wrap {
+  margin: 0 auto;
+}
+
+.BannerCTAGetStarted .btn-wrap .btn:first-of-type {
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .BannerCTAGetStarted h2 {
+    width: 60%;
+    margin: 0 auto 5rem auto;
+  }
+
+  .BannerCTAGetStarted .logo-wrap {
+    width: 98px;
+    height: 98px;
+    background-size: 60%;
+    background-position: center;
+    border-radius: 49px;
+    border: 3px solid white;
+    top: -49px;
+    left: 50%;
+    margin-left: -49px;
+  }
+
+  .BannerCTAGetStarted .btn-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .BannerCTAGetStarted .btn-wrap .btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

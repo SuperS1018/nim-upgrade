@@ -1,0 +1,61 @@
+.OrderSummary {
+  /*position: fixed;*/
+  /*right: 0;*/
+  box-shadow: 0 1rem 1rem #c3c3c3;
+  padding: 0;
+}
+
+.OrderSummary .OrderSummary--Head {
+  background-color: #46a8b9;
+  padding: 3rem;
+}
+
+.OrderSummary .OrderSummary--Body {
+  padding: 3rem;
+}
+
+.OrderSummary .OrderSummary--Body .product {
+  /*margin-bottom: 1rem;*/
+}
+
+.OrderSummary .OrderSummary--Body .active-users {
+  margin-bottom: 5rem;
+}
+
+.OrderSummary .OrderSummary--Body .active-users input[type=number] {
+  border: 0;
+  border-bottom: 1px solid #586163;
+  text-align: center;
+  outline: none;
+}
+
+.OrderSummary .OrderSummary--Body hr {
+  margin-top: 3rem;
+}
+
+.OrderSummary .OrderSummary--Body .product,
+.OrderSummary .OrderSummary--Body .total,
+.OrderSummary .OrderSummary--Body .details {
+  display: flex;
+}
+
+/*.OrderSummary .OrderSummary--Body .product .item-name,*/
+.OrderSummary .OrderSummary--Body .total .item-name,
+.OrderSummary .OrderSummary--Body .details .item-name {
+  flex: 1 0;
+}
+
+.OrderSummary .OrderSummary--Body .product .item-quantity {
+
+}
+
+
+@media screen and (max-width: 414px) {
+  .OrderSummary {
+    position: relative;
+    height: max-content;
+    box-shadow: none;
+    border-bottom: 1px solid #efefef;
+  }
+}
+

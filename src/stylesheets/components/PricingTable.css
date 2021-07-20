@@ -1,0 +1,105 @@
+.PricingTable{
+  background-color: whitesmoke;
+}
+
+.PricingTable .PricingTable--Item .table-wrap {
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 9rem;
+}
+
+.PricingTable .PricingTable--Item .head{
+  color: #ffffff;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.PricingTable .PricingTable--Item:first-of-type .head{
+  background-color: #a9a9a9;
+}
+
+.PricingTable .PricingTable--Item:nth-of-type(2) .head{
+  background-color: #46a8b9;
+}
+
+.PricingTable .PricingTable--Item:last-of-type .head{
+  background-color: #46a8b9;
+}
+
+.PricingTable .PricingTable--Item .pricing{
+  padding: 2rem;
+}
+
+.PricingTable .PricingTable--Item .pricing .value{
+  color: #46a8b9;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.PricingTable .PricingTable--Item .pricing .text-larger{
+  font-size: 1.6em;
+}
+
+.PricingTable .PricingTable--Item .pricing .value sup{
+  vertical-align: baseline;
+  font-size: 0.6em;
+}
+
+.PricingTable .PricingTable--Item .pricing .unit{
+  color: #46a8b9;
+  min-height: 3rem;
+  display: block;
+  margin-top: -2rem;
+  font-weight: 600;
+}
+
+.PricingTable .PricingTable--Item .pricing .note{
+  min-height: 3rem;
+  display: block;
+  font-weight: 600;
+}
+
+.PricingTable .PricingTable--Item .description{
+  padding: 0 2rem 2rem;
+  min-height: 11rem;
+}
+
+.PricingTable .PricingTable--Item .detail{
+  padding: 0 2rem 2rem;
+}
+
+.PricingTable .PricingTable--Item .detail p {
+  margin-bottom: 0;
+}
+
+.PricingTable .PricingTable--Item .detail a {
+  color: #586163;
+}
+
+.PricingTable .PricingTable--Item .btn-wrap{
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .PricingTable .PricingTable--Item .description {
+    min-height: 13rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .PricingTable .PricingTable--Item .description {
+    min-height: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .PricingTable .PricingTable--Item { margin-bottom: 3rem; }
+  .PricingTable .PricingTable--Item .btn-wrap .btn { width: 90%; }
+}

@@ -1,0 +1,119 @@
+.HeroBanner2 { color: white; }
+.HeroBanner2 .HeroBanner--Top {
+  background-color: #092232;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid white;
+  padding-top: 68px;
+}
+.HeroBanner2 .HeroBanner--Top h1 {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px #00202B;
+}
+
+.HeroBanner2 .HeroBanner--Left {
+  background-color: #01354e;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem 0 5rem 3rem;
+  overflow: hidden;
+}
+
+.HeroBanner2 .HeroBanner--Left .text,
+.HeroBanner2 .HeroBanner--Right .text {
+  position: relative;
+}
+
+.HeroBanner2 .HeroBanner--Left .text .btn-wrap,
+.HeroBanner2 .HeroBanner--Right .text .btn-wrap {
+  position: absolute;
+  bottom: 0;
+}
+
+.HeroBanner2 .HeroBanner--Left .text h2,
+.HeroBanner2 .HeroBanner--Right .text h2 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px #00202B;
+}
+
+.HeroBanner2 .HeroBanner--Left .text p,
+.HeroBanner2 .HeroBanner--Right .text p {
+  font-size: 1.2em;
+  margin-bottom: 8rem;
+  text-shadow: 1px 1px 3px #000e12;
+}
+
+.HeroBanner2 .HeroBanner--Right .text h2,
+.HeroBanner2 .HeroBanner--Right .text p {
+  text-shadow: 1px 1px 3px #110019;
+}
+
+.HeroBanner2 .HeroBanner--Left .img {
+  background-color: #222222;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #00B5F2;
+}
+
+.HeroBanner2 .HeroBanner--Right {
+  background-color: #3c0d6a;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-left: 2px solid white;
+  padding: 5rem 0 5rem 3rem;
+  overflow: hidden;
+}
+
+.HeroBanner2 .HeroBanner--Right .img {
+  background-color: #222222;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #C74DFF;
+}
+
+.HeroBanner2 .Content a strong {
+  font-weight: 700;
+  color: #ffcf7f;
+  border-bottom: 1px solid #ffcf7f;
+  transition: all .3s ease-in-out;
+}
+
+.HeroBanner2 .Content a:hover strong {
+  border-bottom: 1px solid #e8a14a;
+  color: #e8a14a;
+}
+
+@media (max-width: 1065px) {
+  .HeroBanner2 .HeroBanner--Top {
+    padding: 120px 0 3rem;
+    height: fit-content !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .HeroBanner2 .HeroBanner--Left .img,
+  .HeroBanner2 .HeroBanner--Right .img {
+    border: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .HeroBanner2 .HeroBanner--Left,
+  .HeroBanner2 .HeroBanner--Right {
+    border: none;
+    border-bottom: 2px solid white;
+  }
+}

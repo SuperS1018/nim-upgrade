@@ -1,0 +1,20 @@
+.Logo {
+  display: flex;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 55px;
+  width: 132px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Logo.Logo--Commander {
+  background-size: 110% 110%;
+  background-position: top;
+  width: 55px;
+}
+
+@media (max-width: 414px) {
+  .Logo { width: 114px; height: 41px; background-position: center 5px; }
+}

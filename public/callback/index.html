@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="noindex">
+  <title>Nimbella - Callback</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Latest patch release (recommended for production) -->
+  <script src="https://cdn.auth0.com/js/lock/11.26.3/lock.min.js"></script>
+  <script>
+    if (/access_token|id_token|error/.test(window.location.hash)) {
+      console.log('*** catch url hash to process authentication: ')
+      const clientId = /(nimbella-test|sam-test|localhost)/i.test(window.location.hostname) ? '66hb7KTT8tpqaVIn4ey0inHdVBSrnAiO' : 'puuhHiPHlSoeSvXV3raN1etjhpJiigVM'
+      const domain = /(nimbella-test|sam-test|localhost)/i.test(window.location.hostname) ? 'login.nimbella-test.com' : 'login.nimbella.com'
+
+      if(typeof window.Auth0Lock === 'function') {
+        let forParam = window.localStorage.getItem('_forParam')
+        const lock = new window.Auth0Lock(clientId, domain)
+
+        if(/netlify\/#auth=/i.test(forParam)) {
+          forParam = `netlify,${forParam.split('=')[1]}`
+        }
+
+        lock.resumeAuth(window.location.hash, (err, authResult) => {
+          // console.log(err, authResult, authResult.idTokenPayload['https://nimbella.com/user_metadata'])
+          if(err) {
+            console.log('*** error on callback: ', err)
+            if(err.error === 'unauthorized') { // unauuthorized error should be caught first
+              window.location.replace(window.location.origin + '?loginCode=' + err.error + '&loginMessage=' +
+              err.errorDescription)
+              return
+            }
+            if(err.error === 'invalid_token' || err.error === 'access_denied') {
+              window.location.replace(window.location.origin + '?loginCode=' + err.error + '&loginMessage=' +
+                err.errorDescription)
+              return
+            }
+
+            window.location.replace(window.location.origin + '?loginCode=other_error')
+            // window.location.replace('https://nimbella-apigcp.nimbella.io/api/user/login?redirect=true')
+          }
+          if(authResult) {
+            console.log('*** auth result on callback: ', authResult.idTokenPayload.name)
+
+            window.localStorage.setItem('isLoggedIn', 'true');
+            console.log('*** resumeAuth - localStorage isLoggIn set')
+
+            const { idToken } = authResult
+            if(authResult.idTokenPayload['https://nimbella.com/user_metadata']) {
+              const _for = authResult.idTokenPayload['https://nimbella.com/user_metadata'].for
+              if(_for) {
+                window.location.replace(`https://portal-apigcp.nimbella.io/login.html${_for ? `?for=${_for}` : ''}${idToken ? `&token=${idToken}` : ''}`)
+              }
+            } else if(forParam) {
+              window.location.replace(`https://portal-apigcp.nimbella.io/login.html${forParam ? `?for=${forParam}` : ''}${idToken ? `&token=${idToken}` : ''}`)
+              // window.localStorage.removeItem('_forParam')
+            } else {
+              window.location.replace(window.location.origin + '?loginCode=loginSuccess')
+            }
+          }
+          const timeout = window.setTimeout(() => {
+            document.getElementById('mask').style.display = 'none'
+            clearTimeout(timeout)
+          }, 2000)
+        })
+      }
+    } else {
+      window.location.replace('/login')
+    }
+  </script>
+  <style>
+    .mask {  position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class='container'>
+    <div class='mask' id='mask'>
+      <img src='https://nimbella.com/images/loading_nim.gif' alt='loading' width='240' height='180'
+           class='d-block mx-auto' />
+    </div>
+    <div class='row'>
+      <div class='col-md-6 offset-md-3'>
+        <a href='https://nimbella.com'>
+          <img src='https://nimbella.com/images/nimbella-logo-full-color.svg' alt="Nimbella" width='132' height='55' class='d-block mx-auto mt-5 mb-5'>
+        </a>
+        <h2 class='d-block w-100 text-center mb-3'>Having problem?</h2>
+        <p class='d-block w-100 text-center'>If the page does not automatically redirect to the homepage, please
+          <a href='mailto:support@nimbella.com'>contact us</a> so we can help.</p>
+        <p class='d-block w-100 text-center'><strong>Suggested workaround:</strong><br />click <a
+                href='https://nimbella-apigcp.nimbella.io/api/user/login?redirect=true'
+                                           target="_blank"
+                rel="noreferrer nofollow noopener">this link to try another approach</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

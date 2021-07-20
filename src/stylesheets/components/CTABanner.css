@@ -1,0 +1,9 @@
+.CTABanner {
+  margin-top: 5rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  transition: box-shadow .3s ease-in-out;
+}
+
+.CTABanner:hover {
+  box-shadow: 0 0 1px rgba(0,0,0,0.3);
+}

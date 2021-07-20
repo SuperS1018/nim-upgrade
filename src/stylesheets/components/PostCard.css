@@ -1,0 +1,110 @@
+.PostCard {
+  text-decoration: none;
+  background: transparent;
+  color: inherit;
+  /*box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);*/
+  transition: all 0.15s ease-in-out;
+  /*overflow: hidden;*/
+  height: 100%;
+}
+
+.PostCard .Card {
+  height: 100%;
+  position: relative;
+}
+
+.PostCard a{
+  text-decoration: none;
+}
+
+.PostCard--Image {
+  margin: 0 0 2rem 0;
+  width: 100%;
+  /*height: 15rem;*/
+  padding-bottom: 48%;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+  border: 1px solid #dbdbdb;
+  position: relative;
+}
+
+/*.PostCard--Image.first{*/
+  /*padding-bottom: 48%;*/
+/*}*/
+
+.PostCard--Image:hover {
+  opacity: .7;
+}
+
+.PostCard--Title {
+  margin: 0 0 10px 0;
+  text-decoration: none;
+  transition: color .3s ease-in-out;
+  color: #0a9db7;
+}
+
+.PostCard--Title:hover{
+  color: #027084;
+}
+
+.PostCard--Content {
+  padding: 0;
+}
+
+.PostCard--Content.first{
+  padding-left: 2.5rem;
+}
+
+.PostCard .PostCard--Date {
+  margin: 2rem 0 0.5rem;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.PostCard--Excerpt {
+  margin: 0;
+  padding: 0 2rem 0 0;
+}
+
+.PostCard--Category {
+  font-size: 1rem;
+  text-align: right;
+}
+
+.PostCard--Category.first {
+  position: inherit;
+}
+
+.PostCard--Category .btn,
+.PostCard--Category .btn.active {
+  background-color: #efefef !important;
+  color: #586163 !important;
+  padding: 2px 5px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.PostCard--Category .btn:hover,
+.PostCard--Category .btn.active:hover {
+  background-color:#7a7a7a !important;
+  color: white !important;
+}
+
+.PostCard--Category .btn.no-link {
+  cursor: default;
+  background-color: #efefef !important;
+  color: #586163 !important;
+  pointer-events: none
+}
+
+@media (max-width: 823px) {
+  .PostCard--Content.first{ padding: 0 2rem 4rem 2rem; }
+  .PostCard--Image { height: auto !important; padding-bottom: 48%; }
+}
+
+@media (max-width: 414px) {
+  .PostCard--Content.first{ padding: 2rem; }
+  /*.PostCard--Image { height: 19rem !important; }*/
+}

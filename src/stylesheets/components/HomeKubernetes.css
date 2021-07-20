@@ -1,0 +1,77 @@
+.HomeKubernetes {
+  color: white;
+}
+
+.HomeKubernetes--Item {
+  background-color: white;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.HomeKubernetes--Item:first-of-type {
+  margin-bottom: 2rem;
+}
+
+.HomeKubernetes--Item img {
+  width: 100%;
+}
+
+.HomeKubernetes h2 strong {
+  color: #7EDBEB;
+}
+
+.HomeKubernetes h2, .HomeKubernetes h2 strong {
+  font-weight: 500;
+}
+
+.HomeKubernetes .Content a {
+  color: #F2994A;
+  font-size: 0.9em;
+  text-decoration: underline !important;
+}
+
+.HomeKubernetes .Content a:hover {
+  text-decoration: none !important;
+}
+
+.HomeKubernetes .Content ul {
+  padding-left: 2rem;
+}
+
+.HomeKubernetes .Content ul li {
+  padding-left: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.HomeKubernetes .Content p,
+.HomeKubernetes .Content ul li {
+  font-size: 1.1em;
+}
+
+.HomeKubernetes .Content:nth-child(3) p {
+  margin-top: 8rem;
+}
+
+.HomeKubernetes .Content.list p:first-of-type {
+  margin: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  .HomeKubernetes h2 {
+    text-align: center;
+  }
+
+  .HomeKubernetes .Content {
+    font-size: 1.4em;
+  }
+
+  .HomeKubernetes .Content p:first-of-type {
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  .HomeKubernetes .Content:nth-child(3) p {
+    margin-top: 3rem;
+  }
+}

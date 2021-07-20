@@ -1,42 +1,27 @@
-# Netlify CMS + React Starter
+# Nimbella.com is using Netlify CMS + React Start
+
+Please read the original instruction below to setup `Netlify CMS` with `React`
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![dependencies](https://david-dm.org/jinksi/netlify-cms-react-starter.svg?style=flat-square)](https://david-dm.org/jinksi/netlify-cms-react-starter)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f007e81b-b83b-4433-bd6d-a3924fae3204/deploy-status)](https://app.netlify.com/sites/netlify-cms-react-starter/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/78bb8a0a-27c3-45e8-a1ee-1706a94f8ada/deploy-status)](https://app.netlify.com/sites/adoring-tereshkova-a26214/deploys)
+
 
 A starter project for creating lightning-fast, offline-first websites with [Netlify CMS](https://netlifycms.org) and React.
 
-- **[Create React App](https://github.com/facebookincubator/create-react-app)**
-- **[React Router](https://github.com/ReactTraining/react-router)** for routing
-- **[React Helmet](https://github.com/nfl/react-helmet)** for document titles, descriptions, meta
-- **[React Snapshot](https://github.com/geelen/react-snapshot)** for pre-rendering to static html so it works without Javascript ⭐️
-- **[Netlify CMS](https://github.com/netlify/netlify-cms)** for content management
-
-I aim to include commonly used components and best-practices e.g. forms, settings, <head> tags, lazy-loading images, etc.
-
-## Get going
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Jinksi/netlify-cms-react-starter&stack=cms)
-
-1.  Hit the **Deploy to Netlify** button. This will:
-
-- Clone the repo into your Github account
-- Create you a new project on Netlify, build & deploy
-
-1.  Once your Netlify project has been created, check a couple of settings:
-
-- Enable **Identity**
-- Change **Registration Preferences** to **Invite Only**
-- Enable **Git Gateway**
-
-1.  Invite users (probably yourself) to enable admin access
-
-- Open the **Identity** tab and hit **Invite Users**
+* **[Create React App](https://github.com/facebookincubator/create-react-app)**
+* **[React Router](https://github.com/ReactTraining/react-router)** for routing
+* **[React Helmet](https://github.com/nfl/react-helmet)** for document titles, descriptions, meta
+* **[React Snapshot](https://github.com/geelen/react-snapshot)** for pre-rendering to static html so it works without Javascript ⭐️
+* **[Netlify CMS](https://github.com/netlify/netlify-cms)** for content management
 
 ## Show me the CMS!
 
-The CMS lives at [\_\_YOUR_SITE_NAME\_\_.netlify.com/admin](https://__YOUR_SITE_NAME__.netlify.com/admin).
+The CMS lives at [https://www.nimbella.com/admin](https://www.nimbella.com/admin).
+1. Invite users (probably yourself) to enable admin access
+
+* Open the **Identity** tab and hit **Invite Users**
 
 ## Developing
 
@@ -67,4 +52,25 @@ Find out more in the [Netlify CMS Docs](https://www.netlifycms.org/docs/#configu
 [Netlify CMS Docs](https://www.netlifycms.org/docs/)  
 [Netlify CMS Repo](https://github.com/netlify/netlify-cms)  
 [Hyperstatic](https://github.com/Jinksi/hyperstatic) – the same starter project minus Netlify CMS  
-[Gatsby + Netlify CMS Starter (Gatsbro)](https://github.com/Jinksi/gatsbro)
+[Gatsby + Netlify CMS Starter](https://github.com/AustinGreen/gatsby-starter-netlify-cms)
+
+## CMS Instruction
+
+This is the instruction on how to update pages and create posts
+
+* **Pages Update -**
+
+    Go to [Pages](https://www.nimbella.com/admin/#/collections/pages) and find the page you want to edit. Edit fields are on the right and left column is preview.
+ 
+    Meta section is for sharing links on social media.
+ 
+* **Create Posts -**
+ 
+    Click on `Quick add` dropdown at the upper-right of [Admin Page](https://www.nimbella.com/admin). You can post `Events`, `News`, `Blogs`, `Jobs`, and `Resource Documents` here.
+
+    Before post a blog, if you want to add more `Blog catagories`, you can also find the option from `Quick add` dropdown list.
+
+* **Nimbella Related Update -**
+
+    If you want to update `Trademark Usage`, `Acceptable Use`, `Privacy Policy`, `Term of Use`, `Out Client List`, `Our Founders List`, or `Nimbella Information`, you can find at [Settings](https://www.nimbella.com/admin/#/collections/settings)
+

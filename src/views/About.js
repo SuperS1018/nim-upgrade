@@ -1,31 +1,49 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
-import PageHeader from '../components/PageHeader'
-import LazyImage from '../components/LazyImage'
+import PageBanner from '../components/PageBanner'
+import Founders from '../components/Founders'
 import Content from '../components/Content.js'
-import './About.css'
+import Investors from '../components/Investors'
 
-export default ({ fields }) => {
-  const { title, subtitle, featuredImage, section1, section2 } = fields
-  return (
-    <div className='About'>
-      <PageHeader
-        title={title}
-        subtitle={subtitle}
-        backgroundImage={featuredImage}
-      />
-      <div className='section'>
-        <div className='container'>
-          <Content source={section1} />
+import '../stylesheets/views/About.css'
+
+class About extends Component {
+  render () {
+    const { fields = {}, founderList = [], investorList = [] } = this.props
+    const { title = '', subtitle = '', featuredImage = '', section1 = '' } = fields
+
+    return (
+      <div className='About page'>
+        <PageBanner
+          title={title}
+          subtitle={subtitle}
+          featuredImage={featuredImage}
+        />
+        <div className='About--Content section thin'>
+          <div className='container'>
+            {section1 && <Content source={section1} />}
+          </div>
         </div>
-      </div>
-      <div className='section'>
+
         <div className='container'>
-          <Content source={section2} />
-          <p>The image below is a {'<LazyImage />'}</p>
-          <LazyImage src={featuredImage} alt='LazyImage' />
+          <hr />
         </div>
+
+        {founderList.length > 0 && <Founders list={founderList} />}
+
+        <div className='container'>
+          <div className='col-lg-12 section thin'>
+            <p className='text-center'>Read the story of our founders <NavLink to='/our-story'>here</NavLink>.</p>
+            <p className='text-center'>We are hiring and growing our team: <NavLink to='/join-us'>join us</NavLink>.</p>
+          </div>
+        </div>
+
+        {investorList.length > 0 && <Investors list={investorList} />}
+
       </div>
-    </div>
-  )
+    )
+  }
 }
+
+export default About
