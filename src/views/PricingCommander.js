@@ -34,6 +34,7 @@ class PricingCommander extends Component {
     const { hash } = window.location
     const isParam = hash.indexOf('?') !== -1
     const id = isParam ? hash.substring(1).split('?')[0] : hash.substring(1)
+    if (!id) return
     this.setState({ id, isParam })
     this.timeout = setTimeout(() => {
       scrollToElement(id, 1, true, -70)

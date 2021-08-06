@@ -205,8 +205,8 @@ class SinglePost extends Component {
                   <li>All</li>
                 </NavLink>
                 {cateList.map((i, index) => (
-                  <NavLink to={slugify(`/blog-category/${i.title}`)}>
-                    <li key={i.title + index}>{i.title}</li>
+                  <NavLink to={slugify(`/blog-category/${i.title}`)} key={i.title + index}>
+                    <li>{i.title}</li>
                   </NavLink>
                 ))}
               </ul>

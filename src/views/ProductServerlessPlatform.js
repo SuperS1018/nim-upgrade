@@ -19,13 +19,11 @@ class ProductServerlessPlatform extends Component {
         <ProductBanner title={pageBanner.title} subtitle={pageBanner.subtitle} image={pageBanner.backgroundImage} />
         <NimCli />
         <ProductFeature title={threePillars.title} subtitle={threePillars.subtitle} list={threePillars.pillarList} highlight={highlight} />
-        <div className='container'><div className='row'><div className='col-lg-12'>
-          <hr /></div></div></div>
+        <div className='container'><div className='row'><div className='col-lg-12'><hr /></div></div></div>
         <ProductTwoColumn title={architecture.title} subtitle={architecture.subtitle} content1={architecture.content1} content2={architecture.content2} image={architecture.featuredImage} />
-        <div className='container'><div className='row'><div className='col-lg-12'>
-          <hr /></div></div></div>
+        <div className='container'><div className='row'><div className='col-lg-12'><hr /></div></div></div>
         <NimStarterProjects {...this.props.more} />
-        {playgroundBanner && <BannerPlayground title={playgroundBanner.title} btn={playgroundBanner.btn} />}
+        <BannerPlayground title={playgroundBanner.title} btn={playgroundBanner.btn} />
       </div>
     )
   }

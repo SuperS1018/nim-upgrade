@@ -68,6 +68,8 @@ a {
 
 a.drk-bg{ color: #1bc8e6 !important; }
 a.drk-bg:hover{ color: #0a9db7 !important; }
+a.link-blk{ color: #19191B !important; }
+a.link-blk:hover{ color: #004d5b !important; }
 
 a:hover {
   color:#004d5b;

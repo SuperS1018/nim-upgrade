@@ -36,7 +36,6 @@ class EnterpriseSolution extends Component {
     const { list = [], fields = {} } = this.props
     const { heroBanner, secondSection, thirdSection, forthSection, fifthSection, sixthSection } = fields
     const { form } = this.state
-    console.log(fields)
     return (
       <div className='EnterpriseSolution' style={{ backgroundColor: '#F3F4F6' }}>
         {heroBanner && <EnterpriseSolutionBanner title={heroBanner.title} subtitle={heroBanner.subtitle} desc={heroBanner.desc} note={heroBanner.note} btnTxt={heroBanner.btnTxt} btnLink={heroBanner.btnLink} />}

@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import Content from './Content'
-import EnquiryFormForresterAjax from './EnquiryFormForresterAjax'
 import Breadcrumb from './Breadcrumb'
 
 import '../stylesheets/components/ForresterBanner.css'
 
 class ForresterBanner extends Component {
   render () {
-    const { title, desc, redirect } = this.props
+    const { title, desc } = this.props
     return (
       <div className='ForresterBanner'>
         <Breadcrumb className='bg-g no-banner top-1' />

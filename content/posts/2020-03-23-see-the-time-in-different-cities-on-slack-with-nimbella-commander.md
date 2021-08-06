@@ -15,6 +15,34 @@ meta:
   description: >-
     With Nimbella Commander, you can find out what time it is in any part of the
     world in one command in your Slack workspace ✔
+  schema:
+    - json: |-
+        {
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://nimbella.com/blog"
+            },
+            "headline": "See the time in different cities on Slack with Nimbella Commander",
+            "image": [
+              "https://nimbella.com/images/uploads/display-times-in-slack-header.png"
+            ],
+            "datePublished": "March 31, 2020 4:00 PM",
+            "dateModified": "March 31, 2020 4:00 PM",
+            "author": {
+              "@type": "Person",
+              "name": "Nimbella"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Nimbella.com®",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://nimbella.com/images/nimbella-logo-full-color.png"
+              }
+            }
+        }
   shareImageUrl: /images/uploads/display-times-in-slack-header.png
   title: How to Setup Multiple Time Zones on your Slack Workspace?
 ---

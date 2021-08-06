@@ -4,7 +4,7 @@ import { googleAnalyticsEvent } from '../util/ga'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars'
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes'
-import { pixelBugs } from '../util/pixel-bugs'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { isMobile } from '../util/misc'
 
 import Logo from './Logo'
@@ -15,7 +15,7 @@ import '../stylesheets/components/Nav.css'
 
 class Navigation extends Component {
   static defaultProps = {
-    handleIfHome: () => /(^\/$|^\/proof-of-concept|\/forrester-report)|\/case-study|\/enterprise-solution/i.test(window.location.pathname)
+    handleIfHome: () => /(^\/$|^\/proof-of-concept|\/forrester-report)|\/case-study|\/nimbella-enterprise|\/nimbella-cloud|\/platform/i.test(window.location.pathname)
   }
   constructor (props) {
     super(props)
@@ -42,13 +42,12 @@ class Navigation extends Component {
     this.unlisten = this.props.history.listen(() => {
       this.props.handleNoticeBanner()
       this.handleNavBackground()
-      pixelBugs()
 
       this.setState({
         isOpen: false
       })
 
-      // for debugging - if thte link is ended with "/"
+      // for debugging - if the link is ended with "/"
       if(/\/$/i.test(window.location.pathname) && window.location.pathname !== '/') {
         console.log('*** the link is ended with a "/"', window.location.href)
       }
@@ -111,7 +110,6 @@ class Navigation extends Component {
         } else {
           this.setState({ setupLink: `${baseURL}/login.html${idToken ? `?token=${idToken}` : ''}` })
         }
-
       }
 
       if(logout) {
@@ -180,13 +178,13 @@ class Navigation extends Component {
 
   handleHover = async evt => {
     evt.preventDefault()
-    // console.log(evt.target.parentNode)
-    evt.target.parentNode.parentNode.childNodes.forEach(i => {
-      if(i !== evt.target.parentNode) {
+    const parentNode = evt.target.tagName === 'svg' ? evt.target.parentNode.parentNode : evt.target.parentNode.parentNode.parentNode
+    parentNode.parentNode.childNodes.forEach(i => {
+      if(i !== parentNode) {
         i.removeAttribute('checked')
       }
     })
-    evt.target.parentNode.toggleAttribute('checked')
+    parentNode.toggleAttribute('checked')
   }
 
   handleAvatarClick = () => {
@@ -220,23 +218,29 @@ class Navigation extends Component {
 
           <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
             <ul className='navbar-nav mr-auto'>
-              <li className='nav-item'>
-                <NavLink className='nav-link' to='/platform'>
-                  Platform
-                </NavLink>
+              <li className='nav-item dropdown'>
+                <div className='buttons-wrap'>
+                  <button className={`dropbtn ${/^\/platform/.test(window.location.pathname) ? 'active' : ''}`} onClick={() => history.push('/platform')}>Platform</button>
+                  <FontAwesomeIcon icon={faAngleRight} onClick={e => {this.handleHover(e)}} />
+                </div>
+
+
+                <div className='dropdown-content'>
+                  <NavLink className='nav-link' to='/platform/nimbella-enterprise'>
+                    Nimbella Enterprise
+                  </NavLink>
+                  <NavLink className='nav-link' to='/platform/nimbella-cloud'>
+                    Nimbella Cloud
+                  </NavLink>
+                  {/*<div className='NavLink nav-link disabled'>Kafka (upcoming)</div>*/}
+                </div>
               </li>
 
-              {/*<li className='nav-item dropdown' onClick={e => this.handleHover(e)}>*/}
-              {/*  <button className={`dropbtn ${/pricing/.test(window.location.pathname) ? 'active' : ''}`}>Frameworks</button>*/}
-              {/*  <div className='dropdown-content'>*/}
-              {/*    <NavLink className='nav-link' to='/react'>*/}
-              {/*      React*/}
-              {/*    </NavLink>*/}
-              {/*  </div>*/}
-              {/*</li>*/}
-
               <li className='nav-item dropdown'>
-                <button className={`dropbtn ${/integrations/.test(window.location.pathname) ? 'active' : ''}`} onClick={e => this.handleHover(e)}>Integrations</button>
+                <div className='buttons-wrap'>
+                  <button className={`dropbtn ${/integrations/.test(window.location.pathname) ? 'active' : ''}`}>Integrations</button>
+                  <FontAwesomeIcon icon={faAngleRight} onClick={e => {this.handleHover(e)}} />
+                </div>
 
                 <div className='dropdown-content'>
                   {/*<NavLink className='nav-link ' to='/integrations/commander'>Commander</NavLink>*/}
@@ -277,8 +281,12 @@ class Navigation extends Component {
                 </div>
               </li>
 
-              <li className='nav-item dropdown' onClick={e => this.handleHover(e)}>
-                <button className={`dropbtn ${/pricing/.test(window.location.pathname) ? 'active' : ''}`}>Pricing</button>
+              <li className='nav-item dropdown'>
+                <div className='buttons-wrap'>
+                  <button className={`dropbtn ${/pricing/.test(window.location.pathname) ? 'active' : ''}`}>Pricing</button>
+                  <FontAwesomeIcon icon={faAngleRight} onClick={e => {this.handleHover(e)}} />
+                </div>
+
                 <div className='dropdown-content'>
                   <NavLink className='nav-link' to='/pricing/platform'>
                     Platform
@@ -290,7 +298,11 @@ class Navigation extends Component {
               </li>
 
               <li className='nav-item dropdown'>
-                <button className={`dropbtn ${/docs/.test(window.location.pathname) ? 'active' : ''}`} onClick={e => this.handleHover(e)}>Docs</button>
+                <div className='buttons-wrap'>
+                  <button className={`dropbtn ${/docs/.test(window.location.pathname) ? 'active' : ''}`}>Docs</button>
+                  <FontAwesomeIcon icon={faAngleRight} onClick={e => {this.handleHover(e)}} />
+                </div>
+
                 <div className='dropdown-content'>
                   <a className='NavLink nav-link' href='https://docs.nimbella.com' target='_blank' rel='noopener noreferrer nofollow' onClick={() => googleAnalyticsEvent(0, 'Top Nav Bar', 'Docs Platform Click')}>Platform</a>
                   <div className='NavLink nav-link sub-indicator'>
@@ -327,7 +339,7 @@ class Navigation extends Component {
             {!/^\/integrations\/commander/i.test(window.location.pathname) && !isLoading && <Fragment>
               {!profile.name && authChecking === false && !/^\/integrations\/commander/i.test(window.location.pathname) && <div className='auth-wrap'>
                 <div className='mt-2 mt-md-0 button'>
-                  <NavLink className={`btn mr-3${/^\/$|\/proof-of-concept|\/forrester-report|\/case-study|\/enterprise-solution/i.test(window.location.pathname) ? ' btn-outline-white' : ' btn-outline-light'}`} to='/login' onClick={this.handleLoginOpen}>
+                  <NavLink className={`btn mr-3${/^\/$|\/proof-of-concept|\/forrester-report|\/case-study|\/nimbella-enterprise|\/nimbella-cloud|\/platform/i.test(window.location.pathname) ? ' btn-outline-white' : ' btn-outline-light'}`} to='/login' onClick={this.handleLoginOpen}>
                     Login
                   </NavLink>
                   <NavLink className='btn btn-app mr-5' to='/signup' onClick={this.handleLoginOpen}>

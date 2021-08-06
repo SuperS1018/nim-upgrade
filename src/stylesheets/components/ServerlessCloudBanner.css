@@ -1,0 +1,56 @@
+.ServerlessCloudBanner {
+  width: 100%;
+  margin-top: 95px;
+  padding: 8rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.ServerlessCloudBanner h1 {
+  font-size: 3em;
+}
+
+.ServerlessCloudBanner .sub-title p {
+  font-size: 1.5em;
+}
+
+.ServerlessCloudBanner .note p {
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 4rem;
+}
+
+.ServerlessCloudBanner .Content .gif_player {
+  border-radius: 20px;
+  overflow: hidden;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.ServerlessCloudBanner .Content .gif_player .play_button {
+  background-color: #48A8B9;
+  box-shadow: none;
+  width: 60px;
+  height: 60px;
+}
+
+.ServerlessCloudBanner .Content .gif_player .play_button::after {
+  content: '' !important;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 16px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+}
+
+@media (max-width: 1024px) {
+  .ServerlessCloudBanner {
+    font-size: 0.9em;
+  }
+}
+
+
+

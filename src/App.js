@@ -23,7 +23,8 @@ import FrameworkReact from './views/FrameworkReact'
 import Whitepaper from './views/Whitepaper'
 import PortableWhitepaper from './views/PortableWhitepaper'
 import WhitepaperThank from './views/WhitepaperThank'
-import ProductServerlessPlatform from './views/ProductServerlessPlatform'
+import ProductPlatform from './views/ProductPlatform'
+// import ProductServerlessPlatform from './views/ProductServerlessPlatform'
 import ProductNimbellaCommander from './views/ProductNimbellaCommander'
 import ProductCommanderSlack from './views/ProductCommanderSlack'
 import ProductCommanderMattermost from './views/ProductCommanderMattermost'
@@ -32,6 +33,7 @@ import ProductCommanderCli from './views/ProductCommanderCli'
 import ProductPostman from './views/ProductPostman'
 import ProductNetlify from './views/ProductNetlify'
 import EnterpriseSolution from './views/EnterpriseSolution'
+import ServerlessCloud from './views/ServerlessCloud'
 import Tools from './views/Tools'
 import ContactForm from './views/ContactForm'
 import DevelopmentExperience from './views/DevelopmentExperience'
@@ -87,6 +89,8 @@ import NimbellaWorkbench from './views/NimbellaWorkbench'
 import NimbellaStarterProjects from './views/NimbellaStarterProjects'
 import POC from './views/POC'
 import Forrester from './views/Forrester'
+
+import './stylesheets/stackoverflow-dark.css'
 
 const RouteWithMeta = ({ component: Component, ...props }) => (
   <Route
@@ -150,6 +154,11 @@ class App extends Component {
     renewSession().then(res => {
       if(res.isAuthenticated) {
         this.setState({ ...res, authChecking: false })
+
+        // Print out portal test link on staging
+        if (res.idToken && /^nimbella-test|^sam-test|^nimbella-staging/i.test(window.location.hostname)) {
+          console.log('portal: ', `https://new9nimb-ubiwebrqu1n-apigcp.nimbella.io/login.html?token=${res.idToken}`)
+        }
       } else {
         this.setState({ profile: {}, authChecking: false })
       }
@@ -323,7 +332,7 @@ class App extends Component {
     } = this.state;
     const globalSettings = this.getDocument('settings', 'global')
     const founderList = this.getDocument('settings', 'founders').founderList
-    const { employeeList } = this.getDocument('settings', 'employees') || { employeeList: [] }
+    const employeeList = this.getDocument('settings', 'employees').employeeList
     const clientList = this.getDocument('settings', 'clients').clientList
     const {
       siteTitle,
@@ -602,10 +611,16 @@ class App extends Component {
             <RouteWithMeta
               path={`/platform`}
               exact
-              component={ProductServerlessPlatform}
-              fields={this.getDocument('pages', 'productFirst')}
-              more={this.getDocument('pages', 'nimbellaStarterProjects')}
+              component={ProductPlatform}
+              fields={this.getDocument('pages', 'productPlatform')}
             />
+            {/*<RouteWithMeta*/}
+            {/*  path={`/platform`}*/}
+            {/*  exact*/}
+            {/*  component={ProductServerlessPlatform}*/}
+            {/*  fields={this.getDocument('pages', 'productFirst')}*/}
+            {/*  more={this.getDocument('pages', 'nimbellaStarterProjects')}*/}
+            {/*/>*/}
             <RouteWithMeta
               path={`/integrations/commander`}
               exact
@@ -708,11 +723,17 @@ class App extends Component {
               fields={this.getDocument('pages', 'poc')}
             />
             <RouteWithMeta
-              path='/enterprise-solution'
+              path='/platform/nimbella-enterprise'
               exact
               component={EnterpriseSolution}
               list={this.getDocument('pages', 'source').openSourceUse.list || []}
               fields={this.getDocument('pages', 'enterpriseSolution')}
+            />
+            <RouteWithMeta
+              path='/platform/nimbella-cloud'
+              exact
+              component={ServerlessCloud}
+              fields={this.getDocument('pages', 'serverlessCloud')}
             />
             <RouteWithMeta
               path='/forrester-report'

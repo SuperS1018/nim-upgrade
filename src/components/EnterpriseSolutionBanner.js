@@ -8,13 +8,9 @@ import '../stylesheets/components/EnterpriseSolutionBanner.css'
 class EnterpriseSolutionBanner extends Component {
   render () {
     const { title = '', subtitle = '', desc = '', note = '', btnLink = '', btnTxt = '' } = this.props
-    const breadcrumb = [
-      { name: 'Home', link: '/' },
-      { name: 'Enterprise Solution', link: '/enterprise-solution' }
-    ]
     return (
       <div className='EnterpriseSolutionBanner'>
-        <Breadcrumb className='bg-g no-banner top-1' items={breadcrumb} />
+        <Breadcrumb className='bg-g no-banner top-1' />
         <div className='container position-relative'>
           <div className='pattern' />
           <div className='row'>

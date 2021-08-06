@@ -8,9 +8,7 @@ import '../stylesheets/views/ProductNimbellaCommander.css'
 
 class ProductPostman extends Component {
   render () {
-    console.log(this.props.fields)
-    const { productPostman } = this.props.fields
-    const { pageBanner, tableComparison, content } = productPostman
+    const { productPostman: { pageBanner, tableComparison, content } } = this.props.fields
     return (
       <div className='Product Commander Postman page'>
         {pageBanner && <ProductBanner title={pageBanner.title} subtitle={pageBanner.subtitle} image={pageBanner.backgroundImage} />}

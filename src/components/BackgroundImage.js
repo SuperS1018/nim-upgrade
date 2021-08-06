@@ -58,7 +58,7 @@ export default class BackgroundImage extends React.Component {
     let { className, contain, opacity, lazy, imageSize } = this.props
     // eslint-disable-next-line
     let { loaded, src } = this.state
-    if (!lazy) {
+    if (!lazy || /admin/i.test(window.location.pathname)) {
       return (
         <div
           className={`BackgroundImage absolute ${className}`}

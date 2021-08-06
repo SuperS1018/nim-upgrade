@@ -4,6 +4,7 @@ import '../src/globalStyles.css'
 import data from '../src/data.json'
 import Home from '../src/views/Home'
 import ProductServerlessPlatform from '../src/views/ProductServerlessPlatform'
+import ProductPlatform from '../src/views/ProductPlatform'
 import ProductNimbellaCommander from '../src/views/ProductNimbellaCommander'
 import ProductCommanderSlack from '../src/views/ProductCommanderSlack'
 import ProductCommanderMattermost from '../src/views/ProductCommanderMattermost'
@@ -27,6 +28,7 @@ import Whitepaper from '../src/views/Whitepaper'
 import PortableWhitepaper from '../src/views/PortableWhitepaper'
 import POC from '../src/views/POC'
 import EnterpriseSolution from '../src/views/EnterpriseSolution'
+import ServerlessCloud from '../src/views/ServerlessCloud'
 import Forrester from '../src/views/Forrester'
 import Blog from '../src/views/Blog'
 import Resources from '../src/views/Resources'
@@ -100,7 +102,10 @@ CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <Home fields={entry.toJS().data} clientList={clientList} current={newsevents} blog={posts} />
 ))
 CMS.registerPreviewTemplate('productFirst-page', ({ entry }) => (
-  <ProductServerlessPlatform fields={entry.toJS().data} />
+  <ProductServerlessPlatform fields={entry.toJS().data} more={getDocument('pages', 'nimbellaStarterProjects')} />
+))
+CMS.registerPreviewTemplate('productPlatform-page', ({ entry }) => (
+  <ProductPlatform fields={entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('productSecond-page', ({ entry }) => (
   <ProductNimbellaCommander fields={entry.toJS().data} />
@@ -206,6 +211,9 @@ CMS.registerPreviewTemplate('source-page', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('enterpriseSolution-page', ({ entry }) => (
   <EnterpriseSolution fields={entry.toJS().data} list={getDocument('pages', 'source').openSourceUse.list} />
+))
+CMS.registerPreviewTemplate('serverlessCloud-page', ({ entry }) => (
+  <ServerlessCloud fields={entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
   <Blog fields={entry.toJS().data} posts={posts} />

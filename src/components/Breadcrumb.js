@@ -7,8 +7,8 @@ import '../stylesheets/components/Breadcrumb.css'
 export default props => {
   let link = ''
   const handleLinkToName = s => {
-    const modified = s.replace(/-/ig, ' ')
-    return modified.charAt(0).toUpperCase() + modified.slice(1)
+    const arr = s.split(/-/ig)
+    return arr.map((i, index) => i.charAt(0).toUpperCase() + i.slice(1) + (index === arr.length - 1 ? '' : ' ')).join(' ')
   }
   // options items
   // exclude: <Array: string> this is to show what items should be excluded from the breadcrumb
@@ -19,6 +19,7 @@ export default props => {
     const pathnameItems = pathname.split('/')
     const trimmed = pathnameItems.slice(1, pathnameItems.length)
     let output = []
+
     output = home.concat(trimmed.map(i => {
       link += `/${i}`
       return { name: handleLinkToName(i), link }

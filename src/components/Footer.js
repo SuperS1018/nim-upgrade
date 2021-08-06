@@ -86,9 +86,6 @@ export default ({ globalSettings }) => (
             <NavLink className='col-lg-12' to='/make-serverless-frictionless-and-portable-whitepaper'>
               Technical Whitepaper
             </NavLink>
-            <NavLink className='col-lg-12' to='/enterprise-solution'>
-              Enterprise Solution
-            </NavLink>
             <NavLink className='col-lg-12' to='/open-source'>
               Open Source
             </NavLink>

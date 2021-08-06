@@ -1,0 +1,39 @@
+.ServerlessCloudThird {
+  text-align: center;
+}
+
+.ServerlessCloudThird h2 {
+  font-size: 2.25em;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.ServerlessCloudThird h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+.ServerlessCloudThird {
+  text-align: left;
+}
+
+.ServerlessCloudThird--Item h4 {
+  font-size: 1.13em;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
+.ServerlessCloudThird--Item .Content p {
+  font-size: 1.13em;
+}
+
+@media (max-width: 736px) {
+  .ServerlessCloudThird--Item {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .ServerlessCloudThird--Item h4 {
+    width: 100%;
+  }
+}

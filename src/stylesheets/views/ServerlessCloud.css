@@ -1,0 +1,35 @@
+.ServerlessCloud {}
+
+/*Section Cloud Fifth Style*/
+.ServerlessCloudFifth {
+
+}
+
+.ServerlessCloudFifth {
+    background-color: #005968;
+    color: white;
+    padding: 6rem;
+    text-align: center;
+}
+
+.ServerlessCloudFifth h2 {
+    font-size: 3em;
+    margin-bottom: 6rem;
+}
+
+@media (max-width: 767px) {
+    .ServerlessCloud {
+        font-size: 0.9em;
+    }
+
+    .ServerlessCloud h2 {
+        font-size: 2em;
+    }
+
+    .ServerlessCloud h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 414px) {
+}

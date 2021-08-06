@@ -15,8 +15,8 @@ export default class Auth {
 
   constructor() {
     let forParam = getParameterFromURL('for')
-    const cid = process.env.NODE_ENV === 'production' && !/sam-test|nimbella-test/i.test(window.location.hostname) ? process.env.REACT_APP_AUTH_CLIENT_ID : process.env.REACT_APP_AUTH_CLIENT_ID_DEV
-    const domain = process.env.NODE_ENV === 'production' && !/sam-test|nimbella-test/i.test(window.location.hostname) ? process.env.REACT_APP_AUTH_DOMAIN : process.env.REACT_APP_AUTH_DOMAIN_DEV
+    const cid = process.env.NODE_ENV === 'production' && !/nimbella-test/i.test(window.location.hostname) ? process.env.REACT_APP_AUTH_CLIENT_ID : process.env.REACT_APP_AUTH_CLIENT_ID_DEV
+    const domain = process.env.NODE_ENV === 'production' && !/nimbella-test/i.test(window.location.hostname) ? process.env.REACT_APP_AUTH_DOMAIN : process.env.REACT_APP_AUTH_DOMAIN_DEV
     console.log('*** current mode: ', domain === process.env.REACT_APP_AUTH_DOMAIN ? 'production' : 'staging')
     if(/netlify\/#auth=/i.test(window.location.href)) {
       forParam = `netlify,${window.location.hash.split('=')[1]}`

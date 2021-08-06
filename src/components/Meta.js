@@ -16,7 +16,8 @@ const Meta = props => {
     twitterCreatorAccount,
     headerScripts,
     noindex,
-    canonicalLink
+    canonicalLink,
+    schema
     // overwrite { title, description } if in fields or fields.meta
   } = {
     ...props,
@@ -53,6 +54,9 @@ const Meta = props => {
       )}
       {noindex && <meta name='robots' content='noindex' />}
       {canonicalLink && <link rel='canonical' href={canonicalLink} />}
+      {schema && schema.map((i, index) => (
+        <script key={i.json + index} type='application/ld+json'>{i.json}</script>
+      ))}
       <meta name='google-site-verification' content='IzuwJgzl9iUPT1KVtgFhUqXaI7xSr-RQQ8NR-fRoaNE' />
       <meta name='insight-app-sec-validation' content='763bb93b-9bda-4689-b600-9ebea0ace42b' />
     </Helmet>
