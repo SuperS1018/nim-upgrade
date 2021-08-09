@@ -1143,7 +1143,7 @@ collections: # A list of collections the CMS should be able to edit
                   - { label: Demo Link, name: demolink, widget: string }
                   - { label: Command, name: command, widget: string }
               - label: "Other Starter Projects"
-                name: "list"
+                name: "other"
                 widget: "list"
                 fields:
                   - { label: Name, name: name, widget: string }
@@ -1436,7 +1436,7 @@ collections: # A list of collections the CMS should be able to edit
                 widget: object
                 fields:
                   - {label: Title (not required), name: title, widget: string, required: false}
-                  - {label: Subtitle (not required), name: subtitle, widget: false}
+                  - {label: Subtitle (not required), name: subtitle, widget: text}
                   - {label: Content Body, name: body, widget: markdown}
           - label: "Meta"
             required: false
@@ -1498,7 +1498,7 @@ collections: # A list of collections the CMS should be able to edit
                 widget: object
                 fields:
                   - {label: Title (not required), name: title, widget: string, required: false}
-                  - {label: Subtitle (not required), name: subtitle, widget: false}
+                  - {label: Subtitle (not required), name: subtitle, widget: text}
                   - {label: Content Body, name: body, widget: markdown}
           - label: "Meta"
             required: false
@@ -1560,7 +1560,7 @@ collections: # A list of collections the CMS should be able to edit
                 widget: object
                 fields:
                   - {label: Title (not required), name: title, widget: string, required: false}
-                  - {label: Subtitle (not required), name: subtitle, widget: false}
+                  - {label: Subtitle (not required), name: subtitle, widget: text}
                   - {label: Content Body, name: body, widget: markdown}
           - label: "Meta"
             required: false
@@ -1622,7 +1622,7 @@ collections: # A list of collections the CMS should be able to edit
                 widget: object
                 fields:
                   - {label: Title (not required), name: title, widget: string, required: false}
-                  - {label: Subtitle (not required), name: subtitle, widget: false}
+                  - {label: Subtitle (not required), name: subtitle, widget: text}
                   - {label: Content Body, name: body, widget: markdown}
           - label: "Meta"
             required: false
@@ -1684,7 +1684,7 @@ collections: # A list of collections the CMS should be able to edit
                 widget: object
                 fields:
                   - {label: Title (not required), name: title, widget: string, required: false}
-                  - {label: Subtitle (not required), name: subtitle, widget: false}
+                  - {label: Subtitle (not required), name: subtitle, widget: text}
                   - {label: Content Body, name: body, widget: markdown}
           - label: "Meta"
             required: false
@@ -2450,7 +2450,7 @@ collections: # A list of collections the CMS should be able to edit
                 widget: object
                 fields:
                   - { label: Title (not required), name: title, widget: string, required: false }
-                  - { label: Subtitle (not required), name: subtitle, widget: false }
+                  - { label: Subtitle (not required), name: subtitle, widget: text }
                   - { label: Content Body, name: body, widget: markdown }
               - label: Signup Banner
                 name: signupBanner
@@ -3145,13 +3145,13 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Paragrapg, name: paragraph, widget: text}
-              - label: 4.1
+              - label: "4.1"
                 name: sublist1
                 widget: object
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Content, name: content, widget: markdown}
-              - label: 4.2
+              - label: "4.2"
                 name: sublist2
                 widget: object
                 fields:
@@ -3165,25 +3165,25 @@ collections: # A list of collections the CMS should be able to edit
                       - {label: Description, name: desc, widget: markdown}
                       - {label: Managing Settings, name: settings, widget: markdown}
                   - {label: Content2, name: content2, widget: markdown}
-              - label: 4.3
+              - label: "4.3"
                 name: sublist3
                 widget: object
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Content, name: content, widget: markdown}
-              - label: 4.4
+              - label: "4.4"
                 name: sublist4
                 widget: object
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Content, name: content, widget: markdown}
-              - label: 4.5
+              - label: "4.5"
                 name: sublist5
                 widget: object
                 fields:
                   - {label: Title, name: title, widget: string}
                   - {label: Content, name: content, widget: markdown}
-              - label: 4.6
+              - label: "4.6"
                 name: sublist6
                 widget: object
                 fields:
