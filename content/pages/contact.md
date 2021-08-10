@@ -4,7 +4,7 @@ backgroundImage: /images/uploads/contact-bg.jpg
 meta:
   canonicalLink: ""
   description: ""
-  title: How to contact Nimbella over email, GitHub or Slack?
+  title: ""
 ---
 ## You can reach us on [GitHub](https://github.com/nimbella), [Slack](https://nimbella-community.slack.com/join/shared_invite/enQtNjg1NzE1OTE3MDI4LWRmOTE0ODVmYzMzODMxNWQ5MDIyMTMxOWZlOTY4NGMxNWUwMmFkM2E2MjRjYWZlNDE1OTUyMjFhNDAyYjZhZDc#/) and [Email](mailto:support@nimbella.com):
 
