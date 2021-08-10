@@ -1,9 +1,34 @@
 ---
 message: We want your experience with Nimbella to be amazing and we are here to help.
 backgroundImage: /images/uploads/contact-bg.jpg
+meta:
+  canonicalLink: ''
+  description: >-
+    We're here to help. Contact us via email, Slack or on Github. Feel free to
+    schedule a demo as per your convenience. 
+  title: 'How to contact Nimbella over email, GitHub or Slack?'
 ---
-# Find out how Nimbella can help your company projects
+## You can reach us on [GitHub](https://github.com/nimbella), [Slack](https://nimbella-community.slack.com/join/shared_invite/enQtNjg1NzE1OTE3MDI4LWRmOTE0ODVmYzMzODMxNWQ5MDIyMTMxOWZlOTY4NGMxNWUwMmFkM2E2MjRjYWZlNDE1OTUyMjFhNDAyYjZhZDc#/) and [Email](mailto:support@nimbella.com):
 
-We want to hear from you. Please leave your business information, and a Nimbella representative will get back to you soon. 
+* If you found a bug in our platform or tools or have a feature request, please tell us on [GitHub](https://github.com/nimbella).
+* Connect with us on Nimbella Community [Slack](https://nimbella-community.slack.com/join/shared_invite/enQtNjg1NzE1OTE3MDI4LWRmOTE0ODVmYzMzODMxNWQ5MDIyMTMxOWZlOTY4NGMxNWUwMmFkM2E2MjRjYWZlNDE1OTUyMjFhNDAyYjZhZDc#/) for the fastest response.
+* [Email](mailto:support@nimbella.com) us your issue. 
 
-  We are happy to help our customers with the best package to fit their requirements.
+---
+
+
+## Our offices:
+
+**USA:** 
+
+4677 Old Ironsides Dr, Suite 180,
+Santa Clara, CA - 95054
+
+**India:**
+
+308, iThum Tower A, Sector 62,
+Noida, UP - 201301
+
+**Italy:**
+
+[Nimbella's European contact](https://nimbella.com/employees/michele-sciabarra)
